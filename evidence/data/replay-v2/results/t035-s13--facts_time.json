@@ -1,0 +1,42 @@
+{
+  "case": "t035-s13",
+  "arm": "facts_time",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 35,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "verify",
+    "target": "control-plane",
+    "action": "start",
+    "summary": "Running a fresh scope health and real ingress job completion check to confirm the reported submission/completion failure."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 2805,
+  "actualPromptTokens": 2805,
+  "reservedHeadroom": 5387,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2805,
+      "outputTokens": 38,
+      "totalDurationNs": 6428971494,
+      "responseText": "{\"tool\":\"verify\",\"target\":\"control-plane\",\"action\":\"start\",\"summary\":\"Running a fresh scope health and real ingress job completion check to confirm the reported submission/completion failure.\"}",
+      "responseFile": "attempts/t035-s13--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494867.6180923
+}

@@ -1,0 +1,42 @@
+{
+  "case": "t003-s06",
+  "arm": "facts_time",
+  "stratum": "success_control",
+  "scenario": "database-route",
+  "sourceTrial": 3,
+  "beforeStep": 6,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "restore_network",
+    "target": "job-api",
+    "action": "start",
+    "summary": "Restore the validated API-to-database route policy for job-api after confirming both API instances are network-blocked from PostgreSQL."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 2228,
+  "actualPromptTokens": 2228,
+  "reservedHeadroom": 5964,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2228,
+      "outputTokens": 50,
+      "totalDurationNs": 6594084405,
+      "responseText": "{\"tool\": \"restore_network\", \"target\": \"job-api\", \"action\": \"start\", \"summary\": \"Restore the validated API-to-database route policy for job-api after confirming both API instances are network-blocked from PostgreSQL.\"}",
+      "responseFile": "attempts/t003-s06--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494432.1966093
+}

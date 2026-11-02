@@ -1,0 +1,279 @@
+{
+  "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+  "selection": "Allowlisted source and static configuration only; no secret or runtime-state files read.",
+  "anchor": "15 of 16 archived study source files match this Git revision byte for byte. This does not independently establish the supplemental files as the exact study-runtime bytes. The archived app/main.py differs; its frozen copy remains authoritative.",
+  "matchingFrozenPaths": [
+    "app/incident_agent.py",
+    "app/plane.py",
+    "app/plane_diagnosis.py",
+    "app/plane_releases.py",
+    "app/recovery_design.py",
+    "app/recovery_study.py",
+    "control-plane/compose.json",
+    "control-plane/network-policy/apply.py",
+    "control-plane/network-policy/main.tf",
+    "control-plane/network-policy/route.py",
+    "control-plane/releases/main.tf",
+    "control-plane/service.py",
+    "control-plane/terraform/main.tf",
+    "control-plane/workers/main.tf",
+    "control-plane/workloads/main.tf"
+  ],
+  "differentFrozenPaths": [
+    "app/main.py"
+  ],
+  "files": [
+    {
+      "path": "code/historical-environment/app/plane_incident.py",
+      "sourcePath": "app/plane_incident.py",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "6e40eed4e5a2167389aa586efadd2f7618a171e5a1130a13a178621feebd0149",
+      "exportSha256": "6e40eed4e5a2167389aa586efadd2f7618a171e5a1130a13a178621feebd0149",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/README.md",
+      "sourcePath": "control-plane/README.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "8baa5524f34397e377a03bb573cb02d1ea0e7bcf5bac6d054ba6d1c92ff55baf",
+      "exportSha256": "8baa5524f34397e377a03bb573cb02d1ea0e7bcf5bac6d054ba6d1c92ff55baf",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/blueprint.json",
+      "sourcePath": "control-plane/blueprint.json",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "0e42dacadae7bad3fbe91f7df53e831ba1e40e4eff754f4b8884eaa17507069d",
+      "exportSha256": "0e42dacadae7bad3fbe91f7df53e831ba1e40e4eff754f4b8884eaa17507069d",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/Dockerfile",
+      "sourcePath": "control-plane/Dockerfile",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "b5c0196a1b218a7f791ba9f4316617a7b06aa5a135f8bbc57ffa9ed5b5fba7f4",
+      "exportSha256": "b5c0196a1b218a7f791ba9f4316617a7b06aa5a135f8bbc57ffa9ed5b5fba7f4",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/requirements.txt",
+      "sourcePath": "control-plane/requirements.txt",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "0f5f7c533836dd3b85b60eff23e87c3ffadacdf92c0edb9dbdb667c1e88939bc",
+      "exportSha256": "0f5f7c533836dd3b85b60eff23e87c3ffadacdf92c0edb9dbdb667c1e88939bc",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/schema.sql",
+      "sourcePath": "control-plane/schema.sql",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "6a64935d5170d4b94f69ad4437131815d8dcf5e2718038636cd9e513ddae6b0f",
+      "exportSha256": "6a64935d5170d4b94f69ad4437131815d8dcf5e2718038636cd9e513ddae6b0f",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/nginx.conf",
+      "sourcePath": "control-plane/nginx.conf",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "e518d354ef06d00e9782186fcdf82a4f7c23c72c80c969128c14bfc4802012e0",
+      "exportSha256": "e518d354ef06d00e9782186fcdf82a4f7c23c72c80c969128c14bfc4802012e0",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/nats-1.conf",
+      "sourcePath": "control-plane/nats-1.conf",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "e47616cf89212b545a42b64a8d42503a4afb79daa26cde2aef2cc2902719ad51",
+      "exportSha256": "e47616cf89212b545a42b64a8d42503a4afb79daa26cde2aef2cc2902719ad51",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/nats-2.conf",
+      "sourcePath": "control-plane/nats-2.conf",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "baae6ca6fbc76adb11011f9f4f85437fc8a5c15b15bbe32d64fb5b4b02a35932",
+      "exportSha256": "baae6ca6fbc76adb11011f9f4f85437fc8a5c15b15bbe32d64fb5b4b02a35932",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/nats-3.conf",
+      "sourcePath": "control-plane/nats-3.conf",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "69039bc3bd40108c72e79bc62eaf2a86ffcaa63152c47c10e1915b8b0634e8c8",
+      "exportSha256": "69039bc3bd40108c72e79bc62eaf2a86ffcaa63152c47c10e1915b8b0634e8c8",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/prometheus.json",
+      "sourcePath": "control-plane/prometheus.json",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "cc14d931b00b2ced0e40b705064fbd938e0ac9e0f9e2589a20f16097b3056563",
+      "exportSha256": "cc14d931b00b2ced0e40b705064fbd938e0ac9e0f9e2589a20f16097b3056563",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/configure.py",
+      "sourcePath": "control-plane/configure.py",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "1333af31857ec0af207b6f4d7eab165559e4590bb9af9dc73814150d7d4aa2b5",
+      "exportSha256": "1333af31857ec0af207b6f4d7eab165559e4590bb9af9dc73814150d7d4aa2b5",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/releases/Dockerfile",
+      "sourcePath": "control-plane/releases/Dockerfile",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "4c79c3580705315cfa94234d6ea7e3552f6475ffd925936e99448a0cc5d4ea91",
+      "exportSha256": "4c79c3580705315cfa94234d6ea7e3552f6475ffd925936e99448a0cc5d4ea91",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/releases/build.py",
+      "sourcePath": "control-plane/releases/build.py",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "657bd69a77ecceba6f94499a0400c297a1452788858d95ebe2de09cfe50f183c",
+      "exportSha256": "657bd69a77ecceba6f94499a0400c297a1452788858d95ebe2de09cfe50f183c",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/releases/README.md",
+      "sourcePath": "control-plane/releases/README.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "7ed9709e35bce5e0b149d197dd0f430b103c8718e4c19a9ddf4f29cd917bc168",
+      "exportSha256": "7ed9709e35bce5e0b149d197dd0f430b103c8718e4c19a9ddf4f29cd917bc168",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/releases/RUNBOOK.md",
+      "sourcePath": "control-plane/releases/RUNBOOK.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "28b9fd9d87afea8aa10141342480f4844005185696e0a9f89de8fb3e6fe9c6fb",
+      "exportSha256": "28b9fd9d87afea8aa10141342480f4844005185696e0a9f89de8fb3e6fe9c6fb",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/releases/.terraform.lock.hcl",
+      "sourcePath": "control-plane/releases/.terraform.lock.hcl",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "abba99dcd5cbcfdd7046c036343afec512c7e5eb7ae34d0c12944f423ccdd626",
+      "exportSha256": "abba99dcd5cbcfdd7046c036343afec512c7e5eb7ae34d0c12944f423ccdd626",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/workers/Dockerfile",
+      "sourcePath": "control-plane/workers/Dockerfile",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "f853da6b2cf69442d662b07b4b4e4453329ca033b509008cb0ab2dc35a103f71",
+      "exportSha256": "f853da6b2cf69442d662b07b4b4e4453329ca033b509008cb0ab2dc35a103f71",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/workers/build.py",
+      "sourcePath": "control-plane/workers/build.py",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "47dda2976cadf7daf85f6d3b39bf7dd45894ac2f57170e1b7c2e2f527be6f6ac",
+      "exportSha256": "47dda2976cadf7daf85f6d3b39bf7dd45894ac2f57170e1b7c2e2f527be6f6ac",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/workers/README.md",
+      "sourcePath": "control-plane/workers/README.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "5b611101d6217898e05e7d32daa29f81bd43dbd7d39e079f796072045438f9a9",
+      "exportSha256": "5b611101d6217898e05e7d32daa29f81bd43dbd7d39e079f796072045438f9a9",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/workers/.terraform.lock.hcl",
+      "sourcePath": "control-plane/workers/.terraform.lock.hcl",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "f45b96ec0f3a542885d223f111206c445133dec536a4a514903fa30885bac5ff",
+      "exportSha256": "f45b96ec0f3a542885d223f111206c445133dec536a4a514903fa30885bac5ff",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/network-policy/README.md",
+      "sourcePath": "control-plane/network-policy/README.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "936364d6b752b8182a34d39efdf166de62376569326e6e732316e3a941113df3",
+      "exportSha256": "936364d6b752b8182a34d39efdf166de62376569326e6e732316e3a941113df3",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/terraform/README.md",
+      "sourcePath": "control-plane/terraform/README.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "d3bc4534f6097876f5339f77e6f96d96897c02d85de8f93204cf0b10b0b17b89",
+      "exportSha256": "d3bc4534f6097876f5339f77e6f96d96897c02d85de8f93204cf0b10b0b17b89",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/terraform/capture-existing.py",
+      "sourcePath": "control-plane/terraform/capture-existing.py",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "88085a08eabb443b2fe5e9ff8b189a13215a4c70926c4a77de04aec15cdbbd3a",
+      "exportSha256": "88085a08eabb443b2fe5e9ff8b189a13215a4c70926c4a77de04aec15cdbbd3a",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/terraform/.terraform.lock.hcl",
+      "sourcePath": "control-plane/terraform/.terraform.lock.hcl",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "abba99dcd5cbcfdd7046c036343afec512c7e5eb7ae34d0c12944f423ccdd626",
+      "exportSha256": "abba99dcd5cbcfdd7046c036343afec512c7e5eb7ae34d0c12944f423ccdd626",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/workloads/README.md",
+      "sourcePath": "control-plane/workloads/README.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "06da8e708d41f179c7b1cfbd2b21a39fcff118aa4ae6170c05823bcbf4074d72",
+      "exportSha256": "06da8e708d41f179c7b1cfbd2b21a39fcff118aa4ae6170c05823bcbf4074d72",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/workloads/RUNBOOK.md",
+      "sourcePath": "control-plane/workloads/RUNBOOK.md",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "cc3843442ab39509426b2ccfcbba50bb2decc4a3460df2c4d8a5a3d8a9465330",
+      "exportSha256": "cc3843442ab39509426b2ccfcbba50bb2decc4a3460df2c4d8a5a3d8a9465330",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    },
+    {
+      "path": "code/historical-environment/control-plane/workloads/.terraform.lock.hcl",
+      "sourcePath": "control-plane/workloads/.terraform.lock.hcl",
+      "gitCommit": "cb9a370a7144c8c2d7b9fbf043b3f64dc1549fc7",
+      "originalSha256": "abba99dcd5cbcfdd7046c036343afec512c7e5eb7ae34d0c12944f423ccdd626",
+      "exportSha256": "abba99dcd5cbcfdd7046c036343afec512c7e5eb7ae34d0c12944f423ccdd626",
+      "transformations": [],
+      "provenanceLevel": "Historical Git supplement; not independently frozen by the study protocol"
+    }
+  ]
+}

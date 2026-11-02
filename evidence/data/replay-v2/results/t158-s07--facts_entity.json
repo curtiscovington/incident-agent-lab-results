@@ -1,0 +1,42 @@
+{
+  "case": "t158-s07",
+  "arm": "facts_entity",
+  "stratum": "truncation",
+  "scenario": "scheduler-lease",
+  "sourceTrial": 158,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "scheduler-2",
+    "action": "start",
+    "summary": "Probe scheduler-2 to confirm its current reachability and health."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 2325,
+  "actualPromptTokens": 2325,
+  "reservedHeadroom": 5867,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2325,
+      "outputTokens": 32,
+      "totalDurationNs": 5381354407,
+      "responseText": "{\"tool\":\"probe\",\"target\":\"scheduler-2\",\"action\":\"start\",\"summary\":\"Probe scheduler-2 to confirm its current reachability and health.\"}",
+      "responseFile": "attempts/t158-s07--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494381.795119
+}

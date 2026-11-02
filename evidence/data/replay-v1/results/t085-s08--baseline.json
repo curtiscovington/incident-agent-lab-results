@@ -1,0 +1,30 @@
+{
+  "case": "t085-s08",
+  "arm": "baseline",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 85,
+  "beforeStep": 8,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 11542052901,
+      "promptTokens": 8173,
+      "outputTokens": 19,
+      "responseFile": "attempts/t085-s08--baseline-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \""
+    }
+  ],
+  "savedAt": 1793493545.6802754
+}

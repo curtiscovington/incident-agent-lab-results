@@ -1,0 +1,42 @@
+{
+  "case": "t086-s15",
+  "arm": "budget_raw",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 86,
+  "beforeStep": 15,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "ingress",
+    "action": "start",
+    "summary": "Probing the ingress load balancer to confirm the job submission failure and identify the failing path."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 6515,
+  "actualPromptTokens": 6515,
+  "reservedHeadroom": 1677,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 6515,
+      "outputTokens": 44,
+      "totalDurationNs": 11431209939,
+      "responseText": "{\"tool\": \"probe\", \"target\": \"ingress\", \"action\": \"start\", \"summary\": \"Probing the ingress load balancer to confirm the job submission failure and identify the failing path.\"}",
+      "responseFile": "attempts/t086-s15--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494652.78219
+}

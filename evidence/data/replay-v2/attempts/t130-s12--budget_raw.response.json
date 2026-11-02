@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:55:26.692654029Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back the workers group from release w2 to the known-good release w1 to resolve the job decode failure.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11308928729,
+  "load_duration": 58539617,
+  "prompt_eval_count": 6209,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 7462687000,
+  "eval_count": 48,
+  "eval_duration": 3618898000
+}

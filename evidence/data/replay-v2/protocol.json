@@ -1,0 +1,509 @@
+{
+  "id": "replay-20261101-v2",
+  "frozenAt": 1793494235.0114806,
+  "purpose": "Development context-budget and matched-evidence-organization diagnostic; no tool execution",
+  "model": "qwen3.8:27b-q4_K_M",
+  "modelDigest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 384
+  },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "tool": {
+        "type": "string",
+        "enum": [
+          "inspect",
+          "logs",
+          "metrics",
+          "probe",
+          "power",
+          "rollback",
+          "verify",
+          "finish",
+          "escalate",
+          "connectivity",
+          "network_policy",
+          "restore_network",
+          "database_activity",
+          "release_database_lock",
+          "messaging_status",
+          "release_scheduler_lease"
+        ]
+      },
+      "target": {
+        "type": "string",
+        "enum": [
+          "ingress",
+          "api-1",
+          "api-2",
+          "postgres",
+          "scheduler-1",
+          "scheduler-2",
+          "nats-1",
+          "nats-2",
+          "nats-3",
+          "worker-1",
+          "worker-2",
+          "worker-3",
+          "prometheus",
+          "control-client",
+          "control-plane",
+          "job-api",
+          "schedulers",
+          "messaging",
+          "workers"
+        ]
+      },
+      "action": {
+        "type": "string",
+        "enum": [
+          "",
+          "start",
+          "stop",
+          "restart"
+        ]
+      },
+      "summary": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "tool",
+      "target",
+      "action",
+      "summary"
+    ],
+    "additionalProperties": false
+  },
+  "arms": [
+    "replication",
+    "budget_raw",
+    "facts_time",
+    "facts_entity"
+  ],
+  "armLabels": {
+    "replication": "Original history",
+    "budget_raw": "Budgeted raw history",
+    "facts_time": "Budgeted facts \u00b7 time",
+    "facts_entity": "Budgeted facts \u00b7 component"
+  },
+  "queue": [
+    {
+      "case": "t158-s07",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t158-s07",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t158-s07",
+      "arm": "replication"
+    },
+    {
+      "case": "t158-s07",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "replication"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "replication"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "replication"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "replication"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "replication"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "replication"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "replication"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "replication"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "replication"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "replication"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "replication"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "replication"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "replication"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "replication"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "replication"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "replication"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "replication"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "replication"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "budget_raw"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "facts_entity"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "facts_time"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "replication"
+    }
+  ],
+  "initialCalls": 80,
+  "maxInferenceCalls": 80,
+  "retries": 0,
+  "promptTokenCap": 7000,
+  "responseTokenCap": 384,
+  "contextTokens": 8192,
+  "minimumReservedHeadroom": 1192,
+  "budgetValidationTolerance": 2,
+  "matchedFactsTokenTolerance": 8,
+  "primaryContrast": "facts_time versus facts_entity: identical shared fact multiset, same instructions, only ordering differs; predicted token counts within eight",
+  "secondaryContrasts": "replication versus budget_raw tests explicit oldest-pair pruning; raw versus normalized facts remains confounded by selected/normalized information and prompt length",
+  "policy": "Raw budget retains initial two messages and removes oldest complete action/result pairs until offline prompt<=7000. Shared facts are latest per key from completed prior observations, logs retain last600chars, last6 prior actions retained. If necessary drop oldest shared facts until both orders fit. No ground truth, future decisions, judge or rubric is inserted in any prompt. No replanning directive added.",
+  "selection": "Same twenty outcome-aware development cases and frozen action rubrics as v1. No held-out or live-recovery claim.",
+  "tokenizer": {
+    "path": "<LOCAL_TOKENIZER_SNAPSHOT>/017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+    "files": {
+      "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+      "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+    },
+    "thinking": false,
+    "calibrationAgainstSavedV1": [
+      {
+        "case": "t007-s13",
+        "offline": 2542,
+        "recorded": 2542
+      },
+      {
+        "case": "t008-s13",
+        "offline": 3236,
+        "recorded": 3236
+      },
+      {
+        "case": "t030-s13",
+        "offline": 4863,
+        "recorded": 4863
+      },
+      {
+        "case": "t035-s13",
+        "offline": 4913,
+        "recorded": 4913
+      },
+      {
+        "case": "t036-s13",
+        "offline": 2544,
+        "recorded": 2544
+      },
+      {
+        "case": "t005-s05",
+        "offline": 3050,
+        "recorded": 3050
+      },
+      {
+        "case": "t018-s06",
+        "offline": 6562,
+        "recorded": 6562
+      },
+      {
+        "case": "t001-s07",
+        "offline": 7328,
+        "recorded": 7328
+      },
+      {
+        "case": "t003-s06",
+        "offline": 7305,
+        "recorded": 7305
+      },
+      {
+        "case": "t015-s03",
+        "offline": 4150,
+        "recorded": 4150
+      },
+      {
+        "case": "t029-s15",
+        "offline": 5114,
+        "recorded": 5114
+      }
+    ]
+  },
+  "sourceCasesSha256": "24127449fa231ed64c4021dc0826c7abe3a0eba9ea3999711db9c663ed1ff4f8",
+  "sourceProtocolSha256": "76faca0f8b432adb24df647dd8ae750ba95d3f7016a95e7be65d24c0c3655059",
+  "scoring": "Reuse v1 schema and preferred/acceptable/unlisted rubrics unchanged; unlisted is review-required, not automatically wrong. Descriptive paired differences, no significance or acceptance threshold.",
+  "stopRule": "Stop on transport/uncertain call, input/model drift, actual budgeted prompt>7002 or matched-pair actual prompt difference>8. Never silently repeat an uncertain call. Preserve all outcomes; no post-outcome retuning. Pause between calls.",
+  "limitations": [
+    "Twenty outcome-aware development states, not independent confirmation.",
+    "Facts-time and facts-entity control fact availability and near-exact prompt length, but test organization of an already normalized record, not semantics or memory mechanisms generally.",
+    "Raw versus fact-record contrasts cannot isolate budgeting from normalization, omitted details, recency or length.",
+    "Unbudgeted replication intentionally retains historical context-pressure behavior.",
+    "Historical source prompts mix current/runbook but are fixed within every case.",
+    "Automatic action rubric; no live repairs or human diagnosis adjudication.",
+    "Offline HF tokenizer matches recorded under-cap prompts; actual serving counters are checked per call.",
+    "Cache/order affects latency; no intrinsic speed claim."
+  ]
+}

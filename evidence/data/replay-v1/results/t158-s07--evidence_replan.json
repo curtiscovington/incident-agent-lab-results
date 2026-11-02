@@ -1,0 +1,36 @@
+{
+  "case": "t158-s07",
+  "arm": "evidence_replan",
+  "stratum": "truncation",
+  "scenario": "scheduler-lease",
+  "sourceTrial": 158,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "release_scheduler_lease",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Releasing the abandoned lab maintenance holder of the scheduler advisory lease to allow schedulers to resume job processing."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3883773643,
+      "promptTokens": 3744,
+      "outputTokens": 49,
+      "responseFile": "attempts/t158-s07--evidence_replan-a0.response.json",
+      "responseText": "{\"tool\": \"release_scheduler_lease\", \"target\": \"schedulers\", \"action\": \"start\", \"summary\": \"Releasing the abandoned lab maintenance holder of the scheduler advisory lease to allow schedulers to resume job processing.\"}"
+    }
+  ],
+  "savedAt": 1793492961.9387379
+}

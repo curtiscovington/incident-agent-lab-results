@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T01:01:50.838917132Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\":\"rollback\",\"target\":\"workers\",\"action\":\"start\",\"summary\":\"Rolling back all workers from release w2 to known-good w1 after logs show job_decode_failed KeyError: job_id on w2 while every other component is healthy.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7875115178,
+  "load_duration": 56413324,
+  "prompt_eval_count": 3078,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 3789394000,
+  "eval_count": 51,
+  "eval_duration": 3822916000
+}

@@ -1,0 +1,36 @@
+{
+  "case": "t011-s11",
+  "arm": "replication",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 11,
+  "beforeStep": 11,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "offlinePromptTokens": 11713,
+  "actualPromptTokens": 8190,
+  "reservedHeadroom": 2,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": -3523,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "promptTokens": 8190,
+      "outputTokens": 2,
+      "totalDurationNs": 10227253597,
+      "responseText": "{\"tool",
+      "responseFile": "attempts/t011-s11--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494733.2624397
+}

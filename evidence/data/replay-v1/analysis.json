@@ -1,0 +1,1041 @@
+{
+  "id": "replay-20261101-v1",
+  "status": "complete",
+  "savedDecisions": 80,
+  "inferenceCallsFromSavedResponses": 85,
+  "inferenceCallsCounter": 85,
+  "arms": [
+    {
+      "arm": "baseline",
+      "decisions": 20,
+      "initialValid": 15,
+      "finalValid": 15,
+      "actionCategories": {
+        "preferred": 5,
+        "unlisted_review_required": 8,
+        "invalid": 5,
+        "acceptable": 2
+      },
+      "repeatedToolTarget": 6,
+      "modelCalls": 20,
+      "conditionalRetries": 0,
+      "totalModelSeconds": 143.046053893,
+      "promptTokens": 116165,
+      "outputTokens": 743,
+      "lengthLimitedResponses": 5,
+      "contextBoundaryStops": 5
+    },
+    {
+      "arm": "evidence_replan",
+      "decisions": 20,
+      "initialValid": 20,
+      "finalValid": 20,
+      "actionCategories": {
+        "preferred": 13,
+        "unlisted_review_required": 7
+      },
+      "repeatedToolTarget": 4,
+      "modelCalls": 20,
+      "conditionalRetries": 0,
+      "totalModelSeconds": 141.215439742,
+      "promptTokens": 121269,
+      "outputTokens": 931,
+      "lengthLimitedResponses": 0,
+      "contextBoundaryStops": 0
+    },
+    {
+      "arm": "format_retry",
+      "decisions": 20,
+      "initialValid": 15,
+      "finalValid": 19,
+      "actionCategories": {
+        "preferred": 8,
+        "unlisted_review_required": 9,
+        "acceptable": 2,
+        "invalid": 1
+      },
+      "repeatedToolTarget": 7,
+      "modelCalls": 25,
+      "conditionalRetries": 5,
+      "totalModelSeconds": 177.404468861,
+      "promptTokens": 150262,
+      "outputTokens": 949,
+      "lengthLimitedResponses": 6,
+      "contextBoundaryStops": 6
+    },
+    {
+      "arm": "both",
+      "decisions": 20,
+      "initialValid": 20,
+      "finalValid": 20,
+      "actionCategories": {
+        "preferred": 13,
+        "unlisted_review_required": 7
+      },
+      "repeatedToolTarget": 4,
+      "modelCalls": 20,
+      "conditionalRetries": 0,
+      "totalModelSeconds": 199.114969582,
+      "promptTokens": 121269,
+      "outputTokens": 931,
+      "lengthLimitedResponses": 0,
+      "contextBoundaryStops": 0
+    }
+  ],
+  "strata": [
+    {
+      "arm": "baseline",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      }
+    },
+    {
+      "arm": "baseline",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 3,
+        "acceptable": 2
+      }
+    },
+    {
+      "arm": "baseline",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "invalid": 5
+      }
+    },
+    {
+      "arm": "baseline",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      }
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      }
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 2,
+        "preferred": 3
+      }
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      }
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      }
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      }
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 3,
+        "acceptable": 2
+      }
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 1,
+        "preferred": 3,
+        "invalid": 1
+      }
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      }
+    },
+    {
+      "arm": "both",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      }
+    },
+    {
+      "arm": "both",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 2,
+        "preferred": 3
+      }
+    },
+    {
+      "arm": "both",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      }
+    },
+    {
+      "arm": "both",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      }
+    }
+  ],
+  "pairedCases": [
+    {
+      "case": "t001-s07",
+      "stratum": "success_control",
+      "actions": {
+        "baseline": {
+          "tool": "power",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Start the scheduler group to restore the stopped schedulers and allow outbox jobs to be published."
+        },
+        "both": {
+          "tool": "power",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Start the exited scheduler group to restore outbox publication, then verify job completion."
+        },
+        "evidence_replan": {
+          "tool": "power",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Start the exited scheduler group to restore outbox publication, then verify job completion."
+        },
+        "format_retry": {
+          "tool": "power",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Start the scheduler group to restore the stopped schedulers and allow outbox jobs to be published."
+        }
+      },
+      "categories": {
+        "baseline": "preferred",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 7328,
+        "both": 8074,
+        "evidence_replan": 8074,
+        "format_retry": 7328
+      }
+    },
+    {
+      "case": "t003-s06",
+      "stratum": "success_control",
+      "actions": {
+        "baseline": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres."
+        },
+        "both": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres."
+        },
+        "evidence_replan": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres."
+        },
+        "format_retry": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres."
+        }
+      },
+      "categories": {
+        "baseline": "preferred",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 7305,
+        "both": 7636,
+        "evidence_replan": 7636,
+        "format_retry": 7305
+      }
+    },
+    {
+      "case": "t005-s05",
+      "stratum": "deployment",
+      "actions": {
+        "baseline": {
+          "tool": "power",
+          "target": "api-1",
+          "action": "restart",
+          "summary": "Restarting api-1 because it is running but unreachable and logs show request dispatch stalled."
+        },
+        "both": {
+          "tool": "power",
+          "target": "api-1",
+          "action": "restart",
+          "summary": "Restarting api-1 to clear the stalled request dispatch state."
+        },
+        "evidence_replan": {
+          "tool": "power",
+          "target": "api-1",
+          "action": "restart",
+          "summary": "Restarting api-1 to clear the stalled request dispatch state."
+        },
+        "format_retry": {
+          "tool": "power",
+          "target": "api-1",
+          "action": "restart",
+          "summary": "Restarting api-1 because it is running but unreachable and logs show request dispatch stalled."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "unlisted_review_required",
+        "evidence_replan": "unlisted_review_required",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 3050,
+        "both": 3698,
+        "evidence_replan": 3698,
+        "format_retry": 3050
+      }
+    },
+    {
+      "case": "t007-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "baseline": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "both": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "evidence_replan": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "format_retry": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "unlisted_review_required",
+        "evidence_replan": "unlisted_review_required",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 2542,
+        "both": 3805,
+        "evidence_replan": 3805,
+        "format_retry": 2542
+      }
+    },
+    {
+      "case": "t008-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "baseline": {
+          "tool": "probe",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Probing api-2 to compare its health and dependencies with api-1."
+        },
+        "both": {
+          "tool": "probe",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Probing api-2 to compare its health and dependencies with api-1."
+        },
+        "evidence_replan": {
+          "tool": "probe",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Probing api-2 to compare its health and dependencies with api-1."
+        },
+        "format_retry": {
+          "tool": "probe",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Probing api-2 to compare its health and dependencies with api-1."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "unlisted_review_required",
+        "evidence_replan": "unlisted_review_required",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 3236,
+        "both": 4547,
+        "evidence_replan": 4547,
+        "format_retry": 3236
+      }
+    },
+    {
+      "case": "t011-s11",
+      "stratum": "truncation",
+      "actions": {
+        "baseline": null,
+        "both": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from release w2 to the known-good w1 to fix the job_id decode failure."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from release w2 to the known-good w1 to fix the job_id decode failure."
+        },
+        "format_retry": {
+          "tool": "probe",
+          "target": "workers",
+          "action": "start",
+          "summary": "Probing worker group to confirm the release mismatch and job-processing failure."
+        }
+      },
+      "categories": {
+        "baseline": "invalid",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 8190,
+        "both": 6858,
+        "evidence_replan": 6858,
+        "format_retry": 8190
+      }
+    },
+    {
+      "case": "t012-s03",
+      "stratum": "success_control",
+      "actions": {
+        "baseline": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from release w2 to the known-good w1, since w2 fails to decode job payloads (KeyError: job_id) and is causing the job backlog."
+        },
+        "both": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1, since w2 fails to decode the job_id field and leaves 4 jobs stuck in the queue."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1, since w2 fails to decode the job_id field and leaves 4 jobs stuck in the queue."
+        },
+        "format_retry": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from release w2 to the known-good w1, since w2 fails to decode job payloads (KeyError: job_id) and is causing the job backlog."
+        }
+      },
+      "categories": {
+        "baseline": "preferred",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 7717,
+        "both": 4122,
+        "evidence_replan": 4122,
+        "format_retry": 7717
+      }
+    },
+    {
+      "case": "t015-s03",
+      "stratum": "success_control",
+      "actions": {
+        "baseline": {
+          "tool": "power",
+          "target": "nats-2",
+          "action": "start",
+          "summary": "Start the exited NATS node nats-2 to restore cluster quorum"
+        },
+        "both": {
+          "tool": "power",
+          "target": "nats-2",
+          "action": "start",
+          "summary": "Start the exited NATS node nats-2 to restore cluster quorum"
+        },
+        "evidence_replan": {
+          "tool": "power",
+          "target": "nats-2",
+          "action": "start",
+          "summary": "Start the exited NATS node nats-2 to restore cluster quorum"
+        },
+        "format_retry": {
+          "tool": "power",
+          "target": "nats-2",
+          "action": "start",
+          "summary": "Start the exited NATS node nats-2 to restore cluster quorum"
+        }
+      },
+      "categories": {
+        "baseline": "preferred",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 4150,
+        "both": 4785,
+        "evidence_replan": 4785,
+        "format_retry": 4150
+      }
+    },
+    {
+      "case": "t018-s06",
+      "stratum": "deployment",
+      "actions": {
+        "baseline": {
+          "tool": "power",
+          "target": "job-api",
+          "action": "restart",
+          "summary": "Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch."
+        },
+        "both": {
+          "tool": "power",
+          "target": "job-api",
+          "action": "restart",
+          "summary": "Restarting the job-api group because both API instances are running but unresponsive with dispatch stalls."
+        },
+        "evidence_replan": {
+          "tool": "power",
+          "target": "job-api",
+          "action": "restart",
+          "summary": "Restarting the job-api group because both API instances are running but unresponsive with dispatch stalls."
+        },
+        "format_retry": {
+          "tool": "power",
+          "target": "job-api",
+          "action": "restart",
+          "summary": "Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "unlisted_review_required",
+        "evidence_replan": "unlisted_review_required",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 6562,
+        "both": 7752,
+        "evidence_replan": 7752,
+        "format_retry": 6562
+      }
+    },
+    {
+      "case": "t029-s15",
+      "stratum": "success_control",
+      "actions": {
+        "baseline": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission."
+        },
+        "both": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Releasing the lab-maintenance session (pid 377) holding the jobs table lock that is blocking job submission."
+        },
+        "evidence_replan": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Releasing the lab-maintenance session (pid 377) holding the jobs table lock that is blocking job submission."
+        },
+        "format_retry": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission."
+        }
+      },
+      "categories": {
+        "baseline": "preferred",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 5114,
+        "both": 6550,
+        "evidence_replan": 6550,
+        "format_retry": 5114
+      }
+    },
+    {
+      "case": "t030-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "baseline": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+        },
+        "both": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+        },
+        "evidence_replan": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+        },
+        "format_retry": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "unlisted_review_required",
+        "evidence_replan": "unlisted_review_required",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 4863,
+        "both": 6173,
+        "evidence_replan": 6173,
+        "format_retry": 4863
+      }
+    },
+    {
+      "case": "t035-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "baseline": {
+          "tool": "probe",
+          "target": "api-1",
+          "action": "start",
+          "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+        },
+        "both": {
+          "tool": "probe",
+          "target": "api-1",
+          "action": "start",
+          "summary": "Probing api-1 to inspect its NATS publisher dependency, recent job submission errors, and release identity."
+        },
+        "evidence_replan": {
+          "tool": "probe",
+          "target": "api-1",
+          "action": "start",
+          "summary": "Probing api-1 to inspect its NATS publisher dependency, recent job submission errors, and release identity."
+        },
+        "format_retry": {
+          "tool": "probe",
+          "target": "api-1",
+          "action": "start",
+          "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "unlisted_review_required",
+        "evidence_replan": "unlisted_review_required",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 4913,
+        "both": 6225,
+        "evidence_replan": 6225,
+        "format_retry": 4913
+      }
+    },
+    {
+      "case": "t036-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "baseline": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "both": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "evidence_replan": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "format_retry": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "unlisted_review_required",
+        "evidence_replan": "unlisted_review_required",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 2544,
+        "both": 3807,
+        "evidence_replan": 3807,
+        "format_retry": 2544
+      }
+    },
+    {
+      "case": "t045-s07",
+      "stratum": "truncation",
+      "actions": {
+        "baseline": null,
+        "both": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from the defective w2 release to the known-good w1 release to fix the job_id decode failure."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from the defective w2 release to the known-good w1 release to fix the job_id decode failure."
+        },
+        "format_retry": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from the broken w2 release to the known-good w1 release to fix the job_id decode failure."
+        }
+      },
+      "categories": {
+        "baseline": "invalid",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 8175,
+        "both": 7636,
+        "evidence_replan": 7636,
+        "format_retry": 8175
+      }
+    },
+    {
+      "case": "t046-s14",
+      "stratum": "deployment",
+      "actions": {
+        "baseline": {
+          "tool": "logs",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages."
+        },
+        "both": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling the worker group back from w2 to known-good w1 because worker logs show job_decode_failed KeyError: job_id."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling the worker group back from w2 to known-good w1 because worker logs show job_decode_failed KeyError: job_id."
+        },
+        "format_retry": {
+          "tool": "logs",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages."
+        }
+      },
+      "categories": {
+        "baseline": "acceptable",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "acceptable"
+      },
+      "initialPromptTokens": {
+        "baseline": 4710,
+        "both": 6405,
+        "evidence_replan": 6405,
+        "format_retry": 4710
+      }
+    },
+    {
+      "case": "t085-s08",
+      "stratum": "truncation",
+      "actions": {
+        "baseline": null,
+        "both": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from the regressed w2 release to the known-good w1 release to fix the job_id decode failure and clear the backlog."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from the regressed w2 release to the known-good w1 release to fix the job_id decode failure and clear the backlog."
+        },
+        "format_retry": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from the broken w2 release to the known-good w1 release to fix job decoding."
+        }
+      },
+      "categories": {
+        "baseline": "invalid",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 8173,
+        "both": 7644,
+        "evidence_replan": 7644,
+        "format_retry": 8173
+      }
+    },
+    {
+      "case": "t086-s15",
+      "stratum": "deployment",
+      "actions": {
+        "baseline": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path."
+        },
+        "both": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from release w2 to the known-good release w1 to resolve the job_id schema mismatch."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from release w2 to the known-good release w1 to resolve the job_id schema mismatch."
+        },
+        "format_retry": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path."
+        }
+      },
+      "categories": {
+        "baseline": "unlisted_review_required",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "unlisted_review_required"
+      },
+      "initialPromptTokens": {
+        "baseline": 5772,
+        "both": 7497,
+        "evidence_replan": 7497,
+        "format_retry": 5772
+      }
+    },
+    {
+      "case": "t091-s10",
+      "stratum": "truncation",
+      "actions": {
+        "baseline": null,
+        "both": {
+          "tool": "rollback",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Rolling back api-2 from r4 to known-good r3 to restore API health."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Rolling back api-2 from r4 to known-good r3 to restore API health."
+        },
+        "format_retry": null
+      },
+      "categories": {
+        "baseline": "invalid",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "invalid"
+      },
+      "initialPromptTokens": {
+        "baseline": 8182,
+        "both": 7166,
+        "evidence_replan": 7166,
+        "format_retry": 8182
+      }
+    },
+    {
+      "case": "t130-s12",
+      "stratum": "deployment",
+      "actions": {
+        "baseline": {
+          "tool": "logs",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Inspecting worker-1 logs to understand the job decode failure and identify the expected payload format."
+        },
+        "both": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the workers group from release w2 to the known-good release w1 to resolve the job payload decode failure."
+        },
+        "evidence_replan": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the workers group from release w2 to the known-good release w1 to resolve the job payload decode failure."
+        },
+        "format_retry": {
+          "tool": "logs",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Inspecting worker-1 logs to understand the job decode failure and identify the expected payload format."
+        }
+      },
+      "categories": {
+        "baseline": "acceptable",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "acceptable"
+      },
+      "initialPromptTokens": {
+        "baseline": 5466,
+        "both": 7145,
+        "evidence_replan": 7145,
+        "format_retry": 5466
+      }
+    },
+    {
+      "case": "t158-s07",
+      "stratum": "truncation",
+      "actions": {
+        "baseline": null,
+        "both": {
+          "tool": "release_scheduler_lease",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Releasing the abandoned lab maintenance holder of the scheduler advisory lease to allow schedulers to resume job processing."
+        },
+        "evidence_replan": {
+          "tool": "release_scheduler_lease",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Releasing the abandoned lab maintenance holder of the scheduler advisory lease to allow schedulers to resume job processing."
+        },
+        "format_retry": {
+          "tool": "release_scheduler_lease",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Releasing the abandoned lab maintenance holder of the scheduler advisory lease to unblock job scheduling."
+        }
+      },
+      "categories": {
+        "baseline": "invalid",
+        "both": "preferred",
+        "evidence_replan": "preferred",
+        "format_retry": "preferred"
+      },
+      "initialPromptTokens": {
+        "baseline": 8173,
+        "both": 3744,
+        "evidence_replan": 3744,
+        "format_retry": 8173
+      }
+    }
+  ],
+  "limitations": [
+    "Descriptive development action rubric, not human diagnosis or live recovery.",
+    "Outcome-aware selected cases and teacher-forced histories; no independent generalization.",
+    "Evidence/replanning intervention also changes retained context and prompt length; no mechanism attribution.",
+    "Initial format_retry and baseline requests are identical, as are both/evidence_replan requests; cache/order affects timing.",
+    "Unlisted actions require review and are not automatically wrong; repeated checks can be legitimate.",
+    "All ten original length-limited responses hit prompt+output=8192; response capacity and history policy need explicit testing."
+  ]
+}

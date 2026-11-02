@@ -1,0 +1,42 @@
+{
+  "case": "t045-s07",
+  "arm": "facts_time",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 45,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back all workers from release w2 to known-good w1 after logs show job decode failures (KeyError: job_id) and a growing queue with zero running jobs."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 3109,
+  "actualPromptTokens": 3109,
+  "reservedHeadroom": 5083,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 3109,
+      "outputTokens": 53,
+      "totalDurationNs": 7828918550,
+      "responseText": "{\"tool\":\"rollback\",\"target\":\"workers\",\"action\":\"start\",\"summary\":\"Rolling back all workers from release w2 to known-good w1 after logs show job decode failures (KeyError: job_id) and a growing queue with zero running jobs.\"}",
+      "responseFile": "attempts/t045-s07--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494515.3721893
+}

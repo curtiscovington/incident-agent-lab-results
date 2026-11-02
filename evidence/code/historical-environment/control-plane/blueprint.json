@@ -1,0 +1,1068 @@
+{
+  "privateAccess": {
+    "id": "catalog-access",
+    "name": "Private catalog access",
+    "producer": "catalog",
+    "endpoint": "private-access",
+    "consumers": [
+      "control-client",
+      "unapproved-client"
+    ],
+    "protocol": "HTTPS",
+    "port": 8443,
+    "path": "/v1/profiles",
+    "implementation": "Local authenticated service proxy; isolated producer bridge; no network peering",
+    "producerSubnet": "sister",
+    "consumerSubnet": "control"
+  },
+  "schemaVersion": 2,
+  "id": "control-plane",
+  "name": "Job control plane",
+  "cidr": "10.78.0.0/16",
+  "resources": [
+    {
+      "id": "postgres",
+      "name": "postgres",
+      "type": "database",
+      "group": "data",
+      "primaryIp": "10.78.50.11",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.50.11",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        5432
+      ],
+      "image": "postgres:17-alpine",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.postgres",
+      "desired": "running"
+    },
+    {
+      "id": "nats-1",
+      "name": "nats-1",
+      "type": "messaging",
+      "group": "messaging",
+      "primaryIp": "10.78.30.11",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.30.11",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        4222,
+        6222,
+        8222
+      ],
+      "image": "nats:2.11-alpine",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.nats-1",
+      "desired": "running"
+    },
+    {
+      "id": "nats-2",
+      "name": "nats-2",
+      "type": "messaging",
+      "group": "messaging",
+      "primaryIp": "10.78.30.12",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.30.12",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        4222,
+        6222,
+        8222
+      ],
+      "image": "nats:2.11-alpine",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.nats-2",
+      "desired": "running"
+    },
+    {
+      "id": "nats-3",
+      "name": "nats-3",
+      "type": "messaging",
+      "group": "messaging",
+      "primaryIp": "10.78.30.13",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.30.13",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        4222,
+        6222,
+        8222
+      ],
+      "image": "nats:2.11-alpine",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.nats-3",
+      "desired": "running"
+    },
+    {
+      "id": "api-1",
+      "name": "api-1",
+      "type": "api",
+      "group": "control",
+      "primaryIp": "10.78.40.21",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.40.21",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.50.21",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-control-plane:1",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Terraform: control-plane/releases#docker_container.api",
+      "desired": "running"
+    },
+    {
+      "id": "api-2",
+      "name": "api-2",
+      "type": "api",
+      "group": "control",
+      "primaryIp": "10.78.40.22",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.40.22",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.50.22",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-control-plane:1",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Terraform: control-plane/releases#docker_container.api",
+      "desired": "running"
+    },
+    {
+      "id": "scheduler-1",
+      "name": "scheduler-1",
+      "type": "scheduler",
+      "group": "control",
+      "primaryIp": "10.78.40.31",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.40.31",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.50.31",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth2",
+          "address": "10.78.30.31",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-control-plane:1",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.scheduler-1",
+      "desired": "running"
+    },
+    {
+      "id": "scheduler-2",
+      "name": "scheduler-2",
+      "type": "scheduler",
+      "group": "control",
+      "primaryIp": "10.78.40.32",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.40.32",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.50.32",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth2",
+          "address": "10.78.30.32",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-control-plane:1",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.scheduler-2",
+      "desired": "running"
+    },
+    {
+      "id": "worker-1",
+      "name": "worker-1",
+      "type": "worker",
+      "group": "compute",
+      "primaryIp": "10.78.20.21",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.20.21",
+          "prefix": 24,
+          "network": "cp-compute",
+          "gateway": "10.78.20.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.50.41",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth2",
+          "address": "10.78.30.41",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-control-plane:1",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.worker-1",
+      "desired": "running"
+    },
+    {
+      "id": "worker-2",
+      "name": "worker-2",
+      "type": "worker",
+      "group": "compute",
+      "primaryIp": "10.78.20.22",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.20.22",
+          "prefix": 24,
+          "network": "cp-compute",
+          "gateway": "10.78.20.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.50.42",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth2",
+          "address": "10.78.30.42",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-control-plane:1",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.worker-2",
+      "desired": "running"
+    },
+    {
+      "id": "worker-3",
+      "name": "worker-3",
+      "type": "worker",
+      "group": "compute",
+      "primaryIp": "10.78.20.23",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.20.23",
+          "prefix": 24,
+          "network": "cp-compute",
+          "gateway": "10.78.20.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.50.43",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth2",
+          "address": "10.78.30.43",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-control-plane:1",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.worker-3",
+      "desired": "running"
+    },
+    {
+      "id": "ingress",
+      "name": "ingress",
+      "type": "load-balancer",
+      "group": "edge",
+      "primaryIp": "10.78.10.10",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.10.10",
+          "prefix": 24,
+          "network": "cp-edge",
+          "gateway": "10.78.10.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.40.10",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "nginx:1.28-alpine",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.ingress",
+      "desired": "running"
+    },
+    {
+      "id": "prometheus",
+      "name": "prometheus",
+      "type": "metrics",
+      "group": "observe",
+      "primaryIp": "10.78.0.20",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.0.20",
+          "prefix": 24,
+          "network": "cp-observe",
+          "gateway": "10.78.0.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.40.90",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth2",
+          "address": "10.78.20.90",
+          "prefix": 24,
+          "network": "cp-compute",
+          "gateway": "10.78.20.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth3",
+          "address": "10.78.30.90",
+          "prefix": 24,
+          "network": "cp-messaging",
+          "gateway": "10.78.30.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth4",
+          "address": "10.78.50.90",
+          "prefix": 24,
+          "network": "cp-data",
+          "gateway": "10.78.50.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        9090
+      ],
+      "image": "prom/prometheus:v3.5.0",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.prometheus",
+      "desired": "running"
+    },
+    {
+      "id": "catalog",
+      "name": "catalog",
+      "type": "producer",
+      "group": "sister",
+      "primaryIp": "10.78.70.11",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.70.11",
+          "prefix": 24,
+          "network": "cp-sister",
+          "gateway": "10.78.70.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8443,
+        8080
+      ],
+      "image": "bigspark-private-access:1",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.catalog",
+      "desired": "running",
+      "system": "Sister catalog"
+    },
+    {
+      "id": "private-access",
+      "name": "private-access",
+      "type": "access-endpoint",
+      "group": "control",
+      "primaryIp": "10.78.40.60",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.40.60",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        },
+        {
+          "name": "eth1",
+          "address": "10.78.70.10",
+          "prefix": 24,
+          "network": "cp-sister",
+          "gateway": "10.78.70.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8443,
+        8080
+      ],
+      "image": "bigspark-private-access:1",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.private-access",
+      "desired": "running",
+      "system": "Job control plane"
+    },
+    {
+      "id": "control-client",
+      "name": "control-client",
+      "type": "consumer",
+      "group": "control",
+      "primaryIp": "10.78.40.61",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.40.61",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-private-access:1",
+      "domain": "a",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.control-client",
+      "desired": "running",
+      "system": "Job control plane"
+    },
+    {
+      "id": "unapproved-client",
+      "name": "unapproved-client",
+      "type": "consumer",
+      "group": "control",
+      "primaryIp": "10.78.40.62",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "address": "10.78.40.62",
+          "prefix": 24,
+          "network": "cp-control",
+          "gateway": "10.78.40.1",
+          "allocation": "static"
+        }
+      ],
+      "ports": [
+        8080
+      ],
+      "image": "bigspark-private-access:1",
+      "domain": "b",
+      "host": "bigspark",
+      "runtime": "container",
+      "provisioning": "Compose: control-plane/compose.json#services.unapproved-client",
+      "desired": "running",
+      "system": "Job control plane"
+    }
+  ],
+  "groups": [
+    {
+      "id": "edge",
+      "name": "Edge",
+      "cidr": "10.78.10.0/24",
+      "gateway": "10.78.10.1",
+      "bridge": "cp-edge",
+      "allocation": "Static endpoints \u00b7 dynamic pool .128\u2013.254",
+      "isolation": "Internal Docker bridge; membership isolation, no per-port ACL"
+    },
+    {
+      "id": "control",
+      "name": "Control",
+      "cidr": "10.78.40.0/24",
+      "gateway": "10.78.40.1",
+      "bridge": "cp-control",
+      "allocation": "Static endpoints \u00b7 dynamic pool .128\u2013.254",
+      "isolation": "Internal Docker bridge; membership isolation, no per-port ACL"
+    },
+    {
+      "id": "messaging",
+      "name": "Messaging",
+      "cidr": "10.78.30.0/24",
+      "gateway": "10.78.30.1",
+      "bridge": "cp-messaging",
+      "allocation": "Static endpoints \u00b7 dynamic pool .128\u2013.254",
+      "isolation": "Internal Docker bridge; membership isolation, no per-port ACL"
+    },
+    {
+      "id": "compute",
+      "name": "Compute",
+      "cidr": "10.78.20.0/24",
+      "gateway": "10.78.20.1",
+      "bridge": "cp-compute",
+      "allocation": "Static endpoints \u00b7 dynamic pool .128\u2013.254",
+      "isolation": "Internal Docker bridge; membership isolation, no per-port ACL"
+    },
+    {
+      "id": "data",
+      "name": "Data",
+      "cidr": "10.78.50.0/24",
+      "gateway": "10.78.50.1",
+      "bridge": "cp-data",
+      "allocation": "Static endpoints \u00b7 dynamic pool .128\u2013.254",
+      "isolation": "Internal Docker bridge; membership isolation, no per-port ACL"
+    },
+    {
+      "id": "observe",
+      "name": "Observe",
+      "cidr": "10.78.0.0/24",
+      "gateway": "10.78.0.1",
+      "bridge": "cp-observe",
+      "allocation": "Static endpoints \u00b7 dynamic pool .128\u2013.254",
+      "isolation": "Internal Docker bridge; membership isolation, no per-port ACL"
+    },
+    {
+      "id": "sister",
+      "name": "Sister",
+      "cidr": "10.78.70.0/24",
+      "gateway": "10.78.70.1",
+      "bridge": "cp-sister",
+      "allocation": "Static endpoints \u00b7 dynamic pool .128\u2013.254",
+      "isolation": "Internal Docker bridge; membership isolation, no per-port ACL"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "ingress>api-1:8080",
+      "source": "ingress",
+      "target": "api-1",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "HTTP job submission / idempotency key",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "api-1>postgres:5432",
+      "source": "api-1",
+      "target": "postgres",
+      "protocol": "TCP",
+      "port": 5432,
+      "purpose": "Job + outbox transaction",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-1>postgres:5432",
+      "source": "scheduler-1",
+      "target": "postgres",
+      "protocol": "TCP",
+      "port": 5432,
+      "purpose": "Leader lock / lease recovery / outbox",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-1>nats-1:4222",
+      "source": "scheduler-1",
+      "target": "nats-1",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "JetStream publish",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-1>nats-2:4222",
+      "source": "scheduler-1",
+      "target": "nats-2",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "JetStream publish",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-1>nats-3:4222",
+      "source": "scheduler-1",
+      "target": "nats-3",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "JetStream publish",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "ingress>api-2:8080",
+      "source": "ingress",
+      "target": "api-2",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "HTTP job submission / idempotency key",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "api-2>postgres:5432",
+      "source": "api-2",
+      "target": "postgres",
+      "protocol": "TCP",
+      "port": 5432,
+      "purpose": "Job + outbox transaction",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-2>postgres:5432",
+      "source": "scheduler-2",
+      "target": "postgres",
+      "protocol": "TCP",
+      "port": 5432,
+      "purpose": "Leader lock / lease recovery / outbox",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-2>nats-1:4222",
+      "source": "scheduler-2",
+      "target": "nats-1",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "JetStream publish",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-2>nats-2:4222",
+      "source": "scheduler-2",
+      "target": "nats-2",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "JetStream publish",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "scheduler-2>nats-3:4222",
+      "source": "scheduler-2",
+      "target": "nats-3",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "JetStream publish",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-1>postgres:5432",
+      "source": "worker-1",
+      "target": "postgres",
+      "protocol": "TCP",
+      "port": 5432,
+      "purpose": "Claim / fenced completion",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-1>nats-1:4222",
+      "source": "worker-1",
+      "target": "nats-1",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-1>nats-2:4222",
+      "source": "worker-1",
+      "target": "nats-2",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-1>nats-3:4222",
+      "source": "worker-1",
+      "target": "nats-3",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "nats-1>nats-2:6222",
+      "source": "nats-1",
+      "target": "nats-2",
+      "protocol": "TCP",
+      "port": 6222,
+      "purpose": "Raft replication / cluster route",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "nats-1>nats-3:6222",
+      "source": "nats-1",
+      "target": "nats-3",
+      "protocol": "TCP",
+      "port": 6222,
+      "purpose": "Raft replication / cluster route",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-2>postgres:5432",
+      "source": "worker-2",
+      "target": "postgres",
+      "protocol": "TCP",
+      "port": 5432,
+      "purpose": "Claim / fenced completion",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-2>nats-1:4222",
+      "source": "worker-2",
+      "target": "nats-1",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-2>nats-2:4222",
+      "source": "worker-2",
+      "target": "nats-2",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-2>nats-3:4222",
+      "source": "worker-2",
+      "target": "nats-3",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "nats-2>nats-3:6222",
+      "source": "nats-2",
+      "target": "nats-3",
+      "protocol": "TCP",
+      "port": 6222,
+      "purpose": "Raft replication / cluster route",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-3>postgres:5432",
+      "source": "worker-3",
+      "target": "postgres",
+      "protocol": "TCP",
+      "port": 5432,
+      "purpose": "Claim / fenced completion",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-3>nats-1:4222",
+      "source": "worker-3",
+      "target": "nats-1",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-3>nats-2:4222",
+      "source": "worker-3",
+      "target": "nats-2",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "worker-3>nats-3:4222",
+      "source": "worker-3",
+      "target": "nats-3",
+      "protocol": "TCP",
+      "port": 4222,
+      "purpose": "Durable pull / acknowledgement",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "prometheus>api-1:8080",
+      "source": "prometheus",
+      "target": "api-1",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "Prometheus scrape",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "prometheus>api-2:8080",
+      "source": "prometheus",
+      "target": "api-2",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "Prometheus scrape",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "prometheus>scheduler-1:8080",
+      "source": "prometheus",
+      "target": "scheduler-1",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "Prometheus scrape",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "prometheus>scheduler-2:8080",
+      "source": "prometheus",
+      "target": "scheduler-2",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "Prometheus scrape",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "prometheus>worker-1:8080",
+      "source": "prometheus",
+      "target": "worker-1",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "Prometheus scrape",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "prometheus>worker-2:8080",
+      "source": "prometheus",
+      "target": "worker-2",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "Prometheus scrape",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "prometheus>worker-3:8080",
+      "source": "prometheus",
+      "target": "worker-3",
+      "protocol": "TCP",
+      "port": 8080,
+      "purpose": "Prometheus scrape",
+      "provenance": "service configuration",
+      "policy": "not a per-port ACL; network membership permits reachability"
+    },
+    {
+      "id": "control-client>private-access:8443",
+      "source": "control-client",
+      "target": "private-access",
+      "protocol": "HTTPS",
+      "port": 8443,
+      "purpose": "Authenticated catalog access",
+      "provenance": "service configuration",
+      "policy": "Explicit consumer grant required for catalog",
+      "accessConnection": "control-client"
+    },
+    {
+      "id": "unapproved-client>private-access:8443",
+      "source": "unapproved-client",
+      "target": "private-access",
+      "protocol": "HTTPS",
+      "port": 8443,
+      "purpose": "Authenticated catalog access",
+      "provenance": "service configuration",
+      "policy": "Explicit consumer grant required for catalog",
+      "accessConnection": "unapproved-client"
+    },
+    {
+      "id": "private-access>catalog:8443",
+      "source": "private-access",
+      "target": "catalog",
+      "protocol": "HTTPS",
+      "port": 8443,
+      "purpose": "Published catalog API",
+      "provenance": "service configuration",
+      "policy": "Producer credential required; fixed upstream and path only"
+    }
+  ],
+  "limits": [
+    "Single physical host; a/b are labels, not independent fault domains.",
+    "PostgreSQL and ingress are single points of failure. NATS has three replicas.",
+    "No per-port firewall or packet-level telemetry. Multi-homed clients join the networks they need.",
+    "Work can execute more than once; completion is fenced and idempotent.",
+    "Legacy sandbox agents are not authorized to control this source."
+  ]
+}

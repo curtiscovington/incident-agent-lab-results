@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T01:02:55.475031762Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\":\"inspect\",\"target\":\"messaging\",\"action\":\"start\",\"summary\":\"Inspect messaging group state to confirm nats-2/nats-3 are stopped before starting them.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5208889817,
+  "load_duration": 47075323,
+  "prompt_eval_count": 1729,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 2139415000,
+  "eval_count": 38,
+  "eval_duration": 2817079000
+}

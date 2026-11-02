@@ -1,0 +1,36 @@
+{
+  "case": "t018-s06",
+  "arm": "both",
+  "stratum": "deployment",
+  "scenario": "api-regression",
+  "sourceTrial": 18,
+  "beforeStep": 6,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "job-api",
+    "action": "restart",
+    "summary": "Restarting the job-api group because both API instances are running but unresponsive with dispatch stalls."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3723002134,
+      "promptTokens": 7752,
+      "outputTokens": 44,
+      "responseFile": "attempts/t018-s06--both-a0.response.json",
+      "responseText": "{\"tool\": \"power\", \"target\": \"job-api\", \"action\": \"restart\", \"summary\": \"Restarting the job-api group because both API instances are running but unresponsive with dispatch stalls.\"}"
+    }
+  ],
+  "savedAt": 1793493071.2122798
+}

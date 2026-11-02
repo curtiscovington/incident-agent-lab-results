@@ -1,0 +1,42 @@
+{
+  "case": "t015-s03",
+  "arm": "facts_entity",
+  "stratum": "success_control",
+  "scenario": "broker-quorum",
+  "sourceTrial": 15,
+  "beforeStep": 3,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "inspect",
+    "target": "messaging",
+    "action": "start",
+    "summary": "Inspect messaging group state to confirm nats-2/nats-3 are stopped before starting them."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 1729,
+  "actualPromptTokens": 1729,
+  "reservedHeadroom": 6463,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 1729,
+      "outputTokens": 38,
+      "totalDurationNs": 5208889817,
+      "responseText": "{\"tool\":\"inspect\",\"target\":\"messaging\",\"action\":\"start\",\"summary\":\"Inspect messaging group state to confirm nats-2/nats-3 are stopped before starting them.\"}",
+      "responseFile": "attempts/t015-s03--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494975.475972
+}

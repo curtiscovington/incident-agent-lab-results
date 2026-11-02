@@ -1,0 +1,42 @@
+{
+  "case": "t091-s10",
+  "arm": "facts_time",
+  "stratum": "truncation",
+  "scenario": "api-regression",
+  "sourceTrial": 91,
+  "beforeStep": 10,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "api-2",
+    "action": "start",
+    "summary": "Rolling back api-2 to known-good release r3 after api-1 rollback"
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 2453,
+  "actualPromptTokens": 2453,
+  "reservedHeadroom": 5739,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2453,
+      "outputTokens": 36,
+      "totalDurationNs": 5973761923,
+      "responseText": "{\"tool\":\"rollback\",\"target\":\"api-2\",\"action\":\"start\",\"summary\":\"Rolling back api-2 to known-good release r3 after api-1 rollback\"}",
+      "responseFile": "attempts/t091-s10--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494687.68558
+}

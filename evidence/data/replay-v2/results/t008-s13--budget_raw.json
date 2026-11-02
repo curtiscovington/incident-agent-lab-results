@@ -1,0 +1,42 @@
+{
+  "case": "t008-s13",
+  "arm": "budget_raw",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 8,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "api-2",
+    "action": "start",
+    "summary": "Probing api-2 to compare its health and dependencies with api-1."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 3236,
+  "actualPromptTokens": 3236,
+  "reservedHeadroom": 4956,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 3236,
+      "outputTokens": 42,
+      "totalDurationNs": 3302919596,
+      "responseText": "{\"tool\": \"probe\", \"target\": \"api-2\", \"action\": \"start\", \"summary\": \"Probing api-2 to compare its health and dependencies with api-1.\"}",
+      "responseFile": "attempts/t008-s13--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494580.536934
+}

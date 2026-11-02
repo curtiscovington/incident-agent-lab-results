@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:31:55.599469946Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"probe\", \"target\": \"scheduler-1\", \"action\": \"start\", \"summary\": \"Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3784923325,
+  "load_duration": 52223047,
+  "prompt_eval_count": 5772,
+  "prompt_eval_cached_count": 5768,
+  "prompt_eval_duration": 126973000,
+  "eval_count": 44,
+  "eval_duration": 3301010000
+}

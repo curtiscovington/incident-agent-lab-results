@@ -1,0 +1,42 @@
+{
+  "case": "t018-s06",
+  "arm": "facts_time",
+  "stratum": "deployment",
+  "scenario": "api-regression",
+  "sourceTrial": 18,
+  "beforeStep": 6,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "job-api",
+    "action": "start",
+    "summary": "Roll back both API nodes from r4 to known-good r3 after dispatch stalls and unreachable health."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 2296,
+  "actualPromptTokens": 2296,
+  "reservedHeadroom": 5896,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2296,
+      "outputTokens": 38,
+      "totalDurationNs": 5938916125,
+      "responseText": "{\"tool\":\"rollback\",\"target\":\"job-api\",\"action\":\"start\",\"summary\":\"Roll back both API nodes from r4 to known-good r3 after dispatch stalls and unreachable health.\"}",
+      "responseFile": "attempts/t018-s06--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494840.0800047
+}

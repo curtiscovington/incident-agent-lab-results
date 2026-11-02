@@ -1,0 +1,14 @@
+Deployment diagnosis runbook:
+1. Establish the actual user-visible failure and compare affected replicas with healthy dependencies. A running process is not proof of service availability.
+2. Inspect recent release changes, image identity, logs, and dependency health. Distinguish a deployment regression from a stopped process or a transient dependency failure.
+3. When evidence supports a deployment regression, use the validated known-good release for the affected component. Do not roll back unrelated healthy components.
+4. A restart may temporarily restore availability without removing a code defect. Inspect the release and failure evidence again before declaring durable repair.
+5. Verify real job completion and fresh component health after a change. If the available tools cannot reproduce the original failing request, report that limitation rather than assuming recurrence is impossible.
+6. Escalate when evidence is insufficient or recovery fails. Explain the supporting observations and remaining uncertainty in your public action summaries.
+7. Follow accepted work through submission, queue delivery, worker execution and completion. Healthy process probes can coexist with a growing backlog. Compare release identities and worker logs before changing dependencies.
+8. Compare connectivity from affected and unaffected components. Inspect the current network policy and recent changes when only some sources cannot reach a healthy dependency. Restore the relevant validated configuration rather than restarting healthy dependencies.
+9. If a database is reachable but writes time out, inspect database activity for waiting statements and their blocking sessions. Remove a confirmed abandoned maintenance blocker using the scoped tool; do not restart healthy database clients as a substitute.
+10. If accepted jobs accumulate in the transactional outbox, inspect scheduler/publisher availability and leadership before changing worker releases. Restore stopped publishers, then verify that the original accepted jobs complete.
+11. Healthy schedulers with a growing outbox may lack leadership. Inspect heartbeats and PostgreSQL advisory lock ownership; distinguish an abandoned maintenance lease from an active legitimate scheduler. Do not kill ordinary sessions or roll back workers to repair a publication problem.
+12. PostgreSQL connectivity checks say nothing about NATS. Use messaging_status to inspect broker members, stream leaders and replicas; distinguish a reachable server from a writable replicated stream. Restore missing members without deleting stream data.
+13. A single failed replica may leave user requests working. Confirm actual job throughput and restore the missing replica before considering broader deployments. Record collateral changes and avoid stopping healthy peers.

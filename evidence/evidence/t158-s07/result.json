@@ -1,0 +1,36 @@
+{
+  "case": "t158-s07",
+  "arm": "replication",
+  "stratum": "truncation",
+  "scenario": "scheduler-lease",
+  "sourceTrial": 158,
+  "beforeStep": 7,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "offlinePromptTokens": 10397,
+  "actualPromptTokens": 8173,
+  "reservedHeadroom": 19,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": -2224,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "promptTokens": 8173,
+      "outputTokens": 19,
+      "totalDurationNs": 11271217714,
+      "responseText": "{\"tool\": \"release_scheduler_lease\", \"target\": \"schedulers\", \"action\":",
+      "responseFile": "attempts/t158-s07--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494393.0795538
+}

@@ -1,0 +1,10 @@
+{
+  "id": "replay-20261101-v2",
+  "status": "complete",
+  "completed": 80,
+  "total": 80,
+  "inferenceCalls": 80,
+  "maxInferenceCalls": 80,
+  "protocolSha256": "832de2d86b194686c33e08de81c423dada17a0e08dfd6f1b1e8b05a2b851a5f5",
+  "casesSha256": "3f6bf24b710a6211d35c0e1f87054643c383de0748433e72f1deb1fa5f9adcda"
+}

@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T01:01:23.109458124Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\":\"probe\",\"target\":\"api-1\",\"action\":\"start\",\"summary\":\"Probe api-1 to confirm reachability and capture current error details.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4074073702,
+  "load_duration": 35673199,
+  "prompt_eval_count": 1622,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 1410459000,
+  "eval_count": 33,
+  "eval_duration": 2429433000
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "context-headroom",
+  "projectId": "cf5c460a60d74100a8f911ba44d670a7",
+  "kind": "token_budget",
+  "eyebrow": "02 / CONTEXT BUDGET",
+  "title": "The submitted input exceeded the context",
+  "subtitle": "Full-input estimate and recorded serving counters",
+  "data": {
+    "capacity": 8192,
+    "outputCap": 384,
+    "case": "t158-s07",
+    "rows": [
+      {
+        "label": "Original history",
+        "prompt": 8173,
+        "output": 19,
+        "valid": false
+      },
+      {
+        "label": "Explicit prompt budget",
+        "prompt": 3303,
+        "output": 53,
+        "valid": true
+      }
+    ],
+    "responseText": "{\"tool\": \"release_scheduler_lease\", \"target\": \"schedulers\", \"action\":",
+    "validBefore": 15,
+    "validAfter": 20,
+    "decisionDenominator": 20,
+    "submittedPromptEstimate": 10397,
+    "submittedServingDifference": 2224,
+    "budgetOfflineEstimate": 3303
+  },
+  "caveats": [
+    "Offline full-input estimates and provider serving counters describe different stages. Which input tokens were omitted was not recorded.",
+    "The 8,192 context is a configured study limit, not a documented hardware or model maximum. History content changed in the budgeted arm."
+  ],
+  "sources": [
+    {
+      "label": "Original-history replay",
+      "run": "replay-20261101-v2",
+      "sha256": "a94ce8d75e8e26597bff9f6e6ad187e6b4d25fce853243b0eb1c408a9db5f8d0",
+      "path": "data/replay-v2/results/t158-s07--replication.json"
+    },
+    {
+      "label": "Budgeted-history replay",
+      "run": "replay-20261101-v2",
+      "sha256": "b074e320c1a9f8dde8e7c4447f39d7e7b8289df4a75e5e1d246c2dccc1f181ef",
+      "path": "data/replay-v2/results/t158-s07--budget_raw.json"
+    }
+  ],
+  "caption": "Original input: 10,397 tokens offline; serving counters: 8,173 prompt + 19 reply = 8,192. The 2,224-token difference and exact under-cap calibration strongly support serving-side input truncation; omitted token IDs were not saved. Budgeted raw input matches at 3,303 offline/recorded, followed by 53 reply tokens. History content also changed; no repair tools ran."
+}

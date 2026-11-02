@@ -1,0 +1,42 @@
+{
+  "case": "t001-s07",
+  "arm": "facts_time",
+  "stratum": "success_control",
+  "scenario": "scheduler-outage",
+  "sourceTrial": 1,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "inspect",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Re-inspect scheduler group state and releases after the prior start attempt."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 2308,
+  "actualPromptTokens": 2308,
+  "reservedHeadroom": 5884,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2308,
+      "outputTokens": 32,
+      "totalDurationNs": 5422151996,
+      "responseText": "{\"tool\":\"inspect\",\"target\":\"schedulers\",\"action\":\"start\",\"summary\":\"Re-inspect scheduler group state and releases after the prior start attempt.\"}",
+      "responseFile": "attempts/t001-s07--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494699.4148648
+}

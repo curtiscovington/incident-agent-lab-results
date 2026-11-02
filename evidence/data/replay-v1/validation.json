@@ -1,0 +1,861 @@
+{
+  "id": "replay-20261101-v1",
+  "status": "complete",
+  "validatedDecisions": 80,
+  "actualModelCalls": 85,
+  "hardCap": 120,
+  "unresolvedStartedCalls": 0,
+  "originalInputsHashChecked": 322,
+  "originalInputsChanged": [],
+  "protocolSha256": "76faca0f8b432adb24df647dd8ae750ba95d3f7016a95e7be65d24c0c3655059",
+  "casesSha256": "24127449fa231ed64c4021dc0826c7abe3a0eba9ea3999711db9c663ed1ff4f8",
+  "runnerHashMatchesFrozen": true,
+  "duplicateResultKeys": 0,
+  "replayToolDispatches": 0,
+  "dispatchEvidence": "Audited frozen runner posts only inference payloads to isolated Ollama; returned tool JSON is scored and saved, never dispatched. This is not a global audit of other users/processes.",
+  "arms": [
+    {
+      "arm": "baseline",
+      "decisions": 20,
+      "initialValid": 15,
+      "finalValid": 15,
+      "categories": {
+        "preferred": 5,
+        "unlisted_review_required": 8,
+        "invalid": 5,
+        "acceptable": 2
+      },
+      "repeatToolTarget": 6,
+      "calls": 20,
+      "retries": 0,
+      "successfulRetries": 0,
+      "failedRetries": 0,
+      "lengthStops": 5,
+      "contextBoundaryStops": 5,
+      "medianCallSeconds": 6.7057608025,
+      "totalModelSeconds": 143.046053893,
+      "promptTokens": 116165,
+      "outputTokens": 743,
+      "initialPromptTokenRange": [
+        2542,
+        8190
+      ]
+    },
+    {
+      "arm": "evidence_replan",
+      "decisions": 20,
+      "initialValid": 20,
+      "finalValid": 20,
+      "categories": {
+        "preferred": 13,
+        "unlisted_review_required": 7
+      },
+      "repeatToolTarget": 4,
+      "calls": 20,
+      "retries": 0,
+      "successfulRetries": 0,
+      "failedRetries": 0,
+      "lengthStops": 0,
+      "contextBoundaryStops": 0,
+      "medianCallSeconds": 4.617062509,
+      "totalModelSeconds": 141.215439742,
+      "promptTokens": 121269,
+      "outputTokens": 931,
+      "initialPromptTokenRange": [
+        3698,
+        8074
+      ]
+    },
+    {
+      "arm": "format_retry",
+      "decisions": 20,
+      "initialValid": 15,
+      "finalValid": 19,
+      "categories": {
+        "preferred": 8,
+        "unlisted_review_required": 9,
+        "acceptable": 2,
+        "invalid": 1
+      },
+      "repeatToolTarget": 7,
+      "calls": 25,
+      "retries": 5,
+      "successfulRetries": 4,
+      "failedRetries": 1,
+      "lengthStops": 6,
+      "contextBoundaryStops": 6,
+      "medianCallSeconds": 7.301090972,
+      "totalModelSeconds": 177.404468861,
+      "promptTokens": 150262,
+      "outputTokens": 949,
+      "initialPromptTokenRange": [
+        2542,
+        8190
+      ]
+    },
+    {
+      "arm": "both",
+      "decisions": 20,
+      "initialValid": 20,
+      "finalValid": 20,
+      "categories": {
+        "preferred": 13,
+        "unlisted_review_required": 7
+      },
+      "repeatToolTarget": 4,
+      "calls": 20,
+      "retries": 0,
+      "successfulRetries": 0,
+      "failedRetries": 0,
+      "lengthStops": 0,
+      "contextBoundaryStops": 0,
+      "medianCallSeconds": 7.602306132500001,
+      "totalModelSeconds": 199.11496958200001,
+      "promptTokens": 121269,
+      "outputTokens": 931,
+      "initialPromptTokenRange": [
+        3698,
+        8074
+      ]
+    }
+  ],
+  "strata": [
+    {
+      "arm": "baseline",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "baseline",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 3,
+        "acceptable": 2
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "baseline",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "invalid": 5
+      },
+      "initialValid": 0,
+      "finalValid": 0
+    },
+    {
+      "arm": "baseline",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 2,
+        "preferred": 3
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "evidence_replan",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 3,
+        "acceptable": 2
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 1,
+        "preferred": 3,
+        "invalid": 1
+      },
+      "initialValid": 0,
+      "finalValid": 4
+    },
+    {
+      "arm": "format_retry",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "both",
+      "stratum": "db_lock",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "both",
+      "stratum": "deployment",
+      "n": 5,
+      "categories": {
+        "unlisted_review_required": 2,
+        "preferred": 3
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "both",
+      "stratum": "truncation",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    },
+    {
+      "arm": "both",
+      "stratum": "success_control",
+      "n": 5,
+      "categories": {
+        "preferred": 5
+      },
+      "initialValid": 5,
+      "finalValid": 5
+    }
+  ],
+  "identicalInitialRequests": {
+    "baseline/format_retry": 20,
+    "evidence_replan/both": 20
+  },
+  "identicalInitialResponseTexts": {
+    "baseline/format_retry": 20,
+    "evidence_replan/both": 20
+  },
+  "rubricReviewRequired": [
+    {
+      "case": "t005-s05",
+      "arm": "baseline",
+      "decision": {
+        "tool": "power",
+        "target": "api-1",
+        "action": "restart",
+        "summary": "Restarting api-1 because it is running but unreachable and logs show request dispatch stalled."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t005-s05",
+      "arm": "both",
+      "decision": {
+        "tool": "power",
+        "target": "api-1",
+        "action": "restart",
+        "summary": "Restarting api-1 to clear the stalled request dispatch state."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t005-s05",
+      "arm": "evidence_replan",
+      "decision": {
+        "tool": "power",
+        "target": "api-1",
+        "action": "restart",
+        "summary": "Restarting api-1 to clear the stalled request dispatch state."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t005-s05",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "power",
+        "target": "api-1",
+        "action": "restart",
+        "summary": "Restarting api-1 because it is running but unreachable and logs show request dispatch stalled."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t007-s13",
+      "arm": "baseline",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t007-s13",
+      "arm": "both",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t007-s13",
+      "arm": "evidence_replan",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t007-s13",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t008-s13",
+      "arm": "baseline",
+      "decision": {
+        "tool": "probe",
+        "target": "api-2",
+        "action": "start",
+        "summary": "Probing api-2 to compare its health and dependencies with api-1."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t008-s13",
+      "arm": "both",
+      "decision": {
+        "tool": "probe",
+        "target": "api-2",
+        "action": "start",
+        "summary": "Probing api-2 to compare its health and dependencies with api-1."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t008-s13",
+      "arm": "evidence_replan",
+      "decision": {
+        "tool": "probe",
+        "target": "api-2",
+        "action": "start",
+        "summary": "Probing api-2 to compare its health and dependencies with api-1."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t008-s13",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "probe",
+        "target": "api-2",
+        "action": "start",
+        "summary": "Probing api-2 to compare its health and dependencies with api-1."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t011-s11",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "probe",
+        "target": "workers",
+        "action": "start",
+        "summary": "Probing worker group to confirm the release mismatch and job-processing failure."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t018-s06",
+      "arm": "baseline",
+      "decision": {
+        "tool": "power",
+        "target": "job-api",
+        "action": "restart",
+        "summary": "Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t018-s06",
+      "arm": "both",
+      "decision": {
+        "tool": "power",
+        "target": "job-api",
+        "action": "restart",
+        "summary": "Restarting the job-api group because both API instances are running but unresponsive with dispatch stalls."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t018-s06",
+      "arm": "evidence_replan",
+      "decision": {
+        "tool": "power",
+        "target": "job-api",
+        "action": "restart",
+        "summary": "Restarting the job-api group because both API instances are running but unresponsive with dispatch stalls."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t018-s06",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "power",
+        "target": "job-api",
+        "action": "restart",
+        "summary": "Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t030-s13",
+      "arm": "baseline",
+      "decision": {
+        "tool": "probe",
+        "target": "scheduler-1",
+        "action": "start",
+        "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t030-s13",
+      "arm": "both",
+      "decision": {
+        "tool": "probe",
+        "target": "scheduler-1",
+        "action": "start",
+        "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t030-s13",
+      "arm": "evidence_replan",
+      "decision": {
+        "tool": "probe",
+        "target": "scheduler-1",
+        "action": "start",
+        "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t030-s13",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "probe",
+        "target": "scheduler-1",
+        "action": "start",
+        "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t035-s13",
+      "arm": "baseline",
+      "decision": {
+        "tool": "probe",
+        "target": "api-1",
+        "action": "start",
+        "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t035-s13",
+      "arm": "both",
+      "decision": {
+        "tool": "probe",
+        "target": "api-1",
+        "action": "start",
+        "summary": "Probing api-1 to inspect its NATS publisher dependency, recent job submission errors, and release identity."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t035-s13",
+      "arm": "evidence_replan",
+      "decision": {
+        "tool": "probe",
+        "target": "api-1",
+        "action": "start",
+        "summary": "Probing api-1 to inspect its NATS publisher dependency, recent job submission errors, and release identity."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t035-s13",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "probe",
+        "target": "api-1",
+        "action": "start",
+        "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t036-s13",
+      "arm": "baseline",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t036-s13",
+      "arm": "both",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t036-s13",
+      "arm": "evidence_replan",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t036-s13",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "probe",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Probing worker-1 to check its job processing behavior."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t046-s14",
+      "arm": "baseline",
+      "decision": {
+        "tool": "logs",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages."
+      },
+      "score": {
+        "category": "acceptable",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t046-s14",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "logs",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages."
+      },
+      "score": {
+        "category": "acceptable",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t086-s15",
+      "arm": "baseline",
+      "decision": {
+        "tool": "probe",
+        "target": "scheduler-1",
+        "action": "start",
+        "summary": "Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t086-s15",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "probe",
+        "target": "scheduler-1",
+        "action": "start",
+        "summary": "Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path."
+      },
+      "score": {
+        "category": "unlisted_review_required",
+        "ambiguous": true,
+        "repeatToolTarget": false,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t130-s12",
+      "arm": "baseline",
+      "decision": {
+        "tool": "logs",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Inspecting worker-1 logs to understand the job decode failure and identify the expected payload format."
+      },
+      "score": {
+        "category": "acceptable",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    },
+    {
+      "case": "t130-s12",
+      "arm": "format_retry",
+      "decision": {
+        "tool": "logs",
+        "target": "worker-1",
+        "action": "start",
+        "summary": "Inspecting worker-1 logs to understand the job decode failure and identify the expected payload format."
+      },
+      "score": {
+        "category": "acceptable",
+        "ambiguous": true,
+        "repeatToolTarget": true,
+        "evidenceUseProxy": false
+      }
+    }
+  ],
+  "caveat": "Automatic development action labels, not human diagnosis, live recovery, independent confirmation or a mechanism-isolating comparison. Context retention and cache/order differ."
+}

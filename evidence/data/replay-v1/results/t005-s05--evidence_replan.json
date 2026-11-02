@@ -1,0 +1,36 @@
+{
+  "case": "t005-s05",
+  "arm": "evidence_replan",
+  "stratum": "deployment",
+  "scenario": "api-regression",
+  "sourceTrial": 5,
+  "beforeStep": 5,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "api-1",
+    "action": "restart",
+    "summary": "Restarting api-1 to clear the stalled request dispatch state."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3090970429,
+      "promptTokens": 3698,
+      "outputTokens": 39,
+      "responseFile": "attempts/t005-s05--evidence_replan-a0.response.json",
+      "responseText": "{\"tool\": \"power\", \"target\": \"api-1\", \"action\": \"restart\", \"summary\": \"Restarting api-1 to clear the stalled request dispatch state.\"}"
+    }
+  ],
+  "savedAt": 1793493375.2310162
+}

@@ -1,0 +1,42 @@
+{
+  "case": "t029-s15",
+  "arm": "facts_entity",
+  "stratum": "success_control",
+  "scenario": "database-lock",
+  "sourceTrial": 29,
+  "beforeStep": 15,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "release_database_lock",
+    "target": "postgres",
+    "action": "start",
+    "summary": "Terminate the maintenance session holding the jobs table lock that is blocking job submission/completion."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 2411,
+  "actualPromptTokens": 2411,
+  "reservedHeadroom": 5781,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2411,
+      "outputTokens": 36,
+      "totalDurationNs": 5829846174,
+      "responseText": "{\"tool\":\"release_database_lock\",\"target\":\"postgres\",\"action\":\"start\",\"summary\":\"Terminate the maintenance session holding the jobs table lock that is blocking job submission/completion.\"}",
+      "responseFile": "attempts/t029-s15--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494471.9872928
+}

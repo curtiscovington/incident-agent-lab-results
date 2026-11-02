@@ -1,0 +1,30 @@
+{
+  "case": "t091-s10",
+  "arm": "baseline",
+  "stratum": "truncation",
+  "scenario": "api-regression",
+  "sourceTrial": 91,
+  "beforeStep": 10,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 10831821552,
+      "promptTokens": 8182,
+      "outputTokens": 10,
+      "responseFile": "attempts/t091-s10--baseline-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \""
+    }
+  ],
+  "savedAt": 1793493170.8660362
+}

@@ -1,0 +1,435 @@
+{
+  "id": "replay-20261101-v1",
+  "type": "Development next-decision replay; never live tool execution",
+  "frozenAt": 1793492847.858249,
+  "model": "qwen3.8:27b-q4_K_M",
+  "modelDigest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+  "endpoint": "http://127.0.0.1:11439",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 384
+  },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "tool": {
+        "type": "string",
+        "enum": [
+          "inspect",
+          "logs",
+          "metrics",
+          "probe",
+          "power",
+          "rollback",
+          "verify",
+          "finish",
+          "escalate",
+          "connectivity",
+          "network_policy",
+          "restore_network",
+          "database_activity",
+          "release_database_lock",
+          "messaging_status",
+          "release_scheduler_lease"
+        ]
+      },
+      "target": {
+        "type": "string",
+        "enum": [
+          "ingress",
+          "api-1",
+          "api-2",
+          "postgres",
+          "scheduler-1",
+          "scheduler-2",
+          "nats-1",
+          "nats-2",
+          "nats-3",
+          "worker-1",
+          "worker-2",
+          "worker-3",
+          "prometheus",
+          "control-client",
+          "control-plane",
+          "job-api",
+          "schedulers",
+          "messaging",
+          "workers"
+        ]
+      },
+      "action": {
+        "type": "string",
+        "enum": [
+          "",
+          "start",
+          "stop",
+          "restart"
+        ]
+      },
+      "summary": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "tool",
+      "target",
+      "action",
+      "summary"
+    ],
+    "additionalProperties": false
+  },
+  "arms": [
+    "baseline",
+    "evidence_replan",
+    "format_retry",
+    "both"
+  ],
+  "initialCalls": 80,
+  "maxRetryPerApplicableDecision": 1,
+  "maxInferenceCalls": 120,
+  "queue": [
+    {
+      "case": "t158-s07",
+      "arm": "both"
+    },
+    {
+      "case": "t158-s07",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t158-s07",
+      "arm": "baseline"
+    },
+    {
+      "case": "t158-s07",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "baseline"
+    },
+    {
+      "case": "t018-s06",
+      "arm": "both"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "both"
+    },
+    {
+      "case": "t086-s15",
+      "arm": "baseline"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "both"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "baseline"
+    },
+    {
+      "case": "t001-s07",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "both"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "baseline"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t091-s10",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "both"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "baseline"
+    },
+    {
+      "case": "t012-s03",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "both"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "baseline"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t045-s07",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "baseline"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t046-s14",
+      "arm": "both"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "both"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t130-s12",
+      "arm": "baseline"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "baseline"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "both"
+    },
+    {
+      "case": "t029-s15",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "baseline"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "both"
+    },
+    {
+      "case": "t005-s05",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "both"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t036-s13",
+      "arm": "baseline"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "baseline"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t015-s03",
+      "arm": "both"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "both"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t011-s11",
+      "arm": "baseline"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "baseline"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "both"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t007-s13",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "baseline"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "both"
+    },
+    {
+      "case": "t003-s06",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "both"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "baseline"
+    },
+    {
+      "case": "t008-s13",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "baseline"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "both"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t085-s08",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "baseline"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "format_retry"
+    },
+    {
+      "case": "t035-s13",
+      "arm": "both"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "evidence_replan"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "both"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "baseline"
+    },
+    {
+      "case": "t030-s13",
+      "arm": "format_retry"
+    }
+  ],
+  "evidenceInstruction": "\nReplay development intervention: Retain the verified facts in the evidence record. Component health alone does not prove business recovery. If a tool/target has already been checked without a repair or material new evidence, reconsider the diagnosis and choose a discriminating diagnostic action or a supported scoped repair; do not simply repeat the same investigation cycle. Do not invent facts. The record summarizes past tool results, not new observations.",
+  "repairInstruction": "The preceding response was not a valid schema-conforming decision. Return exactly one complete JSON object conforming to the supplied schema. Keep summary brief (one sentence). Select an action using only the existing evidence. No tools have been executed since the last observation.",
+  "primary": "Descriptive preferred/acceptable/unlisted next-action counts and schema validity; no significance or acceptance threshold",
+  "limitations": [
+    "Outcome-aware development case selection, not held-out confirmation",
+    "Saved trajectories are teacher-forced; no downstream recovery or safety conclusion",
+    "Source current/runbook prompts retained; source-arm mix is fixed across replay arms",
+    "Preferred action rubric uses known fault and prior trace evidence; unlisted choices require human review",
+    "evidenceUseProxy is next-action match, not a semantic or causal evidence-use rating",
+    "Natural malformed replies may not recur; no forced corruption in model experiment",
+    "Same quantized model and decoding settings; isolated Ollama 0.35.1 serving runtime recorded, exact historical server equivalence unverified",
+    "No retries after an uncertain request outcome; stop for inspection",
+    "No p-values or tuning after results"
+  ],
+  "stopRule": "Run frozen queue to completion, stop on server/model/source drift or uncertain inference; pause between calls, save each attempt, resume completed records without repetition",
+  "selection": "Five fixed cases each: database-lock failures, deployment-evidence failures, historical truncations, successful controls. Not blinded. See cases.json for exact trial and before-step indices.",
+  "scoring": "Deterministic JSON-schema validator plus explicit preferred/acceptable action tuples; all other valid decisions marked unlisted_review_required; not human diagnosis adjudication",
+  "sourceProtocolSha256": "9b2ad7a20eef075e6a34268ccef2d352b1d723f7f35157d7caca9febd4a20df8",
+  "hardware": {
+    "machine": "aarch64"
+  }
+}

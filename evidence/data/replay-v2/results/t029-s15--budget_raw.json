@@ -1,0 +1,42 @@
+{
+  "case": "t029-s15",
+  "arm": "budget_raw",
+  "stratum": "success_control",
+  "scenario": "database-lock",
+  "sourceTrial": 29,
+  "beforeStep": 15,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "release_database_lock",
+    "target": "postgres",
+    "action": "start",
+    "summary": "Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 5114,
+  "actualPromptTokens": 5114,
+  "reservedHeadroom": 3078,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 5114,
+      "outputTokens": 44,
+      "totalDurationNs": 9544887164,
+      "responseText": "{\"tool\": \"release_database_lock\", \"target\": \"postgres\", \"action\": \"start\", \"summary\": \"Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission.\"}",
+      "responseFile": "attempts/t029-s15--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494466.145112
+}

@@ -1,0 +1,42 @@
+{
+  "case": "t158-s07",
+  "arm": "facts_time",
+  "stratum": "truncation",
+  "scenario": "scheduler-lease",
+  "sourceTrial": 158,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "release_scheduler_lease",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Release the abandoned scheduler advisory lease held by session 328 so scheduler-2 can recover."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 2324,
+  "actualPromptTokens": 2324,
+  "reservedHeadroom": 5868,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2324,
+      "outputTokens": 41,
+      "totalDurationNs": 6142893119,
+      "responseText": "{\"tool\":\"release_scheduler_lease\",\"target\":\"schedulers\",\"action\":\"start\",\"summary\":\"Release the abandoned scheduler advisory lease held by session 328 so scheduler-2 can recover.\"}",
+      "responseFile": "attempts/t158-s07--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494399.2350054
+}

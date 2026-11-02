@@ -1,0 +1,36 @@
+{
+  "case": "t029-s15",
+  "arm": "evidence_replan",
+  "stratum": "success_control",
+  "scenario": "database-lock",
+  "sourceTrial": 29,
+  "beforeStep": 15,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "release_database_lock",
+    "target": "postgres",
+    "action": "start",
+    "summary": "Releasing the lab-maintenance session (pid 377) holding the jobs table lock that is blocking job submission."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 4039461057,
+      "promptTokens": 6550,
+      "outputTokens": 51,
+      "responseFile": "attempts/t029-s15--evidence_replan-a0.response.json",
+      "responseText": "{\"tool\": \"release_database_lock\", \"target\": \"postgres\", \"action\": \"start\", \"summary\": \"Releasing the lab-maintenance session (pid 377) holding the jobs table lock that is blocking job submission.\"}"
+    }
+  ],
+  "savedAt": 1793493353.8099964
+}

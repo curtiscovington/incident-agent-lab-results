@@ -1,0 +1,36 @@
+{
+  "case": "t046-s14",
+  "arm": "baseline",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 46,
+  "beforeStep": 14,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "logs",
+    "target": "worker-1",
+    "action": "start",
+    "summary": "Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3611734627,
+      "promptTokens": 4710,
+      "outputTokens": 45,
+      "responseFile": "attempts/t046-s14--baseline-a0.response.json",
+      "responseText": "{\"tool\": \"logs\", \"target\": \"worker-1\", \"action\": \"start\", \"summary\": \"Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages.\"}"
+    }
+  ],
+  "savedAt": 1793493277.7206905
+}

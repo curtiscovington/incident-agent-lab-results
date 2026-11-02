@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:40:17.771474297Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"probe\", \"target\": \"scheduler-1\", \"action\": \"start\", \"summary\": \"Probing scheduler-1 to check its NATS and database dependency behavior.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10790229333,
+  "load_duration": 59222890,
+  "prompt_eval_count": 6173,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 7453207000,
+  "eval_count": 41,
+  "eval_duration": 3091087000
+}

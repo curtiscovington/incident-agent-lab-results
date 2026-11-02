@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:55:15.371504315Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\":\"rollback\",\"target\":\"workers\",\"action\":\"start\",\"summary\":\"Rolling back all workers from release w2 to known-good w1 after logs show job decode failures (KeyError: job_id) and a growing queue with zero running jobs.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7828918550,
+  "load_duration": 49624318,
+  "prompt_eval_count": 3109,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 3796221000,
+  "eval_count": 53,
+  "eval_duration": 3964678000
+}

@@ -1,0 +1,42 @@
+{
+  "case": "t030-s13",
+  "arm": "budget_raw",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 30,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "scheduler-1",
+    "action": "start",
+    "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 4863,
+  "actualPromptTokens": 4863,
+  "reservedHeadroom": 3329,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 4863,
+      "outputTokens": 41,
+      "totalDurationNs": 9088775870,
+      "responseText": "{\"tool\": \"probe\", \"target\": \"scheduler-1\", \"action\": \"start\", \"summary\": \"Probing scheduler-1 to check its NATS and database dependency behavior.\"}",
+      "responseFile": "attempts/t030-s13--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494940.257368
+}

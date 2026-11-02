@@ -1,0 +1,36 @@
+{
+  "case": "t003-s06",
+  "arm": "format_retry",
+  "stratum": "success_control",
+  "scenario": "database-route",
+  "sourceTrial": 3,
+  "beforeStep": 6,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "restore_network",
+    "target": "job-api",
+    "action": "start",
+    "summary": "Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 4138025436,
+      "promptTokens": 7305,
+      "outputTokens": 52,
+      "responseFile": "attempts/t003-s06--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"restore_network\", \"target\": \"job-api\", \"action\": \"start\", \"summary\": \"Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres.\"}"
+    }
+  ],
+  "savedAt": 1793493493.4063988
+}

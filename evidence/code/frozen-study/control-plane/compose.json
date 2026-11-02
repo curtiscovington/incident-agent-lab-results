@@ -1,0 +1,1119 @@
+{
+  "name": "bigspark-plane",
+  "services": {
+    "postgres": {
+      "container_name": "cp-postgres",
+      "image": "postgres:17-alpine",
+      "networks": {
+        "data": {
+          "ipv4_address": "10.78.50.11",
+          "interface_name": "eth0"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "768m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "database",
+        "lab.zone": "data",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "environment": {
+        "POSTGRES_DB": "plane",
+        "POSTGRES_USER": "plane",
+        "POSTGRES_PASSWORD_FILE": "/run/secrets/db_password"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "volumes": [
+        "pg-data:/var/lib/postgresql/data",
+        "./schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -U plane -d plane"
+        ],
+        "interval": "3s",
+        "timeout": "3s",
+        "retries": 20
+      }
+    },
+    "nats-1": {
+      "container_name": "cp-nats-1",
+      "image": "nats:2.11-alpine",
+      "networks": {
+        "messaging": {
+          "ipv4_address": "10.78.30.11",
+          "interface_name": "eth0"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "messaging",
+        "lab.zone": "messaging",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "command": [
+        "-c",
+        "/etc/nats/nats.conf"
+      ],
+      "volumes": [
+        "./nats-1.conf:/etc/nats/nats.conf:ro",
+        "nats-1:/data"
+      ]
+    },
+    "nats-2": {
+      "container_name": "cp-nats-2",
+      "image": "nats:2.11-alpine",
+      "networks": {
+        "messaging": {
+          "ipv4_address": "10.78.30.12",
+          "interface_name": "eth0"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "messaging",
+        "lab.zone": "messaging",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "command": [
+        "-c",
+        "/etc/nats/nats.conf"
+      ],
+      "volumes": [
+        "./nats-2.conf:/etc/nats/nats.conf:ro",
+        "nats-2:/data"
+      ]
+    },
+    "nats-3": {
+      "container_name": "cp-nats-3",
+      "image": "nats:2.11-alpine",
+      "networks": {
+        "messaging": {
+          "ipv4_address": "10.78.30.13",
+          "interface_name": "eth0"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "messaging",
+        "lab.zone": "messaging",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "command": [
+        "-c",
+        "/etc/nats/nats.conf"
+      ],
+      "volumes": [
+        "./nats-3.conf:/etc/nats/nats.conf:ro",
+        "nats-3:/data"
+      ]
+    },
+    "api-1": {
+      "container_name": "cp-api-1",
+      "image": "bigspark-control-plane:1",
+      "networks": {
+        "control": {
+          "ipv4_address": "10.78.40.21",
+          "interface_name": "eth0"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.21",
+          "interface_name": "eth1"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "api",
+        "lab.zone": "control",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": ".",
+      "environment": {
+        "NODE_NAME": "api-1",
+        "ROLE": "api"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=3)"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 3,
+        "start_period": "20s"
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      },
+      "profiles": [
+        "bootstrap-api"
+      ]
+    },
+    "api-2": {
+      "container_name": "cp-api-2",
+      "image": "bigspark-control-plane:1",
+      "networks": {
+        "control": {
+          "ipv4_address": "10.78.40.22",
+          "interface_name": "eth0"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.22",
+          "interface_name": "eth1"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "api",
+        "lab.zone": "control",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": ".",
+      "environment": {
+        "NODE_NAME": "api-2",
+        "ROLE": "api"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=3)"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 3,
+        "start_period": "20s"
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      },
+      "profiles": [
+        "bootstrap-api"
+      ]
+    },
+    "scheduler-1": {
+      "container_name": "cp-scheduler-1",
+      "image": "bigspark-control-plane:1",
+      "networks": {
+        "control": {
+          "ipv4_address": "10.78.40.31",
+          "interface_name": "eth0"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.31",
+          "interface_name": "eth1"
+        },
+        "messaging": {
+          "ipv4_address": "10.78.30.31",
+          "interface_name": "eth2"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "scheduler",
+        "lab.zone": "control",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": ".",
+      "environment": {
+        "NODE_NAME": "scheduler-1",
+        "ROLE": "scheduler"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=3)"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 3,
+        "start_period": "20s"
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      }
+    },
+    "scheduler-2": {
+      "container_name": "cp-scheduler-2",
+      "image": "bigspark-control-plane:1",
+      "networks": {
+        "control": {
+          "ipv4_address": "10.78.40.32",
+          "interface_name": "eth0"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.32",
+          "interface_name": "eth1"
+        },
+        "messaging": {
+          "ipv4_address": "10.78.30.32",
+          "interface_name": "eth2"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "scheduler",
+        "lab.zone": "control",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": ".",
+      "environment": {
+        "NODE_NAME": "scheduler-2",
+        "ROLE": "scheduler"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=3)"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 3,
+        "start_period": "20s"
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      }
+    },
+    "worker-1": {
+      "container_name": "cp-worker-1",
+      "image": "bigspark-control-plane:1",
+      "networks": {
+        "compute": {
+          "ipv4_address": "10.78.20.21",
+          "interface_name": "eth0"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.41",
+          "interface_name": "eth1"
+        },
+        "messaging": {
+          "ipv4_address": "10.78.30.41",
+          "interface_name": "eth2"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "worker",
+        "lab.zone": "compute",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": ".",
+      "environment": {
+        "NODE_NAME": "worker-1",
+        "ROLE": "worker"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=3)"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 3,
+        "start_period": "20s"
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      },
+      "profiles": [
+        "bootstrap-workers"
+      ]
+    },
+    "worker-2": {
+      "container_name": "cp-worker-2",
+      "image": "bigspark-control-plane:1",
+      "networks": {
+        "compute": {
+          "ipv4_address": "10.78.20.22",
+          "interface_name": "eth0"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.42",
+          "interface_name": "eth1"
+        },
+        "messaging": {
+          "ipv4_address": "10.78.30.42",
+          "interface_name": "eth2"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "worker",
+        "lab.zone": "compute",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": ".",
+      "environment": {
+        "NODE_NAME": "worker-2",
+        "ROLE": "worker"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=3)"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 3,
+        "start_period": "20s"
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      },
+      "profiles": [
+        "bootstrap-workers"
+      ]
+    },
+    "worker-3": {
+      "container_name": "cp-worker-3",
+      "image": "bigspark-control-plane:1",
+      "networks": {
+        "compute": {
+          "ipv4_address": "10.78.20.23",
+          "interface_name": "eth0"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.43",
+          "interface_name": "eth1"
+        },
+        "messaging": {
+          "ipv4_address": "10.78.30.43",
+          "interface_name": "eth2"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "worker",
+        "lab.zone": "compute",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": ".",
+      "environment": {
+        "NODE_NAME": "worker-3",
+        "ROLE": "worker"
+      },
+      "secrets": [
+        "db_password"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=3)"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 3,
+        "start_period": "20s"
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      },
+      "profiles": [
+        "bootstrap-workers"
+      ]
+    },
+    "ingress": {
+      "container_name": "cp-ingress",
+      "image": "nginx:1.28-alpine",
+      "networks": {
+        "edge": {
+          "ipv4_address": "10.78.10.10",
+          "interface_name": "eth0"
+        },
+        "control": {
+          "ipv4_address": "10.78.40.10",
+          "interface_name": "eth1"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "384m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "load-balancer",
+        "lab.zone": "edge",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "volumes": [
+        "./nginx.conf:/etc/nginx/nginx.conf:ro"
+      ]
+    },
+    "prometheus": {
+      "container_name": "cp-prometheus",
+      "image": "prom/prometheus:v3.5.0",
+      "networks": {
+        "observe": {
+          "ipv4_address": "10.78.0.20",
+          "interface_name": "eth0"
+        },
+        "control": {
+          "ipv4_address": "10.78.40.90",
+          "interface_name": "eth1"
+        },
+        "compute": {
+          "ipv4_address": "10.78.20.90",
+          "interface_name": "eth2"
+        },
+        "messaging": {
+          "ipv4_address": "10.78.30.90",
+          "interface_name": "eth3"
+        },
+        "data": {
+          "ipv4_address": "10.78.50.90",
+          "interface_name": "eth4"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "512m",
+      "cpus": 0.75,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "metrics",
+        "lab.zone": "observe",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "volumes": [
+        "./prometheus.json:/etc/prometheus/prometheus.yml:ro",
+        "prom-data:/prometheus"
+      ],
+      "command": [
+        "--config.file=/etc/prometheus/prometheus.yml",
+        "--storage.tsdb.retention.time=3d"
+      ]
+    },
+    "catalog": {
+      "container_name": "cp-catalog",
+      "image": "bigspark-private-access:1",
+      "networks": {
+        "sister": {
+          "ipv4_address": "10.78.70.11",
+          "interface_name": "eth0"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "128m",
+      "cpus": 0.25,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "producer",
+        "lab.zone": "sister",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": "./private-access",
+      "environment": {
+        "NODE_NAME": "catalog",
+        "ROLE": "producer",
+        "LISTEN_IP": "10.78.70.11"
+      },
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "sysctls": {
+        "net.ipv4.ip_forward": "0"
+      },
+      "volumes": [
+        "<LOCAL_HOME>/Dev/datacenter-lab/.runtime/private-access/catalog:/run/access:ro"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=2)"
+        ],
+        "interval": "5s",
+        "timeout": "3s",
+        "retries": 3
+      }
+    },
+    "private-access": {
+      "container_name": "cp-private-access",
+      "image": "bigspark-private-access:1",
+      "networks": {
+        "control": {
+          "ipv4_address": "10.78.40.60",
+          "interface_name": "eth0"
+        },
+        "sister": {
+          "ipv4_address": "10.78.70.10",
+          "interface_name": "eth1"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "128m",
+      "cpus": 0.25,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "access-endpoint",
+        "lab.zone": "control",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": "./private-access",
+      "environment": {
+        "NODE_NAME": "private-access",
+        "ROLE": "proxy",
+        "LISTEN_IP": "10.78.40.60"
+      },
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "sysctls": {
+        "net.ipv4.ip_forward": "0"
+      },
+      "volumes": [
+        "<LOCAL_HOME>/Dev/datacenter-lab/.runtime/private-access/private-access:/run/access:ro",
+        "<LOCAL_HOME>/Dev/datacenter-lab/.runtime/private-access/policy:/run/policy:ro"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=2)"
+        ],
+        "interval": "5s",
+        "timeout": "3s",
+        "retries": 3
+      }
+    },
+    "control-client": {
+      "container_name": "cp-control-client",
+      "image": "bigspark-private-access:1",
+      "networks": {
+        "control": {
+          "ipv4_address": "10.78.40.61",
+          "interface_name": "eth0"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "128m",
+      "cpus": 0.25,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "consumer",
+        "lab.zone": "control",
+        "lab.domain": "a"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": "./private-access",
+      "environment": {
+        "NODE_NAME": "control-client",
+        "ROLE": "consumer",
+        "LISTEN_IP": "10.78.40.61"
+      },
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "sysctls": {
+        "net.ipv4.ip_forward": "0"
+      },
+      "volumes": [
+        "<LOCAL_HOME>/Dev/datacenter-lab/.runtime/private-access/control-client:/run/access:ro"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=2)"
+        ],
+        "interval": "5s",
+        "timeout": "3s",
+        "retries": 3
+      }
+    },
+    "unapproved-client": {
+      "container_name": "cp-unapproved-client",
+      "image": "bigspark-private-access:1",
+      "networks": {
+        "control": {
+          "ipv4_address": "10.78.40.62",
+          "interface_name": "eth0"
+        }
+      },
+      "restart": "unless-stopped",
+      "mem_limit": "128m",
+      "cpus": 0.25,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "labels": {
+        "lab.system": "control-plane",
+        "lab.role": "consumer",
+        "lab.zone": "control",
+        "lab.domain": "b"
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "5m",
+          "max-file": "2"
+        }
+      },
+      "build": "./private-access",
+      "environment": {
+        "NODE_NAME": "unapproved-client",
+        "ROLE": "consumer",
+        "LISTEN_IP": "10.78.40.62"
+      },
+      "read_only": true,
+      "tmpfs": [
+        "/tmp"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "sysctls": {
+        "net.ipv4.ip_forward": "0"
+      },
+      "volumes": [
+        "<LOCAL_HOME>/Dev/datacenter-lab/.runtime/private-access/unapproved-client:/run/access:ro"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request;urllib.request.urlopen('http://localhost:8080/health',timeout=2)"
+        ],
+        "interval": "5s",
+        "timeout": "3s",
+        "retries": 3
+      }
+    }
+  },
+  "networks": {
+    "edge": {
+      "name": "cp-edge",
+      "driver": "bridge",
+      "internal": true,
+      "driver_opts": {
+        "com.docker.network.bridge.name": "cp-edge"
+      },
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.78.10.0/24",
+            "gateway": "10.78.10.1",
+            "ip_range": "10.78.10.128/25"
+          }
+        ]
+      }
+    },
+    "control": {
+      "name": "cp-control",
+      "driver": "bridge",
+      "internal": true,
+      "driver_opts": {
+        "com.docker.network.bridge.name": "cp-control"
+      },
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.78.40.0/24",
+            "gateway": "10.78.40.1",
+            "ip_range": "10.78.40.128/25"
+          }
+        ]
+      }
+    },
+    "messaging": {
+      "name": "cp-messaging",
+      "driver": "bridge",
+      "internal": true,
+      "driver_opts": {
+        "com.docker.network.bridge.name": "cp-messaging"
+      },
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.78.30.0/24",
+            "gateway": "10.78.30.1",
+            "ip_range": "10.78.30.128/25"
+          }
+        ]
+      }
+    },
+    "compute": {
+      "name": "cp-compute",
+      "driver": "bridge",
+      "internal": true,
+      "driver_opts": {
+        "com.docker.network.bridge.name": "cp-compute"
+      },
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.78.20.0/24",
+            "gateway": "10.78.20.1",
+            "ip_range": "10.78.20.128/25"
+          }
+        ]
+      }
+    },
+    "data": {
+      "name": "cp-data",
+      "driver": "bridge",
+      "internal": true,
+      "driver_opts": {
+        "com.docker.network.bridge.name": "cp-data"
+      },
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.78.50.0/24",
+            "gateway": "10.78.50.1",
+            "ip_range": "10.78.50.128/25"
+          }
+        ]
+      }
+    },
+    "observe": {
+      "name": "cp-observe",
+      "driver": "bridge",
+      "internal": true,
+      "driver_opts": {
+        "com.docker.network.bridge.name": "cp-observe"
+      },
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.78.0.0/24",
+            "gateway": "10.78.0.1",
+            "ip_range": "10.78.0.128/25"
+          }
+        ]
+      }
+    },
+    "sister": {
+      "name": "cp-sister",
+      "driver": "bridge",
+      "internal": true,
+      "driver_opts": {
+        "com.docker.network.bridge.name": "cp-sister"
+      },
+      "ipam": {
+        "config": [
+          {
+            "subnet": "10.78.70.0/24",
+            "gateway": "10.78.70.1",
+            "ip_range": "10.78.70.128/25"
+          }
+        ]
+      }
+    }
+  },
+  "volumes": {
+    "pg-data": {},
+    "nats-1": {},
+    "nats-2": {},
+    "nats-3": {},
+    "prom-data": {}
+  },
+  "secrets": {
+    "db_password": {
+      "file": "<LOCAL_HOME>/Dev/datacenter-lab/.runtime/control-plane/db-password"
+    }
+  }
+}

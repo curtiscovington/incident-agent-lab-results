@@ -1,0 +1,36 @@
+{
+  "case": "t005-s05",
+  "arm": "format_retry",
+  "stratum": "deployment",
+  "scenario": "api-regression",
+  "sourceTrial": 5,
+  "beforeStep": 5,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "api-1",
+    "action": "restart",
+    "summary": "Restarting api-1 because it is running but unreachable and logs show request dispatch stalled."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3474732084,
+      "promptTokens": 3050,
+      "outputTokens": 44,
+      "responseFile": "attempts/t005-s05--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"power\", \"target\": \"api-1\", \"action\": \"restart\", \"summary\": \"Restarting api-1 because it is running but unreachable and logs show request dispatch stalled.\"}"
+    }
+  ],
+  "savedAt": 1793493364.534309
+}

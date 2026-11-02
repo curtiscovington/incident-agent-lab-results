@@ -1,0 +1,42 @@
+{
+  "case": "t085-s08",
+  "arm": "budget_raw",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 85,
+  "beforeStep": 8,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back all three workers from the broken w2 release to the known-good w1 release that decodes job_id correctly."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 6943,
+  "actualPromptTokens": 6943,
+  "reservedHeadroom": 1249,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 6943,
+      "outputTokens": 50,
+      "totalDurationNs": 12211464535,
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back all three workers from the broken w2 release to the known-good w1 release that decodes job_id correctly.\"}",
+      "responseFile": "attempts/t085-s08--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494923.0714805
+}

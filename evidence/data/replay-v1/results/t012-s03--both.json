@@ -1,0 +1,36 @@
+{
+  "case": "t012-s03",
+  "arm": "both",
+  "stratum": "success_control",
+  "scenario": "worker-backlog",
+  "sourceTrial": 12,
+  "beforeStep": 3,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back all workers from release w2 to known-good w1, since w2 fails to decode the job_id field and leaves 4 jobs stuck in the queue."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 9747499827,
+      "promptTokens": 4122,
+      "outputTokens": 59,
+      "responseFile": "attempts/t012-s03--both-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back all workers from release w2 to known-good w1, since w2 fails to decode the job_id field and leaves 4 jobs stuck in the queue.\"}"
+    }
+  ],
+  "savedAt": 1793493212.055388
+}

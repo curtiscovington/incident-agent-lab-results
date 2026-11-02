@@ -1,0 +1,42 @@
+{
+  "case": "t130-s12",
+  "arm": "replication",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 130,
+  "beforeStep": 12,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "logs",
+    "target": "worker-1",
+    "action": "start",
+    "summary": "Inspecting worker-1 logs to understand the job decode failure and identify the expected payload format."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 11426,
+  "actualPromptTokens": 5466,
+  "reservedHeadroom": 2726,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": -5960,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 5466,
+      "outputTokens": 45,
+      "totalDurationNs": 10291132097,
+      "responseText": "{\"tool\": \"logs\", \"target\": \"worker-1\", \"action\": \"start\", \"summary\": \"Inspecting worker-1 logs to understand the job decode failure and identify the expected payload format.\"}",
+      "responseFile": "attempts/t130-s12--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494536.9900444
+}

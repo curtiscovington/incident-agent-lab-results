@@ -1,0 +1,36 @@
+{
+  "case": "t046-s14",
+  "arm": "both",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 46,
+  "beforeStep": 14,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling the worker group back from w2 to known-good w1 because worker logs show job_decode_failed KeyError: job_id."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 4054097302,
+      "promptTokens": 6405,
+      "outputTokens": 50,
+      "responseFile": "attempts/t046-s14--both-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling the worker group back from w2 to known-good w1 because worker logs show job_decode_failed KeyError: job_id.\"}"
+    }
+  ],
+  "savedAt": 1793493293.6024988
+}

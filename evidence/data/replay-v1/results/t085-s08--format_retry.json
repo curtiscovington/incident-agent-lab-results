@@ -1,0 +1,47 @@
+{
+  "case": "t085-s08",
+  "arm": "format_retry",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 85,
+  "beforeStep": 8,
+  "initialValid": false,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back all workers from the broken w2 release to the known-good w1 release to fix job decoding."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 1961821120,
+      "promptTokens": 8173,
+      "outputTokens": 19,
+      "responseFile": "attempts/t085-s08--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \""
+    },
+    {
+      "attempt": 1,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 11478961033,
+      "promptTokens": 6301,
+      "outputTokens": 47,
+      "responseFile": "attempts/t085-s08--format_retry-a1.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back all workers from the broken w2 release to the known-good w1 release to fix job decoding.\"}"
+    }
+  ],
+  "savedAt": 1793493573.0211084
+}

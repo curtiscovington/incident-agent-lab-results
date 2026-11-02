@@ -1,0 +1,1911 @@
+{
+  "truncationByCondition": {
+    "runbook": {
+      "trials": 80,
+      "replies": 780,
+      "failedTrials": 13,
+      "lengthReplies": 5,
+      "trialsWithLengthReply": 5,
+      "failedWithTerminalLength": 4
+    },
+    "current": {
+      "trials": 80,
+      "replies": 916,
+      "failedTrials": 23,
+      "lengthReplies": 5,
+      "trialsWithLengthReply": 5,
+      "failedWithTerminalLength": 5
+    }
+  },
+  "trialResponseCounts": [
+    {
+      "trial": 1,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "71aee18559528a78184a1493bc6e22146fcfacd5dac78afa9e2c9f86e30eddaf"
+    },
+    {
+      "trial": 2,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "3e285ba52a4ffc83350819041a9efe8b4401c25d8c44a17ff138939693d59cbd"
+    },
+    {
+      "trial": 3,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "14aa3aceffa842f9db4d124b28175f3e9bbd69af314fc2551dedf926b98cd893"
+    },
+    {
+      "trial": 4,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "43a61ae574ec140f978d09e50729cc5b3d569186307596f09536676fc0134eb4"
+    },
+    {
+      "trial": 5,
+      "condition": "current",
+      "replies": 12,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "2df45c2a9a32c2c684994ff2bdaf287421fa48083a71c7a86eba098d89983f11"
+    },
+    {
+      "trial": 6,
+      "condition": "runbook",
+      "replies": 14,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "fbb02d869119faa0f5381b13edb976a4a595138b2f38c94c3d9c5c72d2fd1189"
+    },
+    {
+      "trial": 7,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "5cdb919ce3d3a2e49f3fd784602c32bfba694ecdc2a38099b133a2a4c674f9ee"
+    },
+    {
+      "trial": 8,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "1d7e85d563f962d944d81d4c81b9a1eb5efc7f09c969bf21c525dc1ffabe4351"
+    },
+    {
+      "trial": 9,
+      "condition": "runbook",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "e46b861d540c02261e001795f7592850d49d7e60a5d5dc66d8a58a4b43026e1a"
+    },
+    {
+      "trial": 10,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "cabe40365720d3ba19775506a291cf749ee1818f8a60e075d764213011a88273"
+    },
+    {
+      "trial": 11,
+      "condition": "current",
+      "replies": 11,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "bd2bea23d0faab6f056351ce2fdc72e5ea4ae15b0252eced3af7f89bd7e51212"
+    },
+    {
+      "trial": 12,
+      "condition": "runbook",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "be8149ade94cdd5811b26f72ba8f47369b8682c47a214a1d5b0755748a06f43e"
+    },
+    {
+      "trial": 13,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5ca737689de67e27cb3b4098e93cde6a680b509ddb2229098697b3dd7b2c11e9"
+    },
+    {
+      "trial": 14,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "0a53e6b83daa450e7d4101810d470a0d6209f22f182da53d71caa97b3e813764"
+    },
+    {
+      "trial": 15,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "6830b92c6bb5a857a47b6e973de7171b64c961fe50e205d7bd4d73cee29e243d"
+    },
+    {
+      "trial": 16,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "7fa093754c1d96acc945d09f7486d671fabeb0df51f3a045aa89231d720d6cbf"
+    },
+    {
+      "trial": 17,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "0f67ab885d017829868776f13451f8ef29a84920aba0128f4f84754ab416f635"
+    },
+    {
+      "trial": 18,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "959eeed0bf61ee0456904d98bb75beda015835faaec70522e417e45a6bde5b2c"
+    },
+    {
+      "trial": 19,
+      "condition": "current",
+      "replies": 15,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "85d2ad9cfc42f0f461a65e42f146d470392258dd59c58be5ee08f4f1015115f4"
+    },
+    {
+      "trial": 20,
+      "condition": "runbook",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "ccd30a0d1917e027a389f55bfc776f30266e4c4386b0f1ee8f21d1182e64e7bc"
+    },
+    {
+      "trial": 21,
+      "condition": "current",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "2ffa62cea407c028c1f8b8c670a61e84a4ca07ff105fd35b56f3b32a1d9f6344"
+    },
+    {
+      "trial": 22,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "de6de497a9ad83542ff633bb44a7a1c8c99a3c252b0a4f008be90b668f23f10f"
+    },
+    {
+      "trial": 23,
+      "condition": "current",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "2e099c31bc0b05cf75bfe04381744f317cd0c85f6e843b401ae4e0f6db3ca307"
+    },
+    {
+      "trial": 24,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "34ffe2b50cc6053a31c3191268762fdec114d1f41c06413a7a5ce6ce23cbea55"
+    },
+    {
+      "trial": 25,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "ee512e32af1844d1a2f7f844c499bd72d50abd221915f4b1ec2e1054284a65f2"
+    },
+    {
+      "trial": 26,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "a75a15f390557bf639c8fbbfe39ac7c89079e0664c99656dcaf287870d85f80b"
+    },
+    {
+      "trial": 27,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c73570e6c99d0c4591553f3785ac567dfe53e232337d5db6e4de0e2bbc903784"
+    },
+    {
+      "trial": 28,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "8e0a2e54fa78f2030abafee72c9f00595f8cc6063cec9ddf70f1c1376effdb02"
+    },
+    {
+      "trial": 29,
+      "condition": "current",
+      "replies": 17,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "977540b65923901435f98ffe403949529c9774ff6015a834a151ff106e00a629"
+    },
+    {
+      "trial": 30,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "83f30c4bf8bedca7d66f5b84a15aa55b25a354bfc46ad9301f2cb374855775fd"
+    },
+    {
+      "trial": 31,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "53296cdb94d894953508886f22d8512c1b8cbba4fdfc60bbae81374401fd14de"
+    },
+    {
+      "trial": 32,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c659c440d145eb44d00062cabf97c5be4824d411137491571e17b6a002fc1d4f"
+    },
+    {
+      "trial": 33,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "e9fcf74a50df441037f17deb73eb84708efbecfa882afb3cffcf3e572f8a7104"
+    },
+    {
+      "trial": 34,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "9cd4f1d1bf8337bf6a3d26e38e59bb6fb228cd8339cc16206f22b8778cb4cba9"
+    },
+    {
+      "trial": 35,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "6022c7d31b4561cced8048c50d9197e6746c389d48e9225315e5582386e15e7c"
+    },
+    {
+      "trial": 36,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "f4ff87d948f70a7919dee9bc06257776f1fd8b02b28c38462e877eba983a86e1"
+    },
+    {
+      "trial": 37,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "ac6b6d10cae4413558c3d49ac341a143c1947534fbdadb7ebd8bf041c92207f5"
+    },
+    {
+      "trial": 38,
+      "condition": "current",
+      "replies": 4,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "04a15ebaa9da17d351b26185680303ae0ce56a9a4fca95cbad391618dce17039"
+    },
+    {
+      "trial": 39,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "4e25131bf9289851fee0aaf3fea45904000fb48a4ac23e84a719330647be60c4"
+    },
+    {
+      "trial": 40,
+      "condition": "current",
+      "replies": 12,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "fe91823d4132c0218adcda16fa544d5851b529f9cbe458c2b459697c9b3d7942"
+    },
+    {
+      "trial": 41,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5d1d4fa95eedb3669491fdf51133cfb6d184e5036c3b4ec8dbe1fd7a889897fe"
+    },
+    {
+      "trial": 42,
+      "condition": "current",
+      "replies": 14,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "716910a63d83f8ea3223d113d822483e0a3114ae152574b2395b6c495c2cb467"
+    },
+    {
+      "trial": 43,
+      "condition": "current",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "d4d82253b9db874fede5a3cc23c628a6c9d5e25bbfe07c415a7cd02815033f7b"
+    },
+    {
+      "trial": 44,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "3b01ea0b708c925f9f17f8dc0263fb567e1bc8cf8a8c5e6b81c47ef1e066972c"
+    },
+    {
+      "trial": 45,
+      "condition": "runbook",
+      "replies": 7,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "c2bc166347ada80c08fc95678ebd9788419d8bba2ce0987b5602a501eff83d52"
+    },
+    {
+      "trial": 46,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "efa2e04c3461edc07d932e0728c8ff62af86cd6b6af5909229b0d403b8faf87e"
+    },
+    {
+      "trial": 47,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "4bc93157c2643e735b1b7db684eceedd367e888862faf6dece9147fed4fd54c1"
+    },
+    {
+      "trial": 48,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "aabf29a939e6abee81b1093fe9b7d17fb502b0eabceeab1cc0ccbc1bffc93ef4"
+    },
+    {
+      "trial": 49,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "94c0719e7720859b5103d1afd6a0050810405b2db660ecff00c2c41c32d0cb03"
+    },
+    {
+      "trial": 50,
+      "condition": "current",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "25d25b3ae520be6d4940ad5b0a0c2893f5c893fb92c6e21dface0befb5dea785"
+    },
+    {
+      "trial": 51,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "bc3a2bda5d74ea957f3b442e955afe07941cca67883a58750d7466e7b74a7ae5"
+    },
+    {
+      "trial": 52,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "e410661a54ee7c65dd3afcc90593207d0ceb101f0102465de704e3e2f782d5c8"
+    },
+    {
+      "trial": 53,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "03d6a0e53154c3a27520bb4c96e988047b7f62f96bd6986c75bc4312b42da612"
+    },
+    {
+      "trial": 54,
+      "condition": "runbook",
+      "replies": 11,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c5314daa1d969df476901c49df67d69491ad1e8f98c945224e019cfeffa54ff9"
+    },
+    {
+      "trial": 55,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "93972f3b2b604f1163b68cdd190370443668d0706d651f34c918f4fe30bf35e5"
+    },
+    {
+      "trial": 56,
+      "condition": "current",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c07d08b977241af5ea1fad39df95af3da1b8b94ba96992de531901c10063ed57"
+    },
+    {
+      "trial": 57,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "31b73a83319b06df881646044a3971e9425523ae72b05ce2dbdc0f73bba0d880"
+    },
+    {
+      "trial": 58,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "65894c43fc8c95b56774502206defc03b7980ed5cb4d950cea8b800680f0b1fa"
+    },
+    {
+      "trial": 59,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "4a99c1f579a9420c721bea34f724447bad18838c73801fc8dfae3d9ff553854b"
+    },
+    {
+      "trial": 60,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "0e78de122185a45f39e313ff69c142f45229cc44e9c40ff578c8948ab731961c"
+    },
+    {
+      "trial": 61,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "8a3aa0c5c4ab3c3f9af9514210e7d4e3b773cc362a5566f393f224d2b1d2c027"
+    },
+    {
+      "trial": 62,
+      "condition": "current",
+      "replies": 12,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "474fa4fbba5b588921a86bd98452598f2e5c7878d580b03fea73cf77c6c44c85"
+    },
+    {
+      "trial": 63,
+      "condition": "current",
+      "replies": 4,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "5cfd724d3dbb62866f2831be0315c6690f3c8073eff725a835afdbb2cb5a4171"
+    },
+    {
+      "trial": 64,
+      "condition": "runbook",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "d499d841ecd0d08b0c6d76f895bf4832dabb55d26a7889445e0097b424a27af2"
+    },
+    {
+      "trial": 65,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "a487ea99f399a495ea3ccb93bd48b1ba7c6b0a16b4fbba2b0e0ca6171da0b002"
+    },
+    {
+      "trial": 66,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "f5c3ab139968acbec8322991b1473e7cdb269440b913127403857f37de66f53b"
+    },
+    {
+      "trial": 67,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "18611a8991715885e13240703546780254b77e126a74c6f053b7de2714443a60"
+    },
+    {
+      "trial": 68,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "2df2c774c0cdb5b2defaab09fa259de02ba1c0beb26a5c9db274721cc694bf6f"
+    },
+    {
+      "trial": 69,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "ec59440750a2fe0bcc9e5f0c6cd40c30b9388ded75b2aef43d3eded61e97c699"
+    },
+    {
+      "trial": 70,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "3fb14202745ce59c298c5f4efbf8047bf49faee81fab5b5dacca206d0d345ab6"
+    },
+    {
+      "trial": 71,
+      "condition": "current",
+      "replies": 11,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "6faaceab9fcf7acd6f9aae9fada2b515d1e390b064905014be3ec8ebf9750ed9"
+    },
+    {
+      "trial": 72,
+      "condition": "runbook",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5db0513c3af59ca2b31b93caac7892a664a90f044c0f51768ed0110e1f06f51c"
+    },
+    {
+      "trial": 73,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "401abedd25bf01949ab0d335f1ba771b643f8affd97efd37cb4d32b4062cd853"
+    },
+    {
+      "trial": 74,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "9ed05fccbe93ff2899c28cf574314a3b6d33667c200299eeb238020fa95845a0"
+    },
+    {
+      "trial": 75,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "0e7c7f43637db93d1d66c0ec5d20cb36685d2b90ca42775c03cd985b65e88422"
+    },
+    {
+      "trial": 76,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "21e27915c115847ab9b5caebf90914caf78788c33fe894449c2628128e8934aa"
+    },
+    {
+      "trial": 77,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c24565ed657bac6c81c0751e40b06ac8edd108a24f8806b6574e4046ecb148e4"
+    },
+    {
+      "trial": 78,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "3a5767c64a71c4a35b748d5632a2c81c6362b301ae5d42589a395c2949df07a7"
+    },
+    {
+      "trial": 79,
+      "condition": "current",
+      "replies": 13,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "90bf7ea0495105f36c61da538bf8be7eab91d193180ca9b72a132e0f3dba7db2"
+    },
+    {
+      "trial": 80,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "284d450bb37acdbec3538db5d7ae7ae45d98e0f65684a0fa0060517b3c4bb243"
+    },
+    {
+      "trial": 81,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5136c2ec206ff6b992e2a241c05cb2c1b306d68b3c9dc9fda6dc46f44fd546a1"
+    },
+    {
+      "trial": 82,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "e23a9d77dab80a758d997fcd913cce8d983de92cfe542c62cc4199320ce169fe"
+    },
+    {
+      "trial": 83,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "25c5e0ff7a520d50d371b25c0f265cb8b3882147ec5fbfb4ce475a74c273c1b1"
+    },
+    {
+      "trial": 84,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "bb409a23242499391c345a5bc81f8753b9c1df7795b7ca362f81f3e01af5288f"
+    },
+    {
+      "trial": 85,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "5d3473ea5387b7f502282b446417daaef38579ec0f3e7cdbbf8e82d182f17947"
+    },
+    {
+      "trial": 86,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "6576daaf39f321be2340b9d99739a9c1a72bdb7bf5a3dc9df68df0eceb371b5a"
+    },
+    {
+      "trial": 87,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "fe708bf8aa08e9dbcc79d82497d2e8ff6e50ac21ac316eb707048c85e9580729"
+    },
+    {
+      "trial": 88,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "2926345c91394f9e476c55157181efd247f7926130b20788872af1960f6d5a64"
+    },
+    {
+      "trial": 89,
+      "condition": "current",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "bf72d2878cfab67a868c9c06874b582bb76d3b4b6b985d82994b751e1220db67"
+    },
+    {
+      "trial": 90,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "a2d54db7c23d76b1c506e8fc906c215bccb92255fb6529c4344d8bfc28c408d3"
+    },
+    {
+      "trial": 91,
+      "condition": "current",
+      "replies": 10,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "31e4cd4c5937692a9f8bf749982de2edc6231ecc70d759bba5e81cea6064962f"
+    },
+    {
+      "trial": 92,
+      "condition": "runbook",
+      "replies": 14,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "acd84e6c9dd12b1f5d8e9571df17fdefa7cbc6fa6f48834b3112ab8c3e927423"
+    },
+    {
+      "trial": 93,
+      "condition": "current",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "9fc665695b9dadc573e2872774ae6404bef2eceb99f55ba02ec168e050859095"
+    },
+    {
+      "trial": 94,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "12bc7a60026d32b5efa8941d8ec44166a5672f9c6a90a8afcb23e7e3979fa0ea"
+    },
+    {
+      "trial": 95,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "13b6716173a2ad78710bd2d9af1b1e6b20b3a79d407bf0c5bfacaf5633d79488"
+    },
+    {
+      "trial": 96,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "f5bdecb8fb424a828d436920655e12c4b2cbcd1aaac0bb3f2cfddc952f00c86c"
+    },
+    {
+      "trial": 97,
+      "condition": "runbook",
+      "replies": 12,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "b8c502b773f23c20a0f46f4eab9474a5fbf09b53a86f93c3b56e7a5c2e2e23ec"
+    },
+    {
+      "trial": 98,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "49378126b0c49b8191273aa6cc238de2cbbbd9152590d5bfc1615a7ad767c3c5"
+    },
+    {
+      "trial": 99,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 1,
+      "repairVerified": true,
+      "sourceAgentSha256": "9e705c5180792c4c45e50a17ee419dbd4fadc4e387afdb070b67ba684f5a0b13"
+    },
+    {
+      "trial": 100,
+      "condition": "current",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "8535a60a59f19f22327f40ccd87003eb684e492f1f8997deba9f62fd9f5e12a2"
+    },
+    {
+      "trial": 101,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "aecc21e4917b82990bd769be45c86140f48e0849381ca4149cbab7f677b3b7aa"
+    },
+    {
+      "trial": 102,
+      "condition": "current",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "7bf3f28b95fb95f5651cafdffcacb837e17af7de453d69319fc5455e3eddd892"
+    },
+    {
+      "trial": 103,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "ce1390550a9529499a0980e7a3cf6aa2fca5949fefcffc7d20ba46caad352e0a"
+    },
+    {
+      "trial": 104,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "23eba079fa861ff7d6d912c78a67e63333c1c84476767660e7835b7cb4298e54"
+    },
+    {
+      "trial": 105,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "f5dae59001062fbf0cff3977691fb93973ebb731dfd447e8fdee8229cec138bb"
+    },
+    {
+      "trial": 106,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "d284211debc3a1939518e96a9fe96d781d8242612b409297e07c426e982f979b"
+    },
+    {
+      "trial": 107,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "28d2891bd2a4a3e67c6c0a634d133a2ee8dd27d851960503395ff49776bc62e2"
+    },
+    {
+      "trial": 108,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "d8f1f3d9c1a0f42e0c9607ffdb44d437180e84e298bce211904745663ff28204"
+    },
+    {
+      "trial": 109,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "97ae6e7fb3734fb68f05fa60d47f44c7f236eeb9f494a3b747876f4517c73724"
+    },
+    {
+      "trial": 110,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "43ec16c76de4c0ecab1614dc134d61a0a2ce642f820731959f828223c4c8e88b"
+    },
+    {
+      "trial": 111,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "6e988acd1aa889770ceb23048cefcb5fb8b2b36534f608e2d4971dc60c86c6fb"
+    },
+    {
+      "trial": 112,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5e95aea12670a8feaff35241d6973371a9a815252a670bb4cf6be6ba0d177224"
+    },
+    {
+      "trial": 113,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "8dc3e8e1155b5134f08ef8d638e9a5d38ba86df91bfe58e716dfebc56042edd7"
+    },
+    {
+      "trial": 114,
+      "condition": "runbook",
+      "replies": 5,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "0d6778b3238e403c4ad9230dbe6db41eef7a6a41d8ada4f16d76cdef22ee632a"
+    },
+    {
+      "trial": 115,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "b138e3c4ccf06fd789f5e3c19ed73f3fc65b6b6600e5d7ad76496c4b8fd46d4b"
+    },
+    {
+      "trial": 116,
+      "condition": "current",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "150f15a989a023a1a144b6a39b4966beab510254e1489b664238596103f44b5e"
+    },
+    {
+      "trial": 117,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "5f1eb9abcf1019f0a06071b21ff830ae063418e834f74e1bdb52042d1386187a"
+    },
+    {
+      "trial": 118,
+      "condition": "runbook",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "d8f1f0ae2c9d7d99710a8b382f26db0f72ae9a1e87c01552f889c0e0c41feff0"
+    },
+    {
+      "trial": 119,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "98c42902501d2d8bbff2caaf9192e0db6a5f57498c008aecfbc45ca87e4932c0"
+    },
+    {
+      "trial": 120,
+      "condition": "current",
+      "replies": 12,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "01b8533dbcda2c72e8412a965fefc56f486dea983508192e3761f4b11bf39be5"
+    },
+    {
+      "trial": 121,
+      "condition": "current",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "98747a673edcf6b94d7bdaa29b21fb10655c6df20a7ab95bdc81c8663604df82"
+    },
+    {
+      "trial": 122,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "bc69eb268f90589a86581e61c79942a012d74265050fc5e2e571dbcf9f92650b"
+    },
+    {
+      "trial": 123,
+      "condition": "current",
+      "replies": 14,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "47e9aaba78cb034fd2451ca9307a863073a69d93ac4bf8539b98ab4d278e076b"
+    },
+    {
+      "trial": 124,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "08adf408677c984c9d80052e275b087d127bd9cc4a2108271081a78634eea848"
+    },
+    {
+      "trial": 125,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "2467dcf27e2526c0f1c57a49803c1c75d05b569ba506469a340687e80f91b130"
+    },
+    {
+      "trial": 126,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "e4302c97f4ed095730a1133f77539b55ff55a1d30a2bcdcbe724c1441a7ff5c3"
+    },
+    {
+      "trial": 127,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "13f995d43fbecc7b330dbc87d77f08af429cfaa07bc12b09420d4f3c0250e570"
+    },
+    {
+      "trial": 128,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "faa13c754a78ba798a2ba075e0db0ea89297c86bdf8688bfd0a94f52ef66d60d"
+    },
+    {
+      "trial": 129,
+      "condition": "runbook",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "26e120ae4121f48a5e0939a875cf5054dfd830db0c8235be62f7d108f1fa3c9a"
+    },
+    {
+      "trial": 130,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "c456bd633ca2283fc712af73d3f277364bc1d9cb96b3cfde44db3df99d07f180"
+    },
+    {
+      "trial": 131,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "652eb46265be470dd136ffc02726d13ef3d4bb6b12315410a6d072cd25dbb3d9"
+    },
+    {
+      "trial": 132,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "587fb339a26e3d93423d31c710b74208e918c8c7c2dbca4c40622cc1d88c1064"
+    },
+    {
+      "trial": 133,
+      "condition": "current",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c387232a47206a71fd119105c0114a2ade0ba153c398cca145077b5c8e010337"
+    },
+    {
+      "trial": 134,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c6d6a493d213d1a4d45aab80ae17ae8cd458e3325a51f1242dc0794f1b8de88f"
+    },
+    {
+      "trial": 135,
+      "condition": "runbook",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "0d4dcadb445abcf6401196898a9731cd0bbca2b55008f11c1c9182a4b8793e50"
+    },
+    {
+      "trial": 136,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "78af2eea0c0fdc812cac2c7a11be0d40da01b82988393674c7a679f44c8b457a"
+    },
+    {
+      "trial": 137,
+      "condition": "current",
+      "replies": 13,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "731995cd3c46ec92b4cacaab47bace69f48c44dfa30caadbdd1a7b9b9a558b0b"
+    },
+    {
+      "trial": 138,
+      "condition": "runbook",
+      "replies": 14,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "3fe97efef2f31e807221d099ecc564648dfc093563a852d7d2498b0cd8c39e66"
+    },
+    {
+      "trial": 139,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "4c97232287306cf72ff2184f42f76e07bc63bcb83a5d52470fc21205821ab26e"
+    },
+    {
+      "trial": 140,
+      "condition": "runbook",
+      "replies": 19,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "63142fadb7a295edd16bd65ba17b3e528050d122879a18efad6fc6a5de36d2de"
+    },
+    {
+      "trial": 141,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "bc208d66c564824eb7f08ef668d1eda41997b19884f312ae22aa37a722a718d2"
+    },
+    {
+      "trial": 142,
+      "condition": "current",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "ec116286b22399b705c1bd2e80b57d9c8fc702a79535202339b25319eda17334"
+    },
+    {
+      "trial": 143,
+      "condition": "runbook",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "d29e3aa34214dba540521db0e9b4d3d2cc0b53ed96a8a19c4ca74e7d76ea0af2"
+    },
+    {
+      "trial": 144,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "1d0fe5244feb4962f43c9b5fbff1d3351d023651eeca1ce5479cbf64e577e734"
+    },
+    {
+      "trial": 145,
+      "condition": "current",
+      "replies": 9,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "07336db08e11d4eb4a48c7e16a701c8ca70dc2d20e2ce0ead1be51cf207cc39c"
+    },
+    {
+      "trial": 146,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5be523dc1b074729ae92efde32cec56a64fdb0d1fd5676f3cf8c96c88c16b41d"
+    },
+    {
+      "trial": 147,
+      "condition": "runbook",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5010bddbbcd1ef3bf6fc5f452d76fabfe9ef1dd3b7edf2b816ef07da75d0fa5b"
+    },
+    {
+      "trial": 148,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "630b305f9d0219dacef01de176384e98355c66d6d73015aae130250541b7820a"
+    },
+    {
+      "trial": 149,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "b829cdb71fb33dbdd498abb00f360b9d0cc82c4a5286e3e22f9a3645c68eed21"
+    },
+    {
+      "trial": 150,
+      "condition": "runbook",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": false,
+      "sourceAgentSha256": "314a9f132d8c6b71840cc4522fc9cffdcd80288e4efee2028224dbf749bb6c3d"
+    },
+    {
+      "trial": 151,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "304ed039d9d325fcbd6f6c19024a8416f22e048eafa7dc96add3a8cafbebf5ac"
+    },
+    {
+      "trial": 152,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "8e960c8090c305fea391f2308833f33bad5b6f69717e72996e926ec13853bec2"
+    },
+    {
+      "trial": 153,
+      "condition": "runbook",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "c9c2ba9a36cb27f22d78e26c6e8b1b8f48c8acf25f7eca65883b4f4b409784ec"
+    },
+    {
+      "trial": 154,
+      "condition": "current",
+      "replies": 8,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "41d4d86134154330816e079ef2410156afac530ea5eebdcd31a8800c1b67e458"
+    },
+    {
+      "trial": 155,
+      "condition": "runbook",
+      "replies": 6,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "7a64f1cba094d1f343a6cc2f08aabdc7f143469efe865d555da1624e4307241e"
+    },
+    {
+      "trial": 156,
+      "condition": "current",
+      "replies": 5,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "14d042e9c71bfb6392b0571c9944fbc2fc2d8e5c58e6442b95707a70c10a930a"
+    },
+    {
+      "trial": 157,
+      "condition": "runbook",
+      "replies": 10,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "3547970ae8a7604d061a69af59b4441df053815cc4bd53077be8b5e56a33c916"
+    },
+    {
+      "trial": 158,
+      "condition": "current",
+      "replies": 7,
+      "lengthReplies": 1,
+      "repairVerified": false,
+      "sourceAgentSha256": "605c56466291d7b7bda6ce9c081c9e32b7816c021d1f76de8116066462e6d7f6"
+    },
+    {
+      "trial": 159,
+      "condition": "current",
+      "replies": 24,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "34fa9fd5d946f3f791c21c1edf5cba762b6a95352c234457658d9e6d314fcf7d"
+    },
+    {
+      "trial": 160,
+      "condition": "runbook",
+      "replies": 11,
+      "lengthReplies": 0,
+      "repairVerified": true,
+      "sourceAgentSha256": "5a69668850ccbb82f10b896e7ca25eab3ba342c6aa3da623dee57fc6da3fe129"
+    }
+  ],
+  "lengthLimitedReplies": [
+    {
+      "trial": 11,
+      "condition": "current",
+      "responseIndex": 11,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8190,
+      "outputTokens": 2,
+      "content": "{\"tool",
+      "errors": [
+        "Agent step failed: Unterminated string starting at: line 1 column 2 (char 1)"
+      ]
+    },
+    {
+      "trial": 38,
+      "condition": "current",
+      "responseIndex": 4,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8164,
+      "outputTokens": 28,
+      "content": "{\"tool\": \"power\", \"target\": \"nats-2\", \"action\": \"start\", \"summary\": \"Start the exited",
+      "errors": [
+        "Agent step failed: Unterminated string starting at: line 1 column 69 (char 68)"
+      ]
+    },
+    {
+      "trial": 45,
+      "condition": "runbook",
+      "responseIndex": 7,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8175,
+      "outputTokens": 17,
+      "content": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start",
+      "errors": [
+        "Agent step failed: Unterminated string starting at: line 1 column 53 (char 52)"
+      ]
+    },
+    {
+      "trial": 63,
+      "condition": "current",
+      "responseIndex": 4,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8172,
+      "outputTokens": 20,
+      "content": "{\"tool\": \"logs\", \"target\": \"api-2\", \"action\": \"start\",",
+      "errors": [
+        "Agent step failed: Expecting property name enclosed in double quotes: line 1 column 55 (char 54)"
+      ]
+    },
+    {
+      "trial": 85,
+      "condition": "runbook",
+      "responseIndex": 8,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8173,
+      "outputTokens": 19,
+      "content": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"",
+      "errors": [
+        "Agent step failed: Unterminated string starting at: line 1 column 62 (char 61)"
+      ]
+    },
+    {
+      "trial": 91,
+      "condition": "current",
+      "responseIndex": 10,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8182,
+      "outputTokens": 10,
+      "content": "{\"tool\": \"rollback\", \"target\": \"",
+      "errors": [
+        "Agent step failed: Unterminated string starting at: line 1 column 32 (char 31)"
+      ]
+    },
+    {
+      "trial": 99,
+      "condition": "runbook",
+      "responseIndex": 6,
+      "repairVerified": true,
+      "doneReason": "length",
+      "promptTokens": 8179,
+      "outputTokens": 13,
+      "content": "{\"tool\": \"verify\", \"target\": \"control-plane\",",
+      "errors": [
+        "Agent step failed: Expecting property name enclosed in double quotes: line 1 column 46 (char 45)"
+      ]
+    },
+    {
+      "trial": 114,
+      "condition": "runbook",
+      "responseIndex": 5,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8151,
+      "outputTokens": 41,
+      "content": "{\"tool\": \"power\", \"target\": \"nats-3\", \"action\": \"start\", \"summary\": \"Start the exited nats-3 broker to restore full JetStream quorum.\"",
+      "errors": [
+        "Agent step failed: Expecting ',' delimiter: line 1 column 135 (char 134)"
+      ]
+    },
+    {
+      "trial": 140,
+      "condition": "runbook",
+      "responseIndex": 19,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8153,
+      "outputTokens": 39,
+      "content": "{\"tool\": \"logs\", \"target\": \"api-1\", \"action\": \"start\", \"summary\": \"Reading api-1 logs to identify the actual job submission/completion failure and",
+      "errors": [
+        "Agent step failed: Unterminated string starting at: line 1 column 67 (char 66)"
+      ]
+    },
+    {
+      "trial": 158,
+      "condition": "current",
+      "responseIndex": 7,
+      "repairVerified": false,
+      "doneReason": "length",
+      "promptTokens": 8173,
+      "outputTokens": 19,
+      "content": "{\"tool\": \"release_scheduler_lease\", \"target\": \"schedulers\", \"action\":",
+      "errors": [
+        "Agent step failed: Expecting value: line 1 column 70 (char 69)"
+      ]
+    }
+  ],
+  "replayCases": [
+    {
+      "case": "t007-s13",
+      "sourceTrial": 7,
+      "sourceArm": "current",
+      "stratum": "db_lock",
+      "beforeStep": 13
+    },
+    {
+      "case": "t008-s13",
+      "sourceTrial": 8,
+      "sourceArm": "runbook",
+      "stratum": "db_lock",
+      "beforeStep": 13
+    },
+    {
+      "case": "t030-s13",
+      "sourceTrial": 30,
+      "sourceArm": "runbook",
+      "stratum": "db_lock",
+      "beforeStep": 13
+    },
+    {
+      "case": "t035-s13",
+      "sourceTrial": 35,
+      "sourceArm": "runbook",
+      "stratum": "db_lock",
+      "beforeStep": 13
+    },
+    {
+      "case": "t036-s13",
+      "sourceTrial": 36,
+      "sourceArm": "current",
+      "stratum": "db_lock",
+      "beforeStep": 13
+    },
+    {
+      "case": "t005-s05",
+      "sourceTrial": 5,
+      "sourceArm": "current",
+      "stratum": "deployment",
+      "beforeStep": 5
+    },
+    {
+      "case": "t018-s06",
+      "sourceTrial": 18,
+      "sourceArm": "current",
+      "stratum": "deployment",
+      "beforeStep": 6
+    },
+    {
+      "case": "t046-s14",
+      "sourceTrial": 46,
+      "sourceArm": "current",
+      "stratum": "deployment",
+      "beforeStep": 14
+    },
+    {
+      "case": "t086-s15",
+      "sourceTrial": 86,
+      "sourceArm": "current",
+      "stratum": "deployment",
+      "beforeStep": 15
+    },
+    {
+      "case": "t130-s12",
+      "sourceTrial": 130,
+      "sourceArm": "current",
+      "stratum": "deployment",
+      "beforeStep": 12
+    },
+    {
+      "case": "t011-s11",
+      "sourceTrial": 11,
+      "sourceArm": "current",
+      "stratum": "truncation",
+      "beforeStep": 11
+    },
+    {
+      "case": "t045-s07",
+      "sourceTrial": 45,
+      "sourceArm": "runbook",
+      "stratum": "truncation",
+      "beforeStep": 7
+    },
+    {
+      "case": "t085-s08",
+      "sourceTrial": 85,
+      "sourceArm": "runbook",
+      "stratum": "truncation",
+      "beforeStep": 8
+    },
+    {
+      "case": "t158-s07",
+      "sourceTrial": 158,
+      "sourceArm": "current",
+      "stratum": "truncation",
+      "beforeStep": 7
+    },
+    {
+      "case": "t091-s10",
+      "sourceTrial": 91,
+      "sourceArm": "current",
+      "stratum": "truncation",
+      "beforeStep": 10
+    },
+    {
+      "case": "t001-s07",
+      "sourceTrial": 1,
+      "sourceArm": "runbook",
+      "stratum": "success_control",
+      "beforeStep": 7
+    },
+    {
+      "case": "t003-s06",
+      "sourceTrial": 3,
+      "sourceArm": "current",
+      "stratum": "success_control",
+      "beforeStep": 6
+    },
+    {
+      "case": "t012-s03",
+      "sourceTrial": 12,
+      "sourceArm": "runbook",
+      "stratum": "success_control",
+      "beforeStep": 3
+    },
+    {
+      "case": "t015-s03",
+      "sourceTrial": 15,
+      "sourceArm": "current",
+      "stratum": "success_control",
+      "beforeStep": 3
+    },
+    {
+      "case": "t029-s15",
+      "sourceTrial": 29,
+      "sourceArm": "current",
+      "stratum": "success_control",
+      "beforeStep": 15
+    }
+  ],
+  "replaySourceArms": {
+    "current": 13,
+    "runbook": 7
+  },
+  "methods": "Count done_reason=length across all modelResponses in each of 160 original agent artifacts. Failed means independent repairVerified=false. Counts of failed trials with a final length stop are associations with a parse-error endpoint, not a claim that truncation alone caused non-recovery.",
+  "licenses": {
+    "code": "MIT",
+    "docsAndCuratedData": "CC-BY-4.0",
+    "ccLegalTextSource": "https://creativecommons.org/licenses/by/4.0/legalcode.txt"
+  },
+  "contextChoice": "8192 is hard-coded in frozen source and protocol; no hardware necessity or context-length comparison rationale is documented in the audited artifacts.",
+  "initialContextVariation": [
+    {
+      "scenario": "api-regression",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 4,
+      "examples": [
+        {
+          "trial": 5,
+          "initialContextSha256": "56b6585053ffdcdc67e64f210a0bf574214a66f61a76346146d95d88ab77b821",
+          "capturedAt": null
+        },
+        {
+          "trial": 18,
+          "initialContextSha256": "b7741a076173729d2990df5af53dda1405c62c78a9cf2bb6ac6ed25d65ab9c3d",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "api-regression",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 4,
+      "examples": [
+        {
+          "trial": 6,
+          "initialContextSha256": "56b6585053ffdcdc67e64f210a0bf574214a66f61a76346146d95d88ab77b821",
+          "capturedAt": null
+        },
+        {
+          "trial": 17,
+          "initialContextSha256": "18189798a644710e3a90b74eb066d021913143aefd6e295a22cf5fe609cb7441",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "broker-quorum",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 6,
+      "examples": [
+        {
+          "trial": 15,
+          "initialContextSha256": "bd285ca3c448bdb08e692e58628ac65cbf765218fca18bd307d83ceafe8ec0fc",
+          "capturedAt": null
+        },
+        {
+          "trial": 26,
+          "initialContextSha256": "cbeb9f6de65557b23700c2ef6abb87d1a4230587fc19c859e7a1dc3f3ae7acf4",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "broker-quorum",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 5,
+      "examples": [
+        {
+          "trial": 16,
+          "initialContextSha256": "bd285ca3c448bdb08e692e58628ac65cbf765218fca18bd307d83ceafe8ec0fc",
+          "capturedAt": null
+        },
+        {
+          "trial": 25,
+          "initialContextSha256": "3e5c13e674cf9667c4dfa9a85f1d397610a790899b138544dfdd1d27e754a9c5",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "database-lock",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 10,
+      "examples": [
+        {
+          "trial": 7,
+          "initialContextSha256": "b83d7bad768d2e181d25c7baabfcf98c73225b53862c94e2be1bc5a7778e8689",
+          "capturedAt": null
+        },
+        {
+          "trial": 29,
+          "initialContextSha256": "7f2697b03a2df0839f7cfbe6ecbdc51e24674ead6cb7b73c6ffef52a350e0879",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "database-lock",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 10,
+      "examples": [
+        {
+          "trial": 8,
+          "initialContextSha256": "a09f3cf5236d29ce264ec3ee1d87de345f90290625a99396c64b56da5f8e7b3d",
+          "capturedAt": null
+        },
+        {
+          "trial": 30,
+          "initialContextSha256": "7adb0ab9c7af07bdf62836315b8ece9d1cca638418a2e4d9a42a97e010a9be38",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "database-route",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 2,
+      "examples": [
+        {
+          "trial": 3,
+          "initialContextSha256": "83b1f9c18d8345a0a544257ec87c8b1c95d437650d728780d0799e0e4de8ee3a",
+          "capturedAt": null
+        },
+        {
+          "trial": 23,
+          "initialContextSha256": "3fca6c112b01b2d557e45f0755aa515f8d0fa174b919a41e6a92cef5328d9047",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "database-route",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 5,
+      "examples": [
+        {
+          "trial": 4,
+          "initialContextSha256": "d6f28ae82392345733730f8eb5f6aeb0ac1ec39a1609f1f0c20fbfe64a352f63",
+          "capturedAt": null
+        },
+        {
+          "trial": 24,
+          "initialContextSha256": "83b1f9c18d8345a0a544257ec87c8b1c95d437650d728780d0799e0e4de8ee3a",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "scheduler-lease",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 8,
+      "examples": [
+        {
+          "trial": 13,
+          "initialContextSha256": "555c744494c67d50459d434f911fba802a1acba5b40122ef9d1d53dd44820dfd",
+          "capturedAt": null
+        },
+        {
+          "trial": 27,
+          "initialContextSha256": "ddaa192e70dcccd9988ca0a24109fc1acdcfdb2f6f7edd83b0d17b98c926c12b",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "scheduler-lease",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 5,
+      "examples": [
+        {
+          "trial": 14,
+          "initialContextSha256": "a8a4cb6ca67b89bc8ffe30872385dfc4243ec155f6d1373f5e085ca2fe6ef002",
+          "capturedAt": null
+        },
+        {
+          "trial": 28,
+          "initialContextSha256": "a490ba6dea8f2b20a71c8686a0aed39d74b8c49fd65cebc77e78b86f8967942d",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "scheduler-outage",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 5,
+      "examples": [
+        {
+          "trial": 2,
+          "initialContextSha256": "11b925d315350a0789aed1245236f1ae8645b90427258c7fd63ed19b464be3b3",
+          "capturedAt": null
+        },
+        {
+          "trial": 31,
+          "initialContextSha256": "d3aa06e57cb8bb6d1a724e0a6158a334b00f2929d2ee4aec563aef8511b72f7c",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "scheduler-outage",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 5,
+      "examples": [
+        {
+          "trial": 1,
+          "initialContextSha256": "555c744494c67d50459d434f911fba802a1acba5b40122ef9d1d53dd44820dfd",
+          "capturedAt": null
+        },
+        {
+          "trial": 32,
+          "initialContextSha256": "8ad7b3eb8e4f40c87dca886a9df638af8e907fa869b3d5ef8e9c1c8ab227e50b",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "worker-backlog",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 8,
+      "examples": [
+        {
+          "trial": 11,
+          "initialContextSha256": "39e1fb6991d718398e428f0eba694fe602807eabfef84f10daad7b85bfebaaea",
+          "capturedAt": null
+        },
+        {
+          "trial": 19,
+          "initialContextSha256": "17b64d2dbc3b0dd423ee8d0d4d44620af1723fbeed639fbebb34f0a04b4c2808",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "worker-backlog",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 9,
+      "examples": [
+        {
+          "trial": 12,
+          "initialContextSha256": "4a8f2b56e48097131d5d11694059de625202b579e70fefe071cc7d7041c10e0f",
+          "capturedAt": null
+        },
+        {
+          "trial": 20,
+          "initialContextSha256": "0c225d50c102374c85178beb2d47fba64dc5bef3f4cfc8b6c32edd6065ef7591",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "worker-loss",
+      "condition": "current",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 4,
+      "examples": [
+        {
+          "trial": 10,
+          "initialContextSha256": "7a5cbc5bc67d8348651864953993eb1c4dcc16774af450113fb982de08eb91db",
+          "capturedAt": null
+        },
+        {
+          "trial": 21,
+          "initialContextSha256": "5b9610961d902c3475b2b5fe30e93f1be6c7d546e817883c1785cb7846c73735",
+          "capturedAt": null
+        }
+      ]
+    },
+    {
+      "scenario": "worker-loss",
+      "condition": "runbook",
+      "trials": 10,
+      "distinctSerializedInitialContexts": 3,
+      "examples": [
+        {
+          "trial": 9,
+          "initialContextSha256": "eaf8a8c9de2e4956d46053514b7223748b38cb5cf6130846960dd53e23fa3df6",
+          "capturedAt": null
+        },
+        {
+          "trial": 22,
+          "initialContextSha256": "17f477cc83a719115ae9f61191c649f526f41cfd519656f4c3e5d4298f4cc0a6",
+          "capturedAt": null
+        }
+      ]
+    }
+  ],
+  "scenarioRepairCounts": {
+    "api-regression": {
+      "current": 4,
+      "runbook": 10
+    },
+    "broker-quorum": {
+      "current": 9,
+      "runbook": 9
+    },
+    "database-lock": {
+      "current": 1,
+      "runbook": 0
+    },
+    "database-route": {
+      "current": 10,
+      "runbook": 10
+    },
+    "scheduler-lease": {
+      "current": 8,
+      "runbook": 10
+    },
+    "scheduler-outage": {
+      "current": 10,
+      "runbook": 10
+    },
+    "worker-backlog": {
+      "current": 5,
+      "runbook": 8
+    },
+    "worker-loss": {
+      "current": 10,
+      "runbook": 10
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "protocolPromptsEqualOriginalArchive": true,
+  "currentPromptMatchesFrozenCodeConstant": "app/incident_agent.py:PROMPT",
+  "runbookGuidanceExtractedFrom": "Exact suffix of original archived protocol prompts.runbook after PROMPT plus two newlines. Frozen recovery_study.py dispatches protocol prompts by condition; no current loose runbook file was substituted.",
+  "runbookGuidanceSha256": "b356eb55c5cbf2d1d04e14f265d8cb20d4d012fdafac1b5d6ab2f174a94c446f",
+  "promptHashes": {
+    "current": "58d87c11a96c32eab832b2bc3f2894f669b63e7fce3d0271b72f691d4fc41107",
+    "runbook": "5a0d83124ec04fbc7db8a2450caf17f25d61d4490571cf09097c13962e6d44c6"
+  },
+  "originalStudyProviderResponseObjects": 1696,
+  "originalStudyFullPerCallRequestPacketsIncluded": false,
+  "replayCoverage": {
+    "v1": {
+      "requests": 85,
+      "responses": 85
+    },
+    "v2": {
+      "requests": 80,
+      "responses": 80
+    }
+  },
+  "selectedDecisionStatesPerReplay": 20,
+  "selectedCutoffRequestAndResponse": "evidence/t158-s07 is a convenience copy of the selected replay request/response, not an additional original live-call request packet.",
+  "limitation": "The bundle does not contain full per-call message/tool histories for all 1,696 original live-study responses. It contains the frozen system prompts, scientific protocol, per-trial results, provider responses, and selected replay request contexts.",
+  "frozenSourceAuthority": "The study-frozen app/main.py is authoritative. The historical supplement does not replace it; control-plane/service.py also remains the study-frozen service implementation."
+}

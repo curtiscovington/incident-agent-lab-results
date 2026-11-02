@@ -1,0 +1,325 @@
+{
+  "cells": [
+    {
+      "scenario": "api-regression",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 4,
+      "failed": 6,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.4,
+      "wilson95": [
+        0.16818032970623614,
+        0.6873262302663417
+      ],
+      "fullScheduleRateBounds": [
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "scenario": "api-regression",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "worker-backlog",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 5,
+      "failed": 5,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.5,
+      "wilson95": [
+        0.236593090512564,
+        0.7634069094874361
+      ],
+      "fullScheduleRateBounds": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "scenario": "worker-backlog",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 8,
+      "failed": 2,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.8,
+      "wilson95": [
+        0.49016247153664183,
+        0.9433178485456247
+      ],
+      "fullScheduleRateBounds": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "scenario": "database-route",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "database-route",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "database-lock",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 1,
+      "failed": 9,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.1,
+      "wilson95": [
+        0.017876213095072896,
+        0.4041500267952385
+      ],
+      "fullScheduleRateBounds": [
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "scenario": "database-lock",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 0,
+      "failed": 10,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.2775327998628892
+      ],
+      "fullScheduleRateBounds": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "scenario": "scheduler-outage",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "scheduler-outage",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "scheduler-lease",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 8,
+      "failed": 2,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.8,
+      "wilson95": [
+        0.49016247153664183,
+        0.9433178485456247
+      ],
+      "fullScheduleRateBounds": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "scenario": "scheduler-lease",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "broker-quorum",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 9,
+      "failed": 1,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.9,
+      "wilson95": [
+        0.5958499732047615,
+        0.9821237869049271
+      ],
+      "fullScheduleRateBounds": [
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "scenario": "broker-quorum",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 9,
+      "failed": 1,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 0.9,
+      "wilson95": [
+        0.5958499732047615,
+        0.9821237869049271
+      ],
+      "fullScheduleRateBounds": [
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "scenario": "worker-loss",
+      "condition": "current",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "worker-loss",
+      "condition": "runbook",
+      "planned": 10,
+      "recorded": 10,
+      "evaluated": 10,
+      "passed": 10,
+      "failed": 0,
+      "interrupted": 0,
+      "remaining": 0,
+      "rate": 1.0,
+      "wilson95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "fullScheduleRateBounds": [
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "note": "Descriptive 95% Wilson intervals conditional on evaluated trials and this fixed Lab setup. Repetitions share faults, fixture and temperature-zero model; these are not bounds on general incident reliability. Interrupted trials are shown separately; partial results are not final comparisons."
+}

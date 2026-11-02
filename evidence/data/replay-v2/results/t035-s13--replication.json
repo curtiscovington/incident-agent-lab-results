@@ -1,0 +1,42 @@
+{
+  "case": "t035-s13",
+  "arm": "replication",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 35,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "api-1",
+    "action": "start",
+    "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 4913,
+  "actualPromptTokens": 4913,
+  "reservedHeadroom": 3279,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 4913,
+      "outputTokens": 47,
+      "totalDurationNs": 9519780086,
+      "responseText": "{\"tool\": \"probe\", \"target\": \"api-1\", \"action\": \"start\", \"summary\": \"Probing api-1 to check its job submission path, NATS publish health, and recent errors.\"}",
+      "responseFile": "attempts/t035-s13--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494857.4509735
+}

@@ -1,0 +1,41 @@
+{
+  "case": "t091-s10",
+  "arm": "format_retry",
+  "stratum": "truncation",
+  "scenario": "api-regression",
+  "sourceTrial": 91,
+  "beforeStep": 10,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 1140274978,
+      "promptTokens": 8182,
+      "outputTokens": 10,
+      "responseFile": "attempts/t091-s10--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \""
+    },
+    {
+      "attempt": 1,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 11929646710,
+      "promptTokens": 8167,
+      "outputTokens": 25,
+      "responseFile": "attempts/t091-s10--format_retry-a1.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"api-2\", \"action\": \"start\", \"summary\": \"Roll"
+    }
+  ],
+  "savedAt": 1793493187.8976912
+}

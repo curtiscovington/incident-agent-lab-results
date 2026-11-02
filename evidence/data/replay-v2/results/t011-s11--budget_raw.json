@@ -1,0 +1,42 @@
+{
+  "case": "t011-s11",
+  "arm": "budget_raw",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 11,
+  "beforeStep": 11,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "worker-1",
+    "action": "start",
+    "summary": "Probing worker-1 to confirm the w2 release is failing job completion."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 5975,
+  "actualPromptTokens": 5975,
+  "reservedHeadroom": 2217,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 5975,
+      "outputTokens": 42,
+      "totalDurationNs": 10620697312,
+      "responseText": "{\"tool\": \"probe\", \"target\": \"worker-1\", \"action\": \"start\", \"summary\": \"Probing worker-1 to confirm the w2 release is failing job completion.\"}",
+      "responseFile": "attempts/t011-s11--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494743.8904798
+}

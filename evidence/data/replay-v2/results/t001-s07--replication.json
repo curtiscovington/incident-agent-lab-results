@@ -1,0 +1,42 @@
+{
+  "case": "t001-s07",
+  "arm": "replication",
+  "stratum": "success_control",
+  "scenario": "scheduler-outage",
+  "sourceTrial": 1,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Start the scheduler group because both schedulers are exited and the outbox is growing."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 7328,
+  "actualPromptTokens": 7328,
+  "reservedHeadroom": 864,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 7328,
+      "outputTokens": 42,
+      "totalDurationNs": 10804933318,
+      "responseText": "{\"tool\": \"power\", \"target\": \"schedulers\", \"action\": \"start\", \"summary\": \"Start the scheduler group because both schedulers are exited and the outbox is growing.\"}",
+      "responseFile": "attempts/t001-s07--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494718.88317
+}

@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T01:00:34.1320706Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"power\", \"target\": \"job-api\", \"action\": \"restart\", \"summary\": \"Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3756740866,
+  "load_duration": 65874093,
+  "prompt_eval_count": 6562,
+  "prompt_eval_cached_count": 6558,
+  "prompt_eval_duration": 128032000,
+  "eval_count": 47,
+  "eval_duration": 3541486000
+}

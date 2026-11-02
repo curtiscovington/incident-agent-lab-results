@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:33:32.054785944Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back all workers from release w2 to known-good w1, since w2 fails to decode the job_id field and leaves 4 jobs stuck in the queue.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9747499827,
+  "load_duration": 54816251,
+  "prompt_eval_count": 4122,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 4997356000,
+  "eval_count": 59,
+  "eval_duration": 4438735000
+}

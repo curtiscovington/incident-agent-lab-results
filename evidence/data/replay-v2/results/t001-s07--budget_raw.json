@@ -1,0 +1,42 @@
+{
+  "case": "t001-s07",
+  "arm": "budget_raw",
+  "stratum": "success_control",
+  "scenario": "scheduler-outage",
+  "sourceTrial": 1,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Start the scheduler group to restore the stopped schedulers and allow outbox jobs to publish."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 5715,
+  "actualPromptTokens": 5715,
+  "reservedHeadroom": 2477,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 5715,
+      "outputTokens": 43,
+      "totalDurationNs": 8637173065,
+      "responseText": "{\"tool\": \"power\", \"target\": \"schedulers\", \"action\": \"start\", \"summary\": \"Start the scheduler group to restore the stopped schedulers and allow outbox jobs to publish.\"}",
+      "responseFile": "attempts/t001-s07--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494708.0641518
+}

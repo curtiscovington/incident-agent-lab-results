@@ -1,0 +1,36 @@
+{
+  "case": "t035-s13",
+  "arm": "both",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 35,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "api-1",
+    "action": "start",
+    "summary": "Probing api-1 to inspect its NATS publisher dependency, recent job submission errors, and release identity."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 4044271687,
+      "promptTokens": 6225,
+      "outputTokens": 48,
+      "responseFile": "attempts/t035-s13--both-a0.response.json",
+      "responseText": "{\"tool\": \"probe\", \"target\": \"api-1\", \"action\": \"start\", \"summary\": \"Probing api-1 to inspect its NATS publisher dependency, recent job submission errors, and release identity.\"}"
+    }
+  ],
+  "savedAt": 1793493606.965592
+}

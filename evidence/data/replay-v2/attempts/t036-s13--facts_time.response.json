@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:56:06.789419816Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"verify\", \"target\": \"control-plane\", \"action\": \"start\", \"summary\": \"Run fresh scope health and real ingress job completion to confirm the service is actually working.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4682323180,
+  "load_duration": 51316041,
+  "prompt_eval_count": 2215,
+  "prompt_eval_cached_count": 1191,
+  "prompt_eval_duration": 1338482000,
+  "eval_count": 42,
+  "eval_duration": 3135696000
+}

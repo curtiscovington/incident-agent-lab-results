@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:56:26.757746704Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\":\"inspect\",\"target\":\"control-plane\",\"action\":\"start\",\"summary\":\"Inspecting the Control Plane service state, topology and release identities to establish the actual failure.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6206672635,
+  "load_duration": 52418422,
+  "prompt_eval_count": 2738,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 3329607000,
+  "eval_count": 36,
+  "eval_duration": 2683749000
+}

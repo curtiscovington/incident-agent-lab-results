@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:39:21.5383332Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \""
+  },
+  "done": true,
+  "done_reason": "length",
+  "total_duration": 1961821120,
+  "load_duration": 46219562,
+  "prompt_eval_count": 8173,
+  "prompt_eval_cached_count": 8169,
+  "prompt_eval_duration": 129488000,
+  "eval_count": 19,
+  "eval_duration": 1402491000
+}

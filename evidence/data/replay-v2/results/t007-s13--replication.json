@@ -1,0 +1,42 @@
+{
+  "case": "t007-s13",
+  "arm": "replication",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 7,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "worker-1",
+    "action": "start",
+    "summary": "Probing worker-1 to check its job processing behavior."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 2542,
+  "actualPromptTokens": 2542,
+  "reservedHeadroom": 5650,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2542,
+      "outputTokens": 38,
+      "totalDurationNs": 6121032102,
+      "responseText": "{\"tool\": \"probe\", \"target\": \"worker-1\", \"action\": \"start\", \"summary\": \"Probing worker-1 to check its job processing behavior.\"}",
+      "responseFile": "attempts/t007-s13--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494800.3282127
+}

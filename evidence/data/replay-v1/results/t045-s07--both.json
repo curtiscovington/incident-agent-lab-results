@@ -1,0 +1,36 @@
+{
+  "case": "t045-s07",
+  "arm": "both",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 45,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back all workers from the defective w2 release to the known-good w1 release to fix the job_id decode failure."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 13290562919,
+      "promptTokens": 7636,
+      "outputTokens": 50,
+      "responseFile": "attempts/t045-s07--both-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back all workers from the defective w2 release to the known-good w1 release to fix the job_id decode failure.\"}"
+    }
+  ],
+  "savedAt": 1793493235.445156
+}

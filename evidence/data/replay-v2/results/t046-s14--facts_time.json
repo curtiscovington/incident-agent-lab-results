@@ -1,0 +1,42 @@
+{
+  "case": "t046-s14",
+  "arm": "facts_time",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 46,
+  "beforeStep": 14,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Roll back worker group from w2 to known-good w1 to fix job decode failures"
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 2700,
+  "actualPromptTokens": 2700,
+  "reservedHeadroom": 5492,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2700,
+      "outputTokens": 34,
+      "totalDurationNs": 5979278905,
+      "responseText": "{\"tool\":\"rollback\",\"target\":\"workers\",\"action\":\"start\",\"summary\":\"Roll back worker group from w2 to known-good w1 to fix job decode failures\"}",
+      "responseFile": "attempts/t046-s14--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494597.675851
+}

@@ -1,0 +1,42 @@
+{
+  "case": "t012-s03",
+  "arm": "budget_raw",
+  "stratum": "success_control",
+  "scenario": "worker-backlog",
+  "sourceTrial": 12,
+  "beforeStep": 3,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "inspect",
+    "target": "workers",
+    "action": "start",
+    "summary": "Inspecting worker release identities to confirm the w2 regression and identify the known-good release to roll back to."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 3571,
+  "actualPromptTokens": 3571,
+  "reservedHeadroom": 4621,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 3571,
+      "outputTokens": 46,
+      "totalDurationNs": 7833578057,
+      "responseText": "{\"tool\": \"inspect\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Inspecting worker release identities to confirm the w2 regression and identify the known-good release to roll back to.\"}",
+      "responseFile": "attempts/t012-s03--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494794.1976829
+}

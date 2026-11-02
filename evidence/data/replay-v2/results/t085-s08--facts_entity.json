@@ -1,0 +1,42 @@
+{
+  "case": "t085-s08",
+  "arm": "facts_entity",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 85,
+  "beforeStep": 8,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back all workers from release w2 to known-good w1 after logs show job_decode_failed KeyError: job_id on w2 while every other component is healthy."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 3078,
+  "actualPromptTokens": 3078,
+  "reservedHeadroom": 5114,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 3078,
+      "outputTokens": 51,
+      "totalDurationNs": 7875115178,
+      "responseText": "{\"tool\":\"rollback\",\"target\":\"workers\",\"action\":\"start\",\"summary\":\"Rolling back all workers from release w2 to known-good w1 after logs show job_decode_failed KeyError: job_id on w2 while every other component is healthy.\"}",
+      "responseFile": "attempts/t085-s08--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494910.8398952
+}

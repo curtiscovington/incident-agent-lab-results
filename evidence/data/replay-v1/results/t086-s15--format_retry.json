@@ -1,0 +1,36 @@
+{
+  "case": "t086-s15",
+  "arm": "format_retry",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 86,
+  "beforeStep": 15,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "scheduler-1",
+    "action": "start",
+    "summary": "Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 10427047283,
+      "promptTokens": 5772,
+      "outputTokens": 44,
+      "responseFile": "attempts/t086-s15--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"probe\", \"target\": \"scheduler-1\", \"action\": \"start\", \"summary\": \"Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path.\"}"
+    }
+  ],
+  "savedAt": 1793493107.6281688
+}

@@ -1,0 +1,42 @@
+{
+  "case": "t007-s13",
+  "arm": "facts_time",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 7,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "inspect",
+    "target": "control-plane",
+    "action": "start",
+    "summary": "Inspect current Control Plane state and topology to find the ingress job failure cause."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 2215,
+  "actualPromptTokens": 2215,
+  "reservedHeadroom": 5977,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2215,
+      "outputTokens": 33,
+      "totalDurationNs": 5450935801,
+      "responseText": "{\"tool\":\"inspect\",\"target\":\"control-plane\",\"action\":\"start\",\"summary\":\"Inspect current Control Plane state and topology to find the ingress job failure cause.\"}",
+      "responseFile": "attempts/t007-s13--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494805.7872157
+}

@@ -1,0 +1,36 @@
+{
+  "case": "t018-s06",
+  "arm": "baseline",
+  "stratum": "deployment",
+  "scenario": "api-regression",
+  "sourceTrial": 18,
+  "beforeStep": 6,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "job-api",
+    "action": "restart",
+    "summary": "Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3941649931,
+      "promptTokens": 6562,
+      "outputTokens": 47,
+      "responseFile": "attempts/t018-s06--baseline-a0.response.json",
+      "responseText": "{\"tool\": \"power\", \"target\": \"job-api\", \"action\": \"restart\", \"summary\": \"Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch.\"}"
+    }
+  ],
+  "savedAt": 1793493067.4777577
+}

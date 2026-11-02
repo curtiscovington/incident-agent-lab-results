@@ -1,0 +1,36 @@
+{
+  "case": "t045-s07",
+  "arm": "replication",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 45,
+  "beforeStep": 7,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "offlinePromptTokens": 16328,
+  "actualPromptTokens": 8175,
+  "reservedHeadroom": 17,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": -8153,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "promptTokens": 8175,
+      "outputTokens": 17,
+      "totalDurationNs": 11357621886,
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start",
+      "responseFile": "attempts/t045-s07--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494499.302398
+}

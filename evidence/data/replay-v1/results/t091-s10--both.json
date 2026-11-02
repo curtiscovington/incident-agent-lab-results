@@ -1,0 +1,36 @@
+{
+  "case": "t091-s10",
+  "arm": "both",
+  "stratum": "truncation",
+  "scenario": "api-regression",
+  "sourceTrial": 91,
+  "beforeStep": 10,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "api-2",
+    "action": "start",
+    "summary": "Rolling back api-2 from r4 to known-good r3 to restore API health."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 12260804893,
+      "promptTokens": 7166,
+      "outputTokens": 45,
+      "responseFile": "attempts/t091-s10--both-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"api-2\", \"action\": \"start\", \"summary\": \"Rolling back api-2 from r4 to known-good r3 to restore API health.\"}"
+    }
+  ],
+  "savedAt": 1793493160.0205538
+}

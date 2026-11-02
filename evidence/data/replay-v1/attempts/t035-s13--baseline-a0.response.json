@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:39:47.556200467Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"probe\", \"target\": \"api-1\", \"action\": \"start\", \"summary\": \"Probing api-1 to check its job submission path, NATS publish health, and recent errors.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9699748574,
+  "load_duration": 55005848,
+  "prompt_eval_count": 4913,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 5904996000,
+  "eval_count": 47,
+  "eval_duration": 3525681000
+}

@@ -1,0 +1,36 @@
+{
+  "case": "t086-s15",
+  "arm": "both",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 86,
+  "beforeStep": 15,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back the worker group from release w2 to the known-good release w1 to resolve the job_id schema mismatch."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 4170836311,
+      "promptTokens": 7497,
+      "outputTokens": 49,
+      "responseFile": "attempts/t086-s15--both-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back the worker group from release w2 to the known-good release w1 to resolve the job_id schema mismatch.\"}"
+    }
+  ],
+  "savedAt": 1793493111.8108516
+}

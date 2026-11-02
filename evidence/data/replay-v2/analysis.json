@@ -1,0 +1,1143 @@
+{
+  "id": "replay-20261101-v2",
+  "status": "complete",
+  "decisions": 80,
+  "calls": 80,
+  "cap": 80,
+  "retries": 0,
+  "unresolvedCalls": 0,
+  "replayToolDispatches": 0,
+  "frozenHashesMatch": true,
+  "unchangedV1Files": 434,
+  "unchangedOriginalInputs": 322,
+  "budgetedCallsChecked": 60,
+  "budgetViolations": 0,
+  "maximumMatchedFactsPromptDifference": 1,
+  "arms": [
+    {
+      "arm": "replication",
+      "n": 20,
+      "valid": 15,
+      "categories": {
+        "preferred": 5,
+        "unlisted_review_required": 8,
+        "invalid": 5,
+        "acceptable": 2
+      },
+      "repeatedToolTarget": 6,
+      "lengthStops": 5,
+      "contextBoundaryStops": 5,
+      "actualPromptRange": [
+        2542,
+        8190
+      ],
+      "minimumHeadroom": 2,
+      "promptTokens": 116165,
+      "outputTokens": 741,
+      "medianModelSeconds": 10.259192847000001,
+      "totalModelSeconds": 190.110416402
+    },
+    {
+      "arm": "budget_raw",
+      "n": 20,
+      "valid": 20,
+      "categories": {
+        "preferred": 9,
+        "unlisted_review_required": 9,
+        "acceptable": 2
+      },
+      "repeatedToolTarget": 5,
+      "lengthStops": 0,
+      "contextBoundaryStops": 0,
+      "actualPromptRange": [
+        2304,
+        6943
+      ],
+      "minimumHeadroom": 1249,
+      "promptTokens": 96385,
+      "outputTokens": 901,
+      "medianModelSeconds": 8.862974467499999,
+      "totalModelSeconds": 202.363661884
+    },
+    {
+      "arm": "facts_time",
+      "n": 20,
+      "valid": 20,
+      "categories": {
+        "acceptable": 6,
+        "preferred": 13,
+        "unlisted_review_required": 1
+      },
+      "repeatedToolTarget": 3,
+      "lengthStops": 0,
+      "contextBoundaryStops": 0,
+      "actualPromptRange": [
+        1621,
+        3109
+      ],
+      "minimumHeadroom": 5083,
+      "promptTokens": 50055,
+      "outputTokens": 822,
+      "medianModelSeconds": 6.256119504,
+      "totalModelSeconds": 122.30927097200001
+    },
+    {
+      "arm": "facts_entity",
+      "n": 20,
+      "valid": 20,
+      "categories": {
+        "acceptable": 6,
+        "preferred": 11,
+        "unlisted_review_required": 3
+      },
+      "repeatedToolTarget": 8,
+      "lengthStops": 0,
+      "contextBoundaryStops": 0,
+      "actualPromptRange": [
+        1622,
+        3109
+      ],
+      "minimumHeadroom": 5083,
+      "promptTokens": 50064,
+      "outputTokens": 832,
+      "medianModelSeconds": 6.127750439,
+      "totalModelSeconds": 122.363977155
+    }
+  ],
+  "strata": [
+    {
+      "arm": "replication",
+      "stratum": "db_lock",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      }
+    },
+    {
+      "arm": "replication",
+      "stratum": "deployment",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "unlisted_review_required": 3,
+        "acceptable": 2
+      }
+    },
+    {
+      "arm": "replication",
+      "stratum": "truncation",
+      "n": 5,
+      "valid": 0,
+      "categories": {
+        "invalid": 5
+      }
+    },
+    {
+      "arm": "replication",
+      "stratum": "success_control",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "preferred": 5
+      }
+    },
+    {
+      "arm": "budget_raw",
+      "stratum": "db_lock",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "unlisted_review_required": 5
+      }
+    },
+    {
+      "arm": "budget_raw",
+      "stratum": "deployment",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "unlisted_review_required": 3,
+        "acceptable": 1,
+        "preferred": 1
+      }
+    },
+    {
+      "arm": "budget_raw",
+      "stratum": "truncation",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "unlisted_review_required": 1,
+        "preferred": 4
+      }
+    },
+    {
+      "arm": "budget_raw",
+      "stratum": "success_control",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "preferred": 4,
+        "acceptable": 1
+      }
+    },
+    {
+      "arm": "facts_time",
+      "stratum": "db_lock",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "acceptable": 5
+      }
+    },
+    {
+      "arm": "facts_time",
+      "stratum": "deployment",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "unlisted_review_required": 1,
+        "preferred": 4
+      }
+    },
+    {
+      "arm": "facts_time",
+      "stratum": "truncation",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "preferred": 5
+      }
+    },
+    {
+      "arm": "facts_time",
+      "stratum": "success_control",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "acceptable": 1,
+        "preferred": 4
+      }
+    },
+    {
+      "arm": "facts_entity",
+      "stratum": "db_lock",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "acceptable": 5
+      }
+    },
+    {
+      "arm": "facts_entity",
+      "stratum": "deployment",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "unlisted_review_required": 1,
+        "preferred": 4
+      }
+    },
+    {
+      "arm": "facts_entity",
+      "stratum": "truncation",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "preferred": 4,
+        "unlisted_review_required": 1
+      }
+    },
+    {
+      "arm": "facts_entity",
+      "stratum": "success_control",
+      "n": 5,
+      "valid": 5,
+      "categories": {
+        "acceptable": 1,
+        "preferred": 3,
+        "unlisted_review_required": 1
+      }
+    }
+  ],
+  "pairedComparisons": [
+    {
+      "left": "replication",
+      "right": "budget_raw",
+      "preferredPairedCounts": {
+        "neither_preferred": 10,
+        "right_only": 5,
+        "both_preferred": 4,
+        "left_only": 1
+      }
+    },
+    {
+      "left": "budget_raw",
+      "right": "facts_time",
+      "preferredPairedCounts": {
+        "neither_preferred": 6,
+        "right_only": 5,
+        "both_preferred": 8,
+        "left_only": 1
+      }
+    },
+    {
+      "left": "facts_time",
+      "right": "facts_entity",
+      "preferredPairedCounts": {
+        "neither_preferred": 7,
+        "both_preferred": 11,
+        "left_only": 2
+      }
+    }
+  ],
+  "caseResults": [
+    {
+      "case": "t007-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "budget_raw": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "facts_entity": {
+          "tool": "inspect",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Inspect current Control Plane state and topology to find the ingress job failure cause."
+        },
+        "facts_time": {
+          "tool": "inspect",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Inspect current Control Plane state and topology to find the ingress job failure cause."
+        },
+        "replication": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "acceptable",
+        "facts_time": "acceptable",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 2542,
+        "facts_entity": 2215,
+        "facts_time": 2215,
+        "replication": 2542
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t008-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "budget_raw": {
+          "tool": "probe",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Probing api-2 to compare its health and dependencies with api-1."
+        },
+        "facts_entity": {
+          "tool": "inspect",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Inspecting the Control Plane service state, topology and release identities to establish the actual failure."
+        },
+        "facts_time": {
+          "tool": "verify",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "All components report healthy and releases match known-good; running a fresh scope health and real ingress job completion check to confirm the reported failure is resolved."
+        },
+        "replication": {
+          "tool": "probe",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Probing api-2 to compare its health and dependencies with api-1."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "acceptable",
+        "facts_time": "acceptable",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 3236,
+        "facts_entity": 2738,
+        "facts_time": 2738,
+        "replication": 3236
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t030-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "budget_raw": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+        },
+        "facts_entity": {
+          "tool": "inspect",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Inspecting current control-plane state, topology and release identities to establish the actual failure."
+        },
+        "facts_time": {
+          "tool": "inspect",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Inspecting the full Control Plane service state, topology and release identities to establish the actual failure before any change."
+        },
+        "replication": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "acceptable",
+        "facts_time": "acceptable",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 4863,
+        "facts_entity": 2803,
+        "facts_time": 2803,
+        "replication": 4863
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t035-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "budget_raw": {
+          "tool": "probe",
+          "target": "api-1",
+          "action": "start",
+          "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+        },
+        "facts_entity": {
+          "tool": "verify",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "All components report healthy and releases match known-good, yet the alarm says job submission/completion failed; run a fresh scope health and real ingress job completion check to confirm the actual user-visible state."
+        },
+        "facts_time": {
+          "tool": "verify",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Running a fresh scope health and real ingress job completion check to confirm the reported submission/completion failure."
+        },
+        "replication": {
+          "tool": "probe",
+          "target": "api-1",
+          "action": "start",
+          "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "acceptable",
+        "facts_time": "acceptable",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 4913,
+        "facts_entity": 2805,
+        "facts_time": 2805,
+        "replication": 4913
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t036-s13",
+      "stratum": "db_lock",
+      "actions": {
+        "budget_raw": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        },
+        "facts_entity": {
+          "tool": "inspect",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Inspect current Control Plane state, topology and releases to find the ingress job failure cause."
+        },
+        "facts_time": {
+          "tool": "verify",
+          "target": "control-plane",
+          "action": "start",
+          "summary": "Run fresh scope health and real ingress job completion to confirm the service is actually working."
+        },
+        "replication": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to check its job processing behavior."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "acceptable",
+        "facts_time": "acceptable",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 2544,
+        "facts_entity": 2215,
+        "facts_time": 2215,
+        "replication": 2544
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t005-s05",
+      "stratum": "deployment",
+      "actions": {
+        "budget_raw": {
+          "tool": "power",
+          "target": "api-1",
+          "action": "restart",
+          "summary": "Restarting api-1 because it is running but unreachable and logs show request dispatch stalled."
+        },
+        "facts_entity": {
+          "tool": "probe",
+          "target": "api-1",
+          "action": "start",
+          "summary": "Probe api-1 to confirm reachability and capture current error details."
+        },
+        "facts_time": {
+          "tool": "probe",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Probe api-2 to compare behavior and confirm the failure is isolated to api-1."
+        },
+        "replication": {
+          "tool": "power",
+          "target": "api-1",
+          "action": "restart",
+          "summary": "Restarting api-1 because it is running but unreachable and logs show request dispatch stalled."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "unlisted_review_required",
+        "facts_time": "unlisted_review_required",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 3050,
+        "facts_entity": 1622,
+        "facts_time": 1621,
+        "replication": 3050
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t018-s06",
+      "stratum": "deployment",
+      "actions": {
+        "budget_raw": {
+          "tool": "power",
+          "target": "job-api",
+          "action": "restart",
+          "summary": "Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Roll back both API nodes from r4 to known-good r3 after dispatch stalls and unreachable health."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Roll back both API nodes from r4 to known-good r3 after dispatch stalls and unreachable health."
+        },
+        "replication": {
+          "tool": "power",
+          "target": "job-api",
+          "action": "restart",
+          "summary": "Restarting the job-api group (api-1 and api-2) to clear the stalled request dispatch."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 6562,
+        "facts_entity": 2296,
+        "facts_time": 2296,
+        "replication": 6562
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t046-s14",
+      "stratum": "deployment",
+      "actions": {
+        "budget_raw": {
+          "tool": "logs",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job decode failure (KeyError: job_id) blocking job completion."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back worker group from w2 to known-good w1 to fix job decode failures"
+        },
+        "replication": {
+          "tool": "logs",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Reading worker-1 logs to see why it is not acknowledging the 9 pending job messages."
+        }
+      },
+      "categories": {
+        "budget_raw": "acceptable",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "acceptable"
+      },
+      "promptTokens": {
+        "budget_raw": 5430,
+        "facts_entity": 2701,
+        "facts_time": 2700,
+        "replication": 4710
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t086-s15",
+      "stratum": "deployment",
+      "actions": {
+        "budget_raw": {
+          "tool": "probe",
+          "target": "ingress",
+          "action": "start",
+          "summary": "Probing the ingress load balancer to confirm the job submission failure and identify the failing path."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job decode failure and restore worker health."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job decode failure and restore worker health."
+        },
+        "replication": {
+          "tool": "probe",
+          "target": "scheduler-1",
+          "action": "start",
+          "summary": "Probing the scheduler instance to confirm the schema mismatch and identify the failing job dispatch path."
+        }
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "unlisted_review_required"
+      },
+      "promptTokens": {
+        "budget_raw": 6515,
+        "facts_entity": 2705,
+        "facts_time": 2705,
+        "replication": 5772
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t130-s12",
+      "stratum": "deployment",
+      "actions": {
+        "budget_raw": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the workers group from release w2 to the known-good release w1 to resolve the job decode failure."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job decode failure and restore worker health."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job decode failure and restore worker health."
+        },
+        "replication": {
+          "tool": "logs",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Inspecting worker-1 logs to understand the job decode failure and identify the expected payload format."
+        }
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "acceptable"
+      },
+      "promptTokens": {
+        "budget_raw": 6209,
+        "facts_entity": 2742,
+        "facts_time": 2742,
+        "replication": 5466
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t011-s11",
+      "stratum": "truncation",
+      "actions": {
+        "budget_raw": {
+          "tool": "probe",
+          "target": "worker-1",
+          "action": "start",
+          "summary": "Probing worker-1 to confirm the w2 release is failing job completion."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job decode failure (KeyError: job_id) blocking job completion."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job_id decode failure."
+        },
+        "replication": null
+      },
+      "categories": {
+        "budget_raw": "unlisted_review_required",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "invalid"
+      },
+      "promptTokens": {
+        "budget_raw": 5975,
+        "facts_entity": 2705,
+        "facts_time": 2705,
+        "replication": 8190
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t045-s07",
+      "stratum": "truncation",
+      "actions": {
+        "budget_raw": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from the defective w2 release to the known-good w1 release to fix the job_id decode failure."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1, since worker logs show job_decode_failed (KeyError: job_id) on w2 while APIs and dependencies are healthy."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1 after logs show job decode failures (KeyError: job_id) and a growing queue with zero running jobs."
+        },
+        "replication": null
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "invalid"
+      },
+      "promptTokens": {
+        "budget_raw": 6936,
+        "facts_entity": 3109,
+        "facts_time": 3109,
+        "replication": 8175
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t085-s08",
+      "stratum": "truncation",
+      "actions": {
+        "budget_raw": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all three workers from the broken w2 release to the known-good w1 release that decodes job_id correctly."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1 after logs show job_decode_failed KeyError: job_id on w2 while every other component is healthy."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1 after logs show job decode failures (KeyError: job_id) and a growing queue with zero running jobs."
+        },
+        "replication": null
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "invalid"
+      },
+      "promptTokens": {
+        "budget_raw": 6943,
+        "facts_entity": 3078,
+        "facts_time": 3078,
+        "replication": 8173
+      },
+      "factsPromptDifference": 0
+    },
+    {
+      "case": "t158-s07",
+      "stratum": "truncation",
+      "actions": {
+        "budget_raw": {
+          "tool": "release_scheduler_lease",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Releasing the abandoned lab maintenance holder of the scheduler advisory lease (pid 328) so schedulers can resume."
+        },
+        "facts_entity": {
+          "tool": "probe",
+          "target": "scheduler-2",
+          "action": "start",
+          "summary": "Probe scheduler-2 to confirm its current reachability and health."
+        },
+        "facts_time": {
+          "tool": "release_scheduler_lease",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Release the abandoned scheduler advisory lease held by session 328 so scheduler-2 can recover."
+        },
+        "replication": null
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "unlisted_review_required",
+        "facts_time": "preferred",
+        "replication": "invalid"
+      },
+      "promptTokens": {
+        "budget_raw": 3303,
+        "facts_entity": 2325,
+        "facts_time": 2324,
+        "replication": 8173
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t091-s10",
+      "stratum": "truncation",
+      "actions": {
+        "budget_raw": {
+          "tool": "rollback",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Rolling back api-2 from r4 to known-good r3 to restore API health."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Rolling back api-2 from r4 to known-good r3 after api-1 rollback was initiated."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "api-2",
+          "action": "start",
+          "summary": "Rolling back api-2 to known-good release r3 after api-1 rollback"
+        },
+        "replication": null
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "invalid"
+      },
+      "promptTokens": {
+        "budget_raw": 6510,
+        "facts_entity": 2454,
+        "facts_time": 2453,
+        "replication": 8182
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t001-s07",
+      "stratum": "success_control",
+      "actions": {
+        "budget_raw": {
+          "tool": "power",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Start the scheduler group to restore the stopped schedulers and allow outbox jobs to publish."
+        },
+        "facts_entity": {
+          "tool": "inspect",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Inspecting scheduler group state and releases to understand why both schedulers exited."
+        },
+        "facts_time": {
+          "tool": "inspect",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Re-inspect scheduler group state and releases after the prior start attempt."
+        },
+        "replication": {
+          "tool": "power",
+          "target": "schedulers",
+          "action": "start",
+          "summary": "Start the scheduler group because both schedulers are exited and the outbox is growing."
+        }
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "acceptable",
+        "facts_time": "acceptable",
+        "replication": "preferred"
+      },
+      "promptTokens": {
+        "budget_raw": 5715,
+        "facts_entity": 2309,
+        "facts_time": 2308,
+        "replication": 7328
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t003-s06",
+      "stratum": "success_control",
+      "actions": {
+        "budget_raw": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres."
+        },
+        "facts_entity": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restore the validated API-to-database route policy for job-api after confirming both API instances are network-blocked from PostgreSQL."
+        },
+        "facts_time": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restore the validated API-to-database route policy for job-api after confirming both API instances are network-blocked from PostgreSQL."
+        },
+        "replication": {
+          "tool": "restore_network",
+          "target": "job-api",
+          "action": "start",
+          "summary": "Restoring the validated API-to-database route policy to remove the blackhole blocking api-1 and api-2 from postgres."
+        }
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "preferred"
+      },
+      "promptTokens": {
+        "budget_raw": 2304,
+        "facts_entity": 2229,
+        "facts_time": 2228,
+        "replication": 7305
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t012-s03",
+      "stratum": "success_control",
+      "actions": {
+        "budget_raw": {
+          "tool": "inspect",
+          "target": "workers",
+          "action": "start",
+          "summary": "Inspecting worker release identities to confirm the w2 regression and identify the known-good release to roll back to."
+        },
+        "facts_entity": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1 after logs show job decode failures (KeyError: job_id) on w2."
+        },
+        "facts_time": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back all workers from release w2 to known-good w1 after logs show job decode failures (KeyError: job_id) on w2."
+        },
+        "replication": {
+          "tool": "rollback",
+          "target": "workers",
+          "action": "start",
+          "summary": "Rolling back the worker group from release w2 to the known-good w1, since w2 fails to decode job payloads (KeyError: job_id) and is causing the job backlog."
+        }
+      },
+      "categories": {
+        "budget_raw": "acceptable",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "preferred"
+      },
+      "promptTokens": {
+        "budget_raw": 3571,
+        "facts_entity": 2873,
+        "facts_time": 2872,
+        "replication": 7717
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t015-s03",
+      "stratum": "success_control",
+      "actions": {
+        "budget_raw": {
+          "tool": "power",
+          "target": "nats-2",
+          "action": "start",
+          "summary": "Start the exited NATS node nats-2 to restore cluster quorum"
+        },
+        "facts_entity": {
+          "tool": "inspect",
+          "target": "messaging",
+          "action": "start",
+          "summary": "Inspect messaging group state to confirm nats-2/nats-3 are stopped before starting them."
+        },
+        "facts_time": {
+          "tool": "power",
+          "target": "nats-2",
+          "action": "start",
+          "summary": "Starting the exited nats-2 messaging node to restore cluster redundancy."
+        },
+        "replication": {
+          "tool": "power",
+          "target": "nats-2",
+          "action": "start",
+          "summary": "Start the exited NATS node nats-2 to restore cluster quorum"
+        }
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "unlisted_review_required",
+        "facts_time": "preferred",
+        "replication": "preferred"
+      },
+      "promptTokens": {
+        "budget_raw": 4150,
+        "facts_entity": 1729,
+        "facts_time": 1728,
+        "replication": 4150
+      },
+      "factsPromptDifference": 1
+    },
+    {
+      "case": "t029-s15",
+      "stratum": "success_control",
+      "actions": {
+        "budget_raw": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission."
+        },
+        "facts_entity": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Terminate the maintenance session holding the jobs table lock that is blocking job submission/completion."
+        },
+        "facts_time": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Terminate the maintenance session holding the jobs table lock that is blocking job submission/completion."
+        },
+        "replication": {
+          "tool": "release_database_lock",
+          "target": "postgres",
+          "action": "start",
+          "summary": "Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission."
+        }
+      },
+      "categories": {
+        "budget_raw": "preferred",
+        "facts_entity": "preferred",
+        "facts_time": "preferred",
+        "replication": "preferred"
+      },
+      "promptTokens": {
+        "budget_raw": 5114,
+        "facts_entity": 2411,
+        "facts_time": 2410,
+        "replication": 5114
+      },
+      "factsPromptDifference": 1
+    }
+  ],
+  "limitations": [
+    "Twenty outcome-aware development states, not independent confirmation.",
+    "Facts-time and facts-entity control fact availability and near-exact prompt length, but test organization of an already normalized record, not semantics or memory mechanisms generally.",
+    "Raw versus fact-record contrasts cannot isolate budgeting from normalization, omitted details, recency or length.",
+    "Unbudgeted replication intentionally retains historical context-pressure behavior.",
+    "Historical source prompts mix current/runbook but are fixed within every case.",
+    "Automatic action rubric; no live repairs or human diagnosis adjudication.",
+    "Offline HF tokenizer matches recorded under-cap prompts; actual serving counters are checked per call.",
+    "Cache/order affects latency; no intrinsic speed claim."
+  ],
+  "protocolSha256": "832de2d86b194686c33e08de81c423dada17a0e08dfd6f1b1e8b05a2b851a5f5"
+}

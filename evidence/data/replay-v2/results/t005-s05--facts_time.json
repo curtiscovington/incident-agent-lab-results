@@ -1,0 +1,42 @@
+{
+  "case": "t005-s05",
+  "arm": "facts_time",
+  "stratum": "deployment",
+  "scenario": "api-regression",
+  "sourceTrial": 5,
+  "beforeStep": 5,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "api-2",
+    "action": "start",
+    "summary": "Probe api-2 to compare behavior and confirm the failure is isolated to api-1."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 1621,
+  "actualPromptTokens": 1621,
+  "reservedHeadroom": 6571,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 1621,
+      "outputTokens": 37,
+      "totalDurationNs": 4995466198,
+      "responseText": "{\"tool\":\"probe\",\"target\":\"api-2\",\"action\":\"start\",\"summary\":\"Probe api-2 to compare behavior and confirm the failure is isolated to api-1.\"}",
+      "responseFile": "attempts/t005-s05--facts_time.response.json"
+    }
+  ],
+  "savedAt": 1793494872.6282904
+}

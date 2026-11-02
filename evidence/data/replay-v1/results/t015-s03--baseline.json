@@ -1,0 +1,36 @@
+{
+  "case": "t015-s03",
+  "arm": "baseline",
+  "stratum": "success_control",
+  "scenario": "broker-quorum",
+  "sourceTrial": 15,
+  "beforeStep": 3,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "nats-2",
+    "action": "start",
+    "summary": "Start the exited NATS node nats-2 to restore cluster quorum"
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3322067892,
+      "promptTokens": 4150,
+      "outputTokens": 42,
+      "responseFile": "attempts/t015-s03--baseline-a0.response.json",
+      "responseText": "{\"tool\": \"power\", \"target\": \"nats-2\", \"action\": \"start\", \"summary\": \"Start the exited NATS node nats-2 to restore cluster quorum\"}"
+    }
+  ],
+  "savedAt": 1793493406.9340756
+}

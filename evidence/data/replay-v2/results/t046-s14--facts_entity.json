@@ -1,0 +1,42 @@
+{
+  "case": "t046-s14",
+  "arm": "facts_entity",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 46,
+  "beforeStep": 14,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Roll back the worker group from release w2 to known-good w1 to fix the job decode failure (KeyError: job_id) blocking job completion."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 2701,
+  "actualPromptTokens": 2701,
+  "reservedHeadroom": 5491,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2701,
+      "outputTokens": 48,
+      "totalDurationNs": 7047620180,
+      "responseText": "{\"tool\":\"rollback\",\"target\":\"workers\",\"action\":\"start\",\"summary\":\"Roll back the worker group from release w2 to known-good w1 to fix the job decode failure (KeyError: job_id) blocking job completion.\"}",
+      "responseFile": "attempts/t046-s14--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494604.733069
+}

@@ -1,0 +1,91 @@
+{
+  "originalFullOfflineInput": 10397,
+  "recordedOriginalInput": 8173,
+  "difference": 2224,
+  "recordedOriginalReply": 19,
+  "configuredContext": 8192,
+  "configuredOutputCap": 384,
+  "budgetedOfflineInput": 3303,
+  "budgetedRecordedInput": 3303,
+  "budgetedReply": 53,
+  "exactUnderCapCalibrationCases": [
+    {
+      "case": "t007-s13",
+      "offline": 2542,
+      "recorded": 2542
+    },
+    {
+      "case": "t008-s13",
+      "offline": 3236,
+      "recorded": 3236
+    },
+    {
+      "case": "t030-s13",
+      "offline": 4863,
+      "recorded": 4863
+    },
+    {
+      "case": "t035-s13",
+      "offline": 4913,
+      "recorded": 4913
+    },
+    {
+      "case": "t036-s13",
+      "offline": 2544,
+      "recorded": 2544
+    },
+    {
+      "case": "t005-s05",
+      "offline": 3050,
+      "recorded": 3050
+    },
+    {
+      "case": "t018-s06",
+      "offline": 6562,
+      "recorded": 6562
+    },
+    {
+      "case": "t001-s07",
+      "offline": 7328,
+      "recorded": 7328
+    },
+    {
+      "case": "t003-s06",
+      "offline": 7305,
+      "recorded": 7305
+    },
+    {
+      "case": "t015-s03",
+      "offline": 4150,
+      "recorded": 4150
+    },
+    {
+      "case": "t029-s15",
+      "offline": 5114,
+      "recorded": 5114
+    }
+  ],
+  "baselineReplicationExactRequestMatches": [
+    "t007-s13",
+    "t008-s13",
+    "t030-s13",
+    "t035-s13",
+    "t036-s13",
+    "t005-s05",
+    "t018-s06",
+    "t046-s14",
+    "t086-s15",
+    "t130-s12",
+    "t011-s11",
+    "t045-s07",
+    "t085-s08",
+    "t158-s07",
+    "t091-s10",
+    "t001-s07",
+    "t003-s06",
+    "t012-s03",
+    "t015-s03",
+    "t029-s15"
+  ],
+  "inference": "Difference and exact under-cap matches strongly support serving-side input truncation; retained token IDs and exact omitted tokens were not saved."
+}

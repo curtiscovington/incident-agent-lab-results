@@ -1,0 +1,30 @@
+{
+  "case": "t011-s11",
+  "arm": "baseline",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 11,
+  "beforeStep": 11,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 613554957,
+      "promptTokens": 8190,
+      "outputTokens": 2,
+      "responseFile": "attempts/t011-s11--baseline-a0.response.json",
+      "responseText": "{\"tool"
+    }
+  ],
+  "savedAt": 1793493456.1060257
+}

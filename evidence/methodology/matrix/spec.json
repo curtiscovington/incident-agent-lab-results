@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "replay-action-matrix",
+  "projectId": "cf5c460a60d74100a8f911ba44d670a7",
+  "kind": "matrix_counts",
+  "eyebrow": "03 / NEXT-ACTION REPLAY",
+  "title": "Valid JSON did not ensure the preferred next action",
+  "subtitle": "Two unresolved patterns in the saved-state replay \u00b7 five states per case type",
+  "data": {
+    "focusColumns": [
+      0,
+      3
+    ],
+    "focusTitles": [
+      "Database diagnostic stayed unresolved",
+      "Control-state scores across arms"
+    ],
+    "compactLabels": [
+      "Original context",
+      "Budgeted raw",
+      "Chronological facts",
+      "Component-grouped facts"
+    ],
+    "denominator": 5,
+    "columns": [
+      "Database lock",
+      "Deployment",
+      "Truncation states",
+      "Successful controls"
+    ],
+    "rows": [
+      {
+        "label": "Original history",
+        "note": "Unbudgeted replication",
+        "values": [
+          0,
+          0,
+          0,
+          5
+        ],
+        "valid": 15
+      },
+      {
+        "label": "Budgeted raw history",
+        "note": "Oldest-pair pruning",
+        "values": [
+          0,
+          1,
+          4,
+          4
+        ],
+        "valid": 20
+      },
+      {
+        "label": "Compact facts \u00b7 time",
+        "note": "Chronological order",
+        "values": [
+          0,
+          4,
+          5,
+          4
+        ],
+        "valid": 20
+      },
+      {
+        "label": "Compact facts \u00b7 component",
+        "note": "Grouped by component",
+        "values": [
+          0,
+          4,
+          4,
+          3
+        ],
+        "valid": 20
+      }
+    ]
+  },
+  "caveats": [
+    "Twenty selected development states; five per case type. Descriptive rubric scores, not live recovery rates or evidence of a general regression.",
+    "Only the two fact arms match fact availability and near-exact length. Unlisted actions require review; they are not necessarily incorrect."
+  ],
+  "sources": [
+    {
+      "label": "V2 budget-controlled replay",
+      "run": "replay-20261101-v2",
+      "sha256": "f2767038cf0cbdac395efccdefba0fde005d3490c9cd6fe30fc3efa77aa8b067",
+      "path": "data/replay-v2/analysis.json"
+    }
+  ],
+  "caption": "No arm selected the preferred database-lock diagnostic in these five saved states. Successful-control preferred scores were 5/5, 4/5, 4/5 and 3/5 across the four arms. These are descriptive counts from five selected development states, not evidence of a general regression. Filled dots mean preferred actions; open dots include other rubric outcomes, not necessarily incorrect actions."
+}

@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:38:50.587126518Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"probe\", \"target\": \"api-2\", \"action\": \"start\", \"summary\": \"Probing api-2 to compare its health and dependencies with api-1.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3317187834,
+  "load_duration": 58442455,
+  "prompt_eval_count": 3236,
+  "prompt_eval_cached_count": 3232,
+  "prompt_eval_duration": 129110000,
+  "eval_count": 42,
+  "eval_duration": 3113167000
+}

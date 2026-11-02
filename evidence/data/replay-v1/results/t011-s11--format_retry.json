@@ -1,0 +1,47 @@
+{
+  "case": "t011-s11",
+  "arm": "format_retry",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 11,
+  "beforeStep": 11,
+  "initialValid": false,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "workers",
+    "action": "start",
+    "summary": "Probing worker group to confirm the release mismatch and job-processing failure."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 10265227041,
+      "promptTokens": 8190,
+      "outputTokens": 2,
+      "responseFile": "attempts/t011-s11--format_retry-a0.response.json",
+      "responseText": "{\"tool"
+    },
+    {
+      "attempt": 1,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 9600084219,
+      "promptTokens": 5318,
+      "outputTokens": 38,
+      "responseFile": "attempts/t011-s11--format_retry-a1.response.json",
+      "responseText": "{\"tool\": \"probe\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Probing worker group to confirm the release mismatch and job-processing failure.\"}"
+    }
+  ],
+  "savedAt": 1793493455.4729571
+}

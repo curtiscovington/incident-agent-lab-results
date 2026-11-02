@@ -1,0 +1,20 @@
+{
+  "sourceURL": "https://curtiscovington.com/assets/posts/incident-agent-context/incident-agent-evidence-v0.1.0.zip",
+  "sourceArchiveSha256": "f00a0dfdb6bb985bc91b978d371dc98c2464143bf581c288837e6e15fa23772b",
+  "sourceArchiveBytes": 1665809,
+  "sourceInnerDirectory": "incident-agent-evidence-v0.1.0",
+  "repositoryDestination": "evidence/",
+  "transformation": "Remove only the enclosing ZIP directory; preserve every payload file byte-for-byte.",
+  "payloadFiles": 586,
+  "originalManifest": "evidence/manifest.json",
+  "originalChecksums": "evidence/SHA256SUMS",
+  "newRootFiles": [
+    "README.md",
+    "REPRODUCING.md",
+    "PROVENANCE.md",
+    "LICENSE.md",
+    ".gitignore",
+    "import-provenance.json"
+  ],
+  "sourceURLRole": "Historical publication location, not a current download promise."
+}

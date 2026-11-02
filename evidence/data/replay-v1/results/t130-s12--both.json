@@ -1,0 +1,36 @@
+{
+  "case": "t130-s12",
+  "arm": "both",
+  "stratum": "deployment",
+  "scenario": "worker-backlog",
+  "sourceTrial": 130,
+  "beforeStep": 12,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back the workers group from release w2 to the known-good release w1 to resolve the job payload decode failure."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 12626745985,
+      "promptTokens": 7145,
+      "outputTokens": 49,
+      "responseFile": "attempts/t130-s12--both-a0.response.json",
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling back the workers group from release w2 to the known-good release w1 to resolve the job payload decode failure.\"}"
+    }
+  ],
+  "savedAt": 1793493306.2428815
+}

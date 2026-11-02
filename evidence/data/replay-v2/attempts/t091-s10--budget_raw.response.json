@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:57:50.887062527Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"rollback\", \"target\": \"api-2\", \"action\": \"start\", \"summary\": \"Rolling back api-2 from r4 to known-good r3 to restore API health.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11387741173,
+  "load_duration": 57868118,
+  "prompt_eval_count": 6510,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 7803785000,
+  "eval_count": 45,
+  "eval_duration": 3388142000
+}

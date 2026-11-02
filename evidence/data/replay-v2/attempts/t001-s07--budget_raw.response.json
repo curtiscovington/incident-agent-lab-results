@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:58:28.063498379Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"power\", \"target\": \"schedulers\", \"action\": \"start\", \"summary\": \"Start the scheduler group to restore the stopped schedulers and allow outbox jobs to publish.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8637173065,
+  "load_duration": 40473966,
+  "prompt_eval_count": 5715,
+  "prompt_eval_cached_count": 1284,
+  "prompt_eval_duration": 5347793000,
+  "eval_count": 43,
+  "eval_duration": 3229890000
+}

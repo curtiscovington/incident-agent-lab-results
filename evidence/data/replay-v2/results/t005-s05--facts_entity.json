@@ -1,0 +1,42 @@
+{
+  "case": "t005-s05",
+  "arm": "facts_entity",
+  "stratum": "deployment",
+  "scenario": "api-regression",
+  "sourceTrial": 5,
+  "beforeStep": 5,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "api-1",
+    "action": "start",
+    "summary": "Probe api-1 to confirm reachability and capture current error details."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 1622,
+  "actualPromptTokens": 1622,
+  "reservedHeadroom": 6570,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 1622,
+      "outputTokens": 33,
+      "totalDurationNs": 4074073702,
+      "responseText": "{\"tool\":\"probe\",\"target\":\"api-1\",\"action\":\"start\",\"summary\":\"Probe api-1 to confirm reachability and capture current error details.\"}",
+      "responseFile": "attempts/t005-s05--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494883.1103725
+}

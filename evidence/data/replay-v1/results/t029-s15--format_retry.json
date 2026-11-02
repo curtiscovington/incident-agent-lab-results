@@ -1,0 +1,36 @@
+{
+  "case": "t029-s15",
+  "arm": "format_retry",
+  "stratum": "success_control",
+  "scenario": "database-lock",
+  "sourceTrial": 29,
+  "beforeStep": 15,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "release_database_lock",
+    "target": "postgres",
+    "action": "start",
+    "summary": "Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3483979452,
+      "promptTokens": 5114,
+      "outputTokens": 44,
+      "responseFile": "attempts/t029-s15--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"release_database_lock\", \"target\": \"postgres\", \"action\": \"start\", \"summary\": \"Releasing the lab-maintenance session holding the jobs table lock that is blocking job submission.\"}"
+    }
+  ],
+  "savedAt": 1793493337.7719727
+}

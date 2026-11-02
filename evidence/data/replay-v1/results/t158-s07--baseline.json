@@ -1,0 +1,30 @@
+{
+  "case": "t158-s07",
+  "arm": "baseline",
+  "stratum": "truncation",
+  "scenario": "scheduler-lease",
+  "sourceTrial": 158,
+  "beforeStep": 7,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "totalDurationNs": 11270390616,
+      "promptTokens": 8173,
+      "outputTokens": 19,
+      "responseFile": "attempts/t158-s07--baseline-a0.response.json",
+      "responseText": "{\"tool\": \"release_scheduler_lease\", \"target\": \"schedulers\", \"action\":"
+    }
+  ],
+  "savedAt": 1793492973.2209132
+}

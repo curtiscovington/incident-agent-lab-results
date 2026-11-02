@@ -1,0 +1,36 @@
+{
+  "case": "t030-s13",
+  "arm": "format_retry",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 30,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "scheduler-1",
+    "action": "start",
+    "summary": "Probing scheduler-1 to check its NATS and database dependency behavior."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3262586198,
+      "promptTokens": 4863,
+      "outputTokens": 41,
+      "responseFile": "attempts/t030-s13--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"probe\", \"target\": \"scheduler-1\", \"action\": \"start\", \"summary\": \"Probing scheduler-1 to check its NATS and database dependency behavior.\"}"
+    }
+  ],
+  "savedAt": 1793493633.5137856
+}

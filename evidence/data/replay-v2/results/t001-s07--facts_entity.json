@@ -1,0 +1,42 @@
+{
+  "case": "t001-s07",
+  "arm": "facts_entity",
+  "stratum": "success_control",
+  "scenario": "scheduler-outage",
+  "sourceTrial": 1,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "inspect",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Inspecting scheduler group state and releases to understand why both schedulers exited."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 2309,
+  "actualPromptTokens": 2309,
+  "reservedHeadroom": 5883,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2309,
+      "outputTokens": 33,
+      "totalDurationNs": 4138009565,
+      "responseText": "{\"tool\":\"inspect\",\"target\":\"schedulers\",\"action\":\"start\",\"summary\":\"Inspecting scheduler group state and releases to understand why both schedulers exited.\"}",
+      "responseFile": "attempts/t001-s07--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494723.0282145
+}

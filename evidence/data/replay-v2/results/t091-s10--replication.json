@@ -1,0 +1,36 @@
+{
+  "case": "t091-s10",
+  "arm": "replication",
+  "stratum": "truncation",
+  "scenario": "api-regression",
+  "sourceTrial": 91,
+  "beforeStep": 10,
+  "initialValid": false,
+  "finalValid": false,
+  "decision": null,
+  "score": {
+    "category": "invalid",
+    "ambiguous": false,
+    "repeatToolTarget": false
+  },
+  "offlinePromptTokens": 8927,
+  "actualPromptTokens": 8182,
+  "reservedHeadroom": 10,
+  "budgeted": false,
+  "budgetAdherent": true,
+  "tokenCountDelta": -745,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": false,
+      "error": "invalid JSON or absent content",
+      "doneReason": "length",
+      "promptTokens": 8182,
+      "outputTokens": 10,
+      "totalDurationNs": 10798846963,
+      "responseText": "{\"tool\": \"rollback\", \"target\": \"",
+      "responseFile": "attempts/t091-s10--replication.response.json"
+    }
+  ],
+  "savedAt": 1793494681.698407
+}

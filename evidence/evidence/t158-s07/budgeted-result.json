@@ -1,0 +1,42 @@
+{
+  "case": "t158-s07",
+  "arm": "budget_raw",
+  "stratum": "truncation",
+  "scenario": "scheduler-lease",
+  "sourceTrial": 158,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "release_scheduler_lease",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Releasing the abandoned lab maintenance holder of the scheduler advisory lease (pid 328) so schedulers can resume."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 3303,
+  "actualPromptTokens": 3303,
+  "reservedHeadroom": 4889,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 3303,
+      "outputTokens": 53,
+      "totalDurationNs": 49232581108,
+      "responseText": "{\"tool\": \"release_scheduler_lease\", \"target\": \"schedulers\", \"action\": \"start\", \"summary\": \"Releasing the abandoned lab maintenance holder of the scheduler advisory lease (pid 328) so schedulers can resume.\"}",
+      "responseFile": "attempts/t158-s07--budget_raw.response.json"
+    }
+  ],
+  "savedAt": 1793494376.4071155
+}

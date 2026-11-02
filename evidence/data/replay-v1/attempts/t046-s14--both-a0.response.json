@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "created_at": "2026-11-01T00:34:53.601880168Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"tool\": \"rollback\", \"target\": \"workers\", \"action\": \"start\", \"summary\": \"Rolling the worker group back from w2 to known-good w1 because worker logs show job_decode_failed KeyError: job_id.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4054097302,
+  "load_duration": 51423881,
+  "prompt_eval_count": 6405,
+  "prompt_eval_cached_count": 6401,
+  "prompt_eval_duration": 127749000,
+  "eval_count": 50,
+  "eval_duration": 3766559000
+}

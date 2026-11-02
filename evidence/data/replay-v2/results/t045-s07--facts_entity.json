@@ -1,0 +1,42 @@
+{
+  "case": "t045-s07",
+  "arm": "facts_entity",
+  "stratum": "truncation",
+  "scenario": "worker-backlog",
+  "sourceTrial": 45,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "rollback",
+    "target": "workers",
+    "action": "start",
+    "summary": "Rolling back all workers from release w2 to known-good w1, since worker logs show job_decode_failed (KeyError: job_id) on w2 while APIs and dependencies are healthy."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "offlinePromptTokens": 3109,
+  "actualPromptTokens": 3109,
+  "reservedHeadroom": 5083,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 3109,
+      "outputTokens": 56,
+      "totalDurationNs": 8230484428,
+      "responseText": "{\"tool\":\"rollback\",\"target\":\"workers\",\"action\":\"start\",\"summary\":\"Rolling back all workers from release w2 to known-good w1, since worker logs show job_decode_failed (KeyError: job_id) on w2 while APIs and dependencies are healthy.\"}",
+      "responseFile": "attempts/t045-s07--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494507.5379596
+}

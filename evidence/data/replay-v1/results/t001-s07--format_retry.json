@@ -1,0 +1,36 @@
+{
+  "case": "t001-s07",
+  "arm": "format_retry",
+  "stratum": "success_control",
+  "scenario": "scheduler-outage",
+  "sourceTrial": 1,
+  "beforeStep": 7,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "power",
+    "target": "schedulers",
+    "action": "start",
+    "summary": "Start the scheduler group to restore the stopped schedulers and allow outbox jobs to be published."
+  },
+  "score": {
+    "category": "preferred",
+    "ambiguous": false,
+    "repeatToolTarget": false,
+    "evidenceUseProxy": true
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3498571835,
+      "promptTokens": 7328,
+      "outputTokens": 44,
+      "responseFile": "attempts/t001-s07--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"power\", \"target\": \"schedulers\", \"action\": \"start\", \"summary\": \"Start the scheduler group to restore the stopped schedulers and allow outbox jobs to be published.\"}"
+    }
+  ],
+  "savedAt": 1793493147.7463093
+}

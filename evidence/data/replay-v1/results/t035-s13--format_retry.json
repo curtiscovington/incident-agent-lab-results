@@ -1,0 +1,36 @@
+{
+  "case": "t035-s13",
+  "arm": "format_retry",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 35,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "probe",
+    "target": "api-1",
+    "action": "start",
+    "summary": "Probing api-1 to check its job submission path, NATS publish health, and recent errors."
+  },
+  "score": {
+    "category": "unlisted_review_required",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "totalDurationNs": 3937982091,
+      "promptTokens": 4913,
+      "outputTokens": 47,
+      "responseFile": "attempts/t035-s13--format_retry-a0.response.json",
+      "responseText": "{\"tool\": \"probe\", \"target\": \"api-1\", \"action\": \"start\", \"summary\": \"Probing api-1 to check its job submission path, NATS publish health, and recent errors.\"}"
+    }
+  ],
+  "savedAt": 1793493602.9045413
+}

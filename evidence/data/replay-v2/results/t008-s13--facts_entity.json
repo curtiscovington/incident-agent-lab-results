@@ -1,0 +1,42 @@
+{
+  "case": "t008-s13",
+  "arm": "facts_entity",
+  "stratum": "db_lock",
+  "scenario": "database-lock",
+  "sourceTrial": 8,
+  "beforeStep": 13,
+  "initialValid": true,
+  "finalValid": true,
+  "decision": {
+    "tool": "inspect",
+    "target": "control-plane",
+    "action": "start",
+    "summary": "Inspecting the Control Plane service state, topology and release identities to establish the actual failure."
+  },
+  "score": {
+    "category": "acceptable",
+    "ambiguous": true,
+    "repeatToolTarget": true,
+    "evidenceUseProxy": false
+  },
+  "offlinePromptTokens": 2738,
+  "actualPromptTokens": 2738,
+  "reservedHeadroom": 5454,
+  "budgeted": true,
+  "budgetAdherent": true,
+  "tokenCountDelta": 0,
+  "attempts": [
+    {
+      "attempt": 0,
+      "schemaValid": true,
+      "error": null,
+      "doneReason": "stop",
+      "promptTokens": 2738,
+      "outputTokens": 36,
+      "totalDurationNs": 6206672635,
+      "responseText": "{\"tool\":\"inspect\",\"target\":\"control-plane\",\"action\":\"start\",\"summary\":\"Inspecting the Control Plane service state, topology and release identities to establish the actual failure.\"}",
+      "responseFile": "attempts/t008-s13--facts_entity.response.json"
+    }
+  ],
+  "savedAt": 1793494586.7584696
+}
